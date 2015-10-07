@@ -11,7 +11,7 @@ loosely so that you can change it if you so desire.
 ## Get Hacking
 
 * `npm install`
-* `npm start`
+* `npm start` (On Windows, use `npm run start-windows`)
 * `open localhost:4000`
 
 ## Generator commands
