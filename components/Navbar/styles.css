@@ -4,6 +4,17 @@
 	float: right;
 	height: 100%;
 	width: 65%;
+	/* Eventually move this to NavItem Component */
+	padding-top: 20px;
+}
+
+/* Eventually move this to NavItem Component */
+.Navbar a {
+	color: #000;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
 .Navbar-child {}
