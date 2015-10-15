@@ -1,0 +1,12 @@
+/** @define Navbar; use strict */
+
+.Navbar { 
+	float: right;
+	height: 100%;
+	width: 65%;
+}
+
+.Navbar-child {}
+
+.Navbar-child.is-state {}
+

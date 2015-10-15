@@ -6,7 +6,6 @@ class Home extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="Home">
-        HOME
       </div>
     );
   }

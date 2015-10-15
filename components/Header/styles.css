@@ -1,0 +1,11 @@
+/** @define Header; use strict */
+
+.Header {
+	background-color: #e7e7e7;
+	min-height: 72px;
+}
+
+.Header-child {}
+
+.Header-child.is-state {}
+
