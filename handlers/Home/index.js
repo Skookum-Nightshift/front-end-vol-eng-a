@@ -1,6 +1,7 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import Jumbotron from 'Jumbotron';
+import Carousel from 'Carousel';
 
 class Home extends React.Component {
 
@@ -8,6 +9,7 @@ class Home extends React.Component {
     return (
       <div className="Home">
       	<Jumbotron />
+      	<Carousel />
       </div>
     );
   }
