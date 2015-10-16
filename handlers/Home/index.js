@@ -2,6 +2,7 @@ import React from 'react';
 import {Resolver} from 'react-resolver';
 import Jumbotron from 'Jumbotron';
 import Carousel from 'Carousel';
+import Button from 'Button';
 
 class Home extends React.Component {
 
@@ -10,6 +11,7 @@ class Home extends React.Component {
       <div className="Home">
       	<Jumbotron />
       	<Carousel />
+      	<Button children="Take the Quiz" />
       </div>
     );
   }
