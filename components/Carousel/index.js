@@ -22,13 +22,16 @@ class Carousel extends React.Component {
   render(): ?ReactElement {
   	
   	if (this.state.items) {
-  		console.log(this.state.items);
-  		var items = this.state.items.map(item => <CarouselItem data={item} />);
+
+  		var items = this.state.items.map(	item => 
+  			<CarouselItem data={item} type={this.props.type} />
+  		);
+  		
   	}
   	
     return (
       <div className="Carousel">
-      {items}
+      	{items}
       </div>
     );
   }
