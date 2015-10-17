@@ -1,6 +1,12 @@
 /** @define Footer; use strict */
 
-.Footer {}
+.Footer {
+	background-color: #e7e7e7;
+	bottom: 0;
+	min-height: 200px;
+	position: fixed;
+	width: 100%;
+}
 
 .Footer-child {}
 
