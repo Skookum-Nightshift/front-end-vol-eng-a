@@ -3,9 +3,6 @@
 .Navbar { 
 	float: right;
 	height: 100%;
-	width: 65%;
-	/* Eventually move this to NavItem Component */
-	padding-top: 20px;
 }
 
 /* Eventually move this to NavItem Component */
