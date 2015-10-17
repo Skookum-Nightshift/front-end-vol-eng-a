@@ -30,7 +30,7 @@ class Carousel extends React.Component {
   	}
   	
     return (
-      <div className="Carousel">
+      <div className="Carousel clearfix">
       	{items}
       </div>
     );

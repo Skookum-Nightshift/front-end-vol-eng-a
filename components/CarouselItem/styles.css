@@ -1,8 +1,28 @@
 /** @define CarouselItem; use strict */
 
-.CarouselItem {}
+.CarouselItem {
+	float: left;
+}
 
 .CarouselItem-child {}
 
 .CarouselItem-child.is-state {}
+
+.CarouselItem.is-icons {
+	background-color: #e7e7e7;
+	color: #fff;
+	height: 60px;
+	margin-right: 10px;
+	width: 100px;
+	border-radius: 50px;
+	padding-top: 40px;
+}
+
+.CarouselItem.is-icons span {
+	color: #000;
+}
+
+.CarouselItem.is-images {}
+
+.CarouselItem.is-thumbs {}
 

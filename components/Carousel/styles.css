@@ -1,7 +1,11 @@
 /** @define Carousel; use strict */
 
 .Carousel {
+	clear: both;
+	padding: 20px;
+	margin-left: 33%;
 	text-align: center;
+	width: 100%;
 }
 
 .Carousel-child {}
