@@ -1,6 +1,8 @@
 /** @define Carousel; use strict */
 
-.Carousel {}
+.Carousel {
+	text-align: center;
+}
 
 .Carousel-child {}
 
