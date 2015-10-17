@@ -5,12 +5,13 @@ require('./styles.css');
 
 import React from 'react';
 import {RouteHandler} from 'react-router';
+import Jumbotron from 'Jumbotron';
 
 class NotFound extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="NotFound">
-        Not Found
+        <Jumbotron header="Page Not Found" />
         <RouteHandler />
       </div>
     );
