@@ -13,7 +13,7 @@ class Home extends React.Component {
     return (
       <div className="Home">
       	<Jumbotron header="Who we are" paragraph={paragraph} />
-      	<Carousel type="icons"/>
+      	<Carousel type="icons" />
       	<Button children="Take the Quiz" />
       </div>
     );
