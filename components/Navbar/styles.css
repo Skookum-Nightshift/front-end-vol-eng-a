@@ -19,6 +19,10 @@
 	text-transform: uppercase;
 }
 
+.Navbar a.active, .Navbar a:hover {
+	color: #4C4C4C;
+}
+
 .Navbar-child {}
 
 .Navbar-child.is-state {}
