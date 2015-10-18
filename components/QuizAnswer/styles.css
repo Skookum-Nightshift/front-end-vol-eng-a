@@ -1,8 +1,15 @@
 /** @define QuizAnswer; use strict */
+.QuizAnswer  {
+}
+.QuizAnswer  {
+	
+	
+}
 
-.QuizAnswer {}
+.QuizAnswer-child {
 
-.QuizAnswer-child {}
+
+}
 
 .QuizAnswer-child.is-state {}
 

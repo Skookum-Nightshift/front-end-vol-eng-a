@@ -3,6 +3,11 @@
 .Button {
 }
 
+.Button.Navigate {
+display: inline-block;
+
+}
+
 .Button.is-black {
 }
 
