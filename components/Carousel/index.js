@@ -4,6 +4,7 @@ require('./styles.css');
 
 import React from 'react';
 var {PropTypes} = React;
+import {apiGet} from 'requestLib';
 import CarouselItem from 'CarouselItem';
 
 class Carousel extends React.Component {
@@ -14,9 +15,20 @@ class Carousel extends React.Component {
   }
 
 	componentDidMount() {
-		 this.setState({
-		 	items: ['animals','children','crisis','seniors']
-		 });
+    // apiGet('/categories/',(),
+    // success: function(data) 
+    // {
+    //   this.setState({
+    //    items: data,
+    //   });
+    // }, 
+    // fail: 
+    // {
+    //   console.log('Error');
+    // });
+      this.setState({
+       items: ['animals','children','crisis','seniors']
+      });
 	}
 
   render(): ?ReactElement {
