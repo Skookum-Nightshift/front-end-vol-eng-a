@@ -1,6 +1,6 @@
 /** @define AppBase; use strict */
 @import 'normalize.css';
-@import 'materialize-css';
+@import '../materialize-css/bin/materialize.css';
 
 
 .clearfix:after {
