@@ -1,6 +1,6 @@
 /** @define AppBase; use strict */
 @import 'normalize.css';
-@import 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css';
+@import 'materialize-css';
 
 
 .clearfix:after {
