@@ -89,6 +89,9 @@ module.exports = function(options) {
             ExtractTextPlugin.extract('style', 'rework-webpack') :
             'style!rework-webpack',
         },
+        { test   : /\.(ttf|eot|svg|woff(2)?)$/,
+          loader : 'file-loader' 
+        },
         {test: /\.json$/, loader: 'json'},
         {test: /\.jsx?$/,
           exclude: [
