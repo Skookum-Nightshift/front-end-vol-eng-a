@@ -3,9 +3,9 @@
 .Button {
 }
 
-.Button.Navigate {
-display: inline-block;
-
+.Button.QuizAnswer {
+padding-left: 20px;
+	padding-right: 20px;
 }
 
 .Button.is-black {

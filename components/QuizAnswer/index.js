@@ -18,7 +18,7 @@ class QuizAnswer extends React.Component {
   }
 
   render(): ?ReactElement {
-    return <Button onClick={this.handleSelected} className="col s6">{this.props.text}</Button>;
+    return <Button onClick={this.handleSelected}>{this.props.text}</Button>;
   }
 }
 

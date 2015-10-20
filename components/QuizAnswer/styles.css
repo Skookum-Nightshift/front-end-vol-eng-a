@@ -1,15 +1,18 @@
 /** @define QuizAnswer; use strict */
 .QuizAnswer  {
+	padding-left: 20px;
+	padding-right: 20px;
 }
-.QuizAnswer  {
-	
-	
-}
+
 
 .QuizAnswer-child {
-
+padding-left: 20px;
+	padding-right: 20px;
 
 }
 
-.QuizAnswer-child.is-state {}
+.QuizAnswer-child.is-state {
+	padding-left: 20px;
+	padding-right: 20px;
+}
 

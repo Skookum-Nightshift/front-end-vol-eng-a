@@ -1,7 +1,9 @@
 .Navigate .Button {
-	display: inline-block;
+		padding-left: 20px;
+	padding-right: 20px;
 }
 
 .Navigate .QuizNumber {
-	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
 }

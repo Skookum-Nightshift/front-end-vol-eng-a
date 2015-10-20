@@ -11,7 +11,9 @@ class QuizNumber extends React.Component {
 
     return (
       <div className="QuizNumber">
-      	{this.props.id}
+      <p>
+      	{this.props.id} of {this.props.remaining}
+      	</p>
       </div>
     );
   }
@@ -19,6 +21,7 @@ class QuizNumber extends React.Component {
 
 QuizNumber.propTypes = {
   id: PropTypes.any.isRequired,
+  remaining: PropTypes.any.isRequired,
 };
 
 export default QuizNumber;
