@@ -2,7 +2,7 @@ import React from 'react';
 import {Resolver} from 'react-resolver';
 import Jumbotron from 'Jumbotron';
 import Carousel from 'Carousel';
-import Button from 'Button';
+import RaisedButton from 'material-ui/lib/raised-button';
 
 class Home extends React.Component {
 
@@ -14,7 +14,11 @@ class Home extends React.Component {
       <div className="Home">
       	<Jumbotron header="Who we are" paragraph={paragraph} />
       	<Carousel type="icons" />
-      	<Button children="Take the Quiz" />
+        <RaisedButton 
+          className="clearfix"
+          label="Primary" 
+          primary={true} />
+        <RaisedButton label="Secondary" backgroundColor="#2196F3" labelColor="#FFFFFF" />
       </div>
     );
   }
