@@ -15,7 +15,7 @@ class AppBase extends React.Component {
     return (
       <div className="AppBase">
       	<Header />
-        <RouteHandler />
+      	<RouteHandler />
         <Footer />
       </div>
     );
