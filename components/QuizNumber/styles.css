@@ -1,0 +1,10 @@
+/** @define QuizNumber; use strict */
+
+.QuizNumber {
+	text-align: center;
+	position: center;
+}
+.QuizNumber-child {}
+
+.QuizNumber-child.is-state {}
+

@@ -1,0 +1,27 @@
+/** @define Jumbotron; use strict */
+
+.Jumbotron {
+	background: repeating-linear-gradient(
+	  45deg,
+	  #e7e7e7,
+	  #e7e7e7 10px,
+	  #ffffff 10px,
+	  #ffffff 20px
+	);
+	border-bottom: 1px solid #000;
+	padding: 100px 350px;
+	min-height: 100px;
+	text-align: center;
+}
+
+.Jumbotron h1 {
+	text-transform: uppercase;
+}
+
+.Jumbotron p {
+	line-height: 1.5em;
+}
+.Jumbotron-child {}
+
+.Jumbotron-child.is-state {}
+

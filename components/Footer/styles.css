@@ -1,0 +1,21 @@
+/** @define Footer; use strict */
+
+.Footer {
+	background-color: #e7e7e7;
+	border-top: 1px solid #000;
+	bottom: 0;
+	min-height: 100px;
+	padding-top: 30px;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+}
+
+.Footer .credits {
+	font-size: 10px;
+	text-transform: uppercase;
+}
+.Footer-child {}
+
+.Footer-child.is-state {}
+
