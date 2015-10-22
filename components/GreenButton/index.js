@@ -19,7 +19,6 @@ class GreenButton extends React.Component {
 }
 
 GreenButton.propTypes = {
-  children: PropTypes.any.isRequired,
 };
 
 GreenButton.defaultProps = {

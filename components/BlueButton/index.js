@@ -19,7 +19,6 @@ class BlueButton extends React.Component {
 }
 
 BlueButton.propTypes = {
-  children: PropTypes.any.isRequired,
 };
 
 BlueButton.defaultProps = {
