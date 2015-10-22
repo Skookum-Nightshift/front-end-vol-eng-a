@@ -5,24 +5,28 @@ require('./styles.css');
 
 import React from 'react';
 import {RouteHandler} from 'react-router';
+import injectTapEventPlugin  from "react-tap-event-plugin";
+injectTapEventPlugin();
 var {PropTypes} = React;
+
 import Header from 'Header';
 import Footer from 'Footer';
 
 import UWCCtheme from './theme';
-const ThemeManager = require('material-ui/lib/styles/theme-manager');
-const ThemeDecorator = require('material-ui/lib/styles/theme-decorator');
+import ThemeManager from 'material-ui/lib/styles/theme-manager';
+import ThemeDecorator from 'material-ui/lib/styles/theme-decorator';
 
 @ThemeDecorator(ThemeManager.getMuiTheme(UWCCtheme))
+
 
 class AppBase extends React.Component {
 
   render(): ?ReactElement {
     return (
       <div className="AppBase">
-      	<Header />
+      	<Header id="header" />
         <RouteHandler />
-        <Footer />
+        <Footer id="footer" />
       </div>
     );
   }
