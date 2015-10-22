@@ -1,3 +1,14 @@
 /** @define AppBase; use strict */
 @import 'normalize.css';
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,900);
+
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}

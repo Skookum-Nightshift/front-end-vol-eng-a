@@ -6,6 +6,7 @@ import React from 'react';
 import { Router, Route, Link } from 'react-router';
 var {PropTypes} = React;
 import AppBar from 'material-ui/lib/app-bar';
+import MobileNav from 'MobileNav';
 import Navbar from 'Navbar';
 
 class Header extends React.Component {
