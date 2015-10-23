@@ -4,19 +4,35 @@ require('./styles.css');
 
 import React from 'react';
 import { Router, Route, Link } from 'react-router';
+import FlatButton from 'material-ui/lib/flat-button';
+
+
+
 
 var {PropTypes} = React;
 
 class Navbar extends React.Component {
   render(): ?ReactElement {
     return (
-      <div className="Navbar">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/quiz">Take the Quiz</Link></li>
-        <li><Link to="/categories">Categories</Link></li>
-        <li><Link to="/organizations">Organizations</Link></li>
-        <li><Link to="/account">My Account</Link></li>
-      </div>
+       <div className="Navbar">
+          <FlatButton 
+          	label="Take the Quiz"
+          	linkButton={true}
+          	containerElement={ <Link to="quiz" /> } />
+
+          <FlatButton 
+          	label="All Categories"
+          	linkButton={true}  />
+
+          <FlatButton 
+          	label="All Organizations"
+          	linkButton={true} />
+
+          <FlatButton 
+          	label="My Account"
+          	linkButton={true} />
+
+       </div>
     );
   }
 }

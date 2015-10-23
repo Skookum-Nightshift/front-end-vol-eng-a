@@ -1,12 +1,7 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import Jumbotron from 'Jumbotron';
-import QuizAnswers from 'QuizAnswers';
-import QuizNumber from 'QuizNumber';
-import Button from 'Button';
-
-
-require('./styles.css');
+import QuizAnswer from 'QuizAnswer'
 
 
 class TakeQuiz extends React.Component {
@@ -133,7 +128,6 @@ class TakeQuiz extends React.Component {
           <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
           <Button onClick={this.backButton} {...buttonBackOptions} >Go Back</Button>
             <Button onClick={this.showResultsButton} {...buttonShowResults}>Show Results</Button>
-
 
          </div>
       </div>

@@ -1,24 +1,12 @@
 /** @define Navbar; use strict */
 
-.Navbar { 
-	float: right;
-	height: 100%;
+.Navbar {}
+
+.Navbar a { 
+	background: transparent!important;
 }
 
-/* Eventually move this to NavItem Component */
-.Navbar a {
-	color: #000;
-	font-size: 18px;
-	font-weight: bold;
-	padding-right: 25px;
-	text-align: right;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-.Navbar a.active, .Navbar a:hover {
-	color: #4C4C4C;
-}
+.Navbar a.active, .Navbar a:hover {}
 
 .Navbar-child {}
 
