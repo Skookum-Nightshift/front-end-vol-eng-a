@@ -1,7 +1,7 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import Jumbotron from 'Jumbotron';
-import QuizAnswer from 'QuizAnswer'
+import QuizAnswer from 'QuizAnswer';
 import QuizAnswers from 'QuizAnswers';
 import QuizNumber from 'QuizNumber';
 import Button from 'Button';
@@ -119,14 +119,14 @@ class TakeQuiz extends React.Component {
     }
 
     var buttonShowResults = {};
-    if (this.state.selectedAnswers != this.state.questions.length) {
+    if (this.state.selectedAnswers.length != this.state.questions.length) {
       buttonShowResults.disabled = true;
     }
 
     return (
       <div className="container">
 
-         <Jumbotron className = "QuizQuestion" paragraph={question.text} />
+         <Jumbotron className = "QuizQuestion" header={question.text} />
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} answerB={question.answerB} /> 
          <div className="Navigate">
           <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
