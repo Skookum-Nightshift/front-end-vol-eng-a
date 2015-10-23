@@ -20,8 +20,8 @@ class QuizAnswers extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="QuizAnswers row">
-        Quiz Answer: <QuizAnswer onSelected={this.handleSelected} text={this.props.answerA} />
-        Quiz Answer: <QuizAnswer onSelected={this.handleSelected} text={this.props.answerB} />
+         <QuizAnswer onSelected={this.handleSelected} text={this.props.answerA} />
+        <QuizAnswer onSelected={this.handleSelected} text={this.props.answerB} />
       </div>
     );
   }

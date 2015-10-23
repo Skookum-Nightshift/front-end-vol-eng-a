@@ -1,8 +1,14 @@
 /** @define QuizAnswers; use strict */
 
-.QuizAnswers {}
+.QuizAnswers {
+	padding-left: 200px;
+}
 
-.QuizAnswers-child {}
+.QuizAnswers-child {
 
-.QuizAnswers-child.is-state {}
+}
+
+.QuizAnswers-child.is-state {
+
+}
 
