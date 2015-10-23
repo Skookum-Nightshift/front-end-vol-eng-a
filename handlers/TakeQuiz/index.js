@@ -2,6 +2,10 @@ import React from 'react';
 import {Resolver} from 'react-resolver';
 import Jumbotron from 'Jumbotron';
 import QuizAnswer from 'QuizAnswer'
+import QuizAnswers from 'QuizAnswers';
+import QuizNumber from 'QuizNumber';
+import Button from 'Button';
+
 
 
 class TakeQuiz extends React.Component {
