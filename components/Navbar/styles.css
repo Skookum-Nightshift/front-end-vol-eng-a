@@ -1,0 +1,10 @@
+/** @define Navbar; use strict */
+
+.Navbar {}
+
+.Navbar a { 
+	background: transparent!important;
+}
+
+
+

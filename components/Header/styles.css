@@ -2,7 +2,9 @@
 
 .Header {}
 
-.Header img {}
+.AppBar h1 {
+	color: #000!important;
+}
 
 .Header-child {}
 

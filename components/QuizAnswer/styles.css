@@ -1,8 +1,19 @@
 /** @define QuizAnswer; use strict */
+<<<<<<< HEAD
+.QuizAnswer  {
+	padding-left: 20px;
+	padding-right: 20px;
+}
 
-.QuizAnswer {}
 
-.QuizAnswer-child {}
+.QuizAnswer-child {
+padding-left: 20px;
+	padding-right: 20px;
 
-.QuizAnswer-child.is-state {}
+}
+
+.QuizAnswer-child.is-state {
+	padding-left: 20px;
+	padding-right: 20px;
+}
 
