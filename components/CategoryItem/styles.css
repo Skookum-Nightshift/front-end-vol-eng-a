@@ -1,0 +1,10 @@
+/** @define CategoryItem; use strict */
+
+.CategoryItem {
+  flex: 1;
+}
+
+.CategoryItem-child {}
+
+.CategoryItem-child.is-state {}
+

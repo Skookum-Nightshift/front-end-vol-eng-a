@@ -1,5 +1,9 @@
 /** @define CategoriesHeader; use strict */
 
+.CategoriesHeader {
+  flex: 1;
+}
+
 .CategoriesHeader h2 {
   text-align: center;
 }
