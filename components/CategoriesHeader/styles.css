@@ -1,0 +1,11 @@
+/** @define CategoriesHeader; use strict */
+
+.CategoriesHeader {
+  text-align: center;
+  width: 80%;
+}
+
+.CategoriesHeader-child {}
+
+.CategoriesHeader-child.is-state {}
+

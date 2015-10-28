@@ -1,0 +1,14 @@
+/** @define CategoriesContainer; use strict */
+
+.CategoriesContainer {
+  background: pink;
+  display: flex;
+}
+
+
+.CategoriesContainer-child {
+  flex: 1;
+}
+
+.CategoriesContainer-child.is-state {}
+
