@@ -1,8 +1,11 @@
 /** @define CategoriesHeader; use strict */
 
-.CategoriesHeader {
+.CategoriesHeader h2 {
   text-align: center;
-  width: 80%;
+}
+
+.CategoriesHeader p {
+  text-align: left;
 }
 
 .CategoriesHeader-child {}

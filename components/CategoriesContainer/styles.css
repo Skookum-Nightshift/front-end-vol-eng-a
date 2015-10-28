@@ -3,11 +3,12 @@
 .CategoriesContainer {
   background: pink;
   display: flex;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 
 .CategoriesContainer-child {
-  flex: 1;
 }
 
 .CategoriesContainer-child.is-state {}
