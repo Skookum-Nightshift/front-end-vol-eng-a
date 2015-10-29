@@ -15,6 +15,7 @@ class Navbar extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="Navbar">
+<<<<<<< Updated upstream
        <div className="hidden-mobile">
           <FlatButton 
           	label="Take the Quiz"
@@ -40,6 +41,15 @@ class Navbar extends React.Component {
           <MenuItem primaryText="Sign out" />
         </IconMenu>
        </div>
+=======
+       <IconMenu desktop={true} className="IconMenu" iconButtonElement={ <IconButton><HamburgerIcon /></IconButton> } >
+        <MenuItem 
+            primaryText="Home"
+            linkButton={true} 
+            href="/" />
+        
+      </IconMenu>
+>>>>>>> Stashed changes
     </div>
     );
   }
