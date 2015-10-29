@@ -13,43 +13,19 @@ var {PropTypes} = React;
 class Navbar extends React.Component {
 
   render(): ?ReactElement {
+
     return (
       <div className="Navbar">
-<<<<<<< Updated upstream
-       <div className="hidden-mobile">
-          <FlatButton 
-          	label="Take the Quiz"
-          	linkButton={true}
-          	containerElement={ <Link to="quiz" /> } />
-
-          <FlatButton 
-          	label="All Categories"
-          	linkButton={true}  />
-
-          <FlatButton 
-          	label="All Organizations"
-          	linkButton={true} />
-
-          <FlatButton 
-          	label="My Account"
-          	linkButton={true} />
-       </div>
-       <div className="hidden-desktop">
-       <IconMenu iconButtonElement={ <IconButton><HamburgerIcon /></IconButton> } >
-          <MenuItem primaryText="Refresh" />
-          <MenuItem primaryText="Help" />
-          <MenuItem primaryText="Sign out" />
-        </IconMenu>
-       </div>
-=======
        <IconMenu desktop={true} className="IconMenu" iconButtonElement={ <IconButton><HamburgerIcon /></IconButton> } >
-        <MenuItem 
-            primaryText="Home"
-            linkButton={true} 
-            href="/" />
-        
+        <MenuItem primaryText="Home" linkButton={true} href="/" />
+        <MenuItem primaryText="Take the Quiz" linkButton={true} href="/quiz" />
+        <MenuItem primaryText="All Categories" linkButton={true} href="/categories" />
+        <MenuItem primaryText="View Organizations" linkButton={true} href="/organizations" />
+        <MenuItem primaryText="About UWCCaspwires" linkButton={true} href="/about" />
+        <MenuItem primaryText="My Profile" linkButton={true} href="/profile" />
+
+
       </IconMenu>
->>>>>>> Stashed changes
     </div>
     );
   }
