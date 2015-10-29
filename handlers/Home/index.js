@@ -2,7 +2,8 @@ import React from 'react';
 import {Resolver} from 'react-resolver';
 import Jumbotron from 'Jumbotron';
 import Carousel from 'Carousel';
-import Button from 'Button';
+import BlueButton from 'BlueButton';
+import GreenButton from 'GreenButton';
 
 class Home extends React.Component {
 
@@ -14,7 +15,8 @@ class Home extends React.Component {
       <div className="Home">
       	<Jumbotron header="Who we are" paragraph={paragraph} />
       	<Carousel type="icons" />
-      	<Button children="Take the Quiz" />
+        <BlueButton 
+          label="Click to see all our categories" />
       </div>
     );
   }

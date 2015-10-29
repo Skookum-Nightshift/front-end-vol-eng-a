@@ -16,9 +16,9 @@ class Header extends React.Component {
 		      <AppBar
 		      	className="AppBar"
 					  title="UWCCaspires"
-					  showMenuIconButton="false"
+					  showMenuIconButton={false}
 					  iconElementRight={ <Navbar /> } />
-		    </div>
+				</div>
     );
   }
 }
