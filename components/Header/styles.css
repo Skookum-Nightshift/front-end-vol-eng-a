@@ -1,9 +1,13 @@
 /** @define Header; use strict */
 
-.Header {}
+.Header {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
 
-.AppBar h1 {
-	color: #000!important;
+.Header .AppBar {
+	font-size: 24px;
 }
 
 .Header-child {}

@@ -16,6 +16,10 @@ import TakeQuiz from'./handlers/TakeQuiz';
 var routes = (
   <Route path="/" handler={App} >
     <DefaultRoute name="home" handler={Home} />
+    <Route name="about" handler={NotFound} />
+    <Route name="categories" handler={NotFound} />
+    <Route name="organizations" handler={NotFound} />
+    <Route name="profile" handler={NotFound} />
     <Route name="quiz" handler={TakeQuiz} />
     <NotFoundRoute handler={NotFound} />
   </Route>

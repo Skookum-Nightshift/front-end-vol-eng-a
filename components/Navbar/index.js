@@ -13,33 +13,22 @@ var {PropTypes} = React;
 class Navbar extends React.Component {
 
   render(): ?ReactElement {
+
     return (
       <div className="Navbar">
-       <div className="hidden-mobile">
-          <FlatButton 
-          	label="Take the Quiz"
-          	linkButton={true}
-          	containerElement={ <Link to="quiz" /> } />
+       <IconMenu 
+          desktop={true} 
+          className="IconMenu" 
+          iconButtonElement={ <IconButton iconStyle={{color: "#ffffff", fill: "rgba(255,255,255,1)"}}><HamburgerIcon /></IconButton> } >
 
-          <FlatButton 
-          	label="All Categories"
-          	linkButton={true}  />
+        <MenuItem className="MenuItem" primaryText="Home" linkButton={true} href="/" />
+        <MenuItem className="MenuItem" primaryText="Take the Quiz" linkButton={true} href="/quiz" />
+        <MenuItem className="MenuItem" primaryText="All Categories" linkButton={true} href="/categories" />
+        <MenuItem className="MenuItem" primaryText="View Organizations" linkButton={true} href="/organizations" />
+        <MenuItem className="MenuItem" primaryText="About UWCCaspwires" linkButton={true} href="/about" />
+        <MenuItem className="MenuItem" primaryText="My Profile" linkButton={true} href="/profile" />
 
-          <FlatButton 
-          	label="All Organizations"
-          	linkButton={true} />
-
-          <FlatButton 
-          	label="My Account"
-          	linkButton={true} />
-       </div>
-       <div className="hidden-desktop">
-       <IconMenu iconButtonElement={ <IconButton><HamburgerIcon /></IconButton> } >
-          <MenuItem primaryText="Refresh" />
-          <MenuItem primaryText="Help" />
-          <MenuItem primaryText="Sign out" />
-        </IconMenu>
-       </div>
+      </IconMenu>
     </div>
     );
   }
