@@ -20,7 +20,7 @@ handleSelected() {
 
 
   render(): ?ReactElement {
-    return <Button onClick={this.handleSelected}>{this.props.text}</Button>;
+    return <Button onClick={this.handleSelected} label={this.props.text} />;
   }
 }
 

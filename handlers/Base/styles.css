@@ -1,3 +1,9 @@
 /** @define AppBase; use strict */
 @import 'normalize.css';
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,900);
+
+.Header + div { 
+  padding-top: 64px;
+	position: relative;
+	z-index: 100;
+}

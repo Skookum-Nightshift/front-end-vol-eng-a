@@ -7,7 +7,7 @@ var {PropTypes} = React;
 import RaisedButton from 'material-ui/lib/raised-button';
 
 
-class Button extends React.Component {
+class GreenButton extends React.Component {
   render(): ?ReactElement {
 
     var {children, type, ...props} = this.props;
@@ -18,13 +18,13 @@ class Button extends React.Component {
   }
 }
 
-Button.propTypes = {
+GreenButton.propTypes = {
 };
 
-Button.defaultProps = {
+GreenButton.defaultProps = {
   label: 'Submit',
-  backgroundColor: '#BDBDBD',
+  primary: {true},
   labelColor: '#FFFFFF',
 };
 
-export default Button;
+export default GreenButton;

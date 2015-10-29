@@ -130,8 +130,8 @@ class TakeQuiz extends React.Component {
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} answerB={question.answerB} /> 
          <div className="Navigate">
           <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
-          <Button onClick={this.backButton} {...buttonBackOptions} >Go Back</Button>
-            <Button onClick={this.showResultsButton} {...buttonShowResults}>Show Results</Button>
+          <Button onClick={this.backButton} {...buttonBackOptions} label="Go Back" />
+            <Button onClick={this.showResultsButton} {...buttonShowResults} label="Show Results" />
 
          </div>
       </div>

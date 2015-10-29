@@ -3,20 +3,20 @@
 
 jest.dontMock('../index.js');
 
-describe('Navbar', function() {
+describe('Button', function() {
   it('validates on propTypes', function() {
     spyOn(console, 'warn');
 
     const React = require('react');
     const Renderer = require('react/lib/ReactTestUtils').createRenderer();
-    const Navbar = require('../index.js');
+    const Button = require('../index.js');
 
     Renderer.render(
-      <Navbar />
+      <Button />
     );
 
     Renderer.render(
-      <Navbar id="1234" />
+      <Button id="1234" />
     );
 
     const REQUIRED_PROP_TYPES = [
@@ -27,17 +27,17 @@ describe('Navbar', function() {
     expect(console.warn.calls[0].args[0]).toBe(
       'Warning: Failed propType: Required prop `' +
       REQUIRED_PROP_TYPES[0] +
-      '` was not specified in `Navbar`.'
+      '` was not specified in `Button`.'
     );
   });
 
   it('renders', function() {
     const React = require('react');
     const Renderer = require('react/lib/ReactTestUtils').createRenderer();
-    const Navbar = require('../index.js');
+    const Button = require('../index.js');
 
     Renderer.render(
-      <Navbar />
+      <Button />
     );
 
     const result = Renderer.getRenderOutput();

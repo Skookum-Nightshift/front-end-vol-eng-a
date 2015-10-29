@@ -11,7 +11,7 @@ class Footer extends React.Component {
       <div className="Footer">
         <div className="credits">
       		<img src="/public/images/apollo.png" width="150" /><br/>
-        	UWaspires is a <a href="http://nightshiftc.lt" target="_blank">Nightshift</a> Project by Team Apollo.
+        	UWCCaspires is a <a href="http://nightshiftc.lt" target="_blank">Nightshift</a> Project by Team Apollo.
         </div>
       </div>
     );
