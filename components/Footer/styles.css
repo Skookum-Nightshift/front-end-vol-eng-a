@@ -4,9 +4,10 @@
 	background-color: #e7e7e7;
 	border-top: 1px solid #000;
 	bottom: 0;
+	margin-top: 50px;
 	min-height: 100px;
 	padding-top: 30px;
-	position: fixed;
+	position: relative;
 	text-align: center;
 	width: 100%;
 }
