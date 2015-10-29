@@ -16,14 +16,17 @@ class Navbar extends React.Component {
 
     return (
       <div className="Navbar">
-       <IconMenu desktop={true} className="IconMenu" iconButtonElement={ <IconButton><HamburgerIcon /></IconButton> } >
-        <MenuItem primaryText="Home" linkButton={true} href="/" />
-        <MenuItem primaryText="Take the Quiz" linkButton={true} href="/quiz" />
-        <MenuItem primaryText="All Categories" linkButton={true} href="/categories" />
-        <MenuItem primaryText="View Organizations" linkButton={true} href="/organizations" />
-        <MenuItem primaryText="About UWCCaspwires" linkButton={true} href="/about" />
-        <MenuItem primaryText="My Profile" linkButton={true} href="/profile" />
+       <IconMenu 
+          desktop={true} 
+          className="IconMenu" 
+          iconButtonElement={ <IconButton iconStyle={{color: "#ffffff", fill: "rgba(255,255,255,1)"}}><HamburgerIcon /></IconButton> } >
 
+        <MenuItem className="MenuItem" primaryText="Home" linkButton={true} href="/" />
+        <MenuItem className="MenuItem" primaryText="Take the Quiz" linkButton={true} href="/quiz" />
+        <MenuItem className="MenuItem" primaryText="All Categories" linkButton={true} href="/categories" />
+        <MenuItem className="MenuItem" primaryText="View Organizations" linkButton={true} href="/organizations" />
+        <MenuItem className="MenuItem" primaryText="About UWCCaspwires" linkButton={true} href="/about" />
+        <MenuItem className="MenuItem" primaryText="My Profile" linkButton={true} href="/profile" />
 
       </IconMenu>
     </div>
