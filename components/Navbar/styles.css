@@ -2,8 +2,9 @@
 
 .Navbar {}
 
-.Navbar a { 
-	background: transparent!important;
+.Navbar .IconMenu .MenuItem {
+	padding: 20px;
+	font-weight: 700;
 }
 
 
