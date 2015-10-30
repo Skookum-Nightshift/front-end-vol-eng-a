@@ -1,11 +1,13 @@
 /** @define CategoryItem; use strict */
 
 .CategoryItem {
-  background: red;
-  border: 1px solid #e3e3e3;
   text-align: center;
   flex: 1;
-  flex-basis: 33.3%;
+  flex-basis: 20%;
+}
+
+.CategoryItem img {
+  border-radius: 50%;
 }
 
 .CategoryItem-child {}

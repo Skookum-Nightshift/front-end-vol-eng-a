@@ -13,8 +13,8 @@ class CategoryItem extends React.Component {
 
     return (
       <div className="CategoryItem">
-        <h1>{this.props.data.name}</h1>
-        <img src={this.props.data.icon} width="150"/>
+      <img src={this.props.data.icon} width="75"/>
+        <h3>{this.props.data.name}</h3>
       </div>
     );
   }

@@ -13,16 +13,28 @@ class Categories extends React.Component {
       categories: [
         {
           name: 'Seniors',
-          icon: "/public/images/apollo.png"
+          icon: "/public/images/help-icon.svg"
         },
         {
           name: 'Animals',
-          icon: "/public/images/apollo.png"
+          icon: "/public/images/help-icon.svg"
         },
         {
           name: 'Whatever',
-          icon: "/public/images/apollo.png"
+          icon: "/public/images/help-icon.svg"
         },
+        {
+          name: 'Seniors',
+          icon: "/public/images/help-icon.svg"
+        },
+        {
+          name: 'Animals',
+          icon: "/public/images/help-icon.svg"
+        },
+        {
+          name: 'Whatever',
+          icon: "/public/images/help-icon.svg"
+        }
       ]
     };
 
