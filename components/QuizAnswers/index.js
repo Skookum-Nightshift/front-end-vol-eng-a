@@ -13,15 +13,15 @@ class QuizAnswers extends React.Component {
     this.handleSelected = this.handleSelected.bind(this);
   }
 
-  handleSelected(text) {
-    this.props.onSelected(text)
+  handleSelected(value) {
+    this.props.onSelected(value)
   }
 
   render(): ?ReactElement {
     return (
-      <div className="QuizAnswers row">
-         <QuizAnswer onSelected={this.handleSelected} text={this.props.answerA} />
-        <QuizAnswer onSelected={this.handleSelected} text={this.props.answerB} />
+      <div className="QuizAnswers">
+         <QuizAnswer onSelected={this.handleSelected} text={this.props.answerA} value={this.props.tagsA}/>
+        <QuizAnswer onSelected={this.handleSelected} text={this.props.answerB} value={this.props.tagsB}/>
       </div>
     );
   }
@@ -30,6 +30,8 @@ class QuizAnswers extends React.Component {
 QuizAnswers.propTypes = {
   answerA: PropTypes.string.isRequired,
   answerB: PropTypes.string.isRequired,
+   tagsA: PropTypes.array.isRequired,
+  tagsB: PropTypes.array.isRequired,
   onSelected: PropTypes.func.isRequired,
 };
 

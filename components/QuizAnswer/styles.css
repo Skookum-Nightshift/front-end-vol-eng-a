@@ -1,5 +1,4 @@
 /** @define QuizAnswer; use strict */
-<<<<<<< HEAD
 .QuizAnswer  {
 	padding-left: 20px;
 	padding-right: 20px;
@@ -7,13 +6,8 @@
 
 
 .QuizAnswer-child {
-padding-left: 20px;
-	padding-right: 20px;
-
 }
 
 .QuizAnswer-child.is-state {
-	padding-left: 20px;
-	padding-right: 20px;
 }
 
