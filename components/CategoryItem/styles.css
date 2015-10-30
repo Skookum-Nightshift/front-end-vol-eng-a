@@ -4,6 +4,7 @@
   text-align: center;
   flex: 1;
   flex-basis: 20%;
+  padding: 0 5px 0 5px;
 }
 
 .CategoryItem img {
