@@ -14,5 +14,6 @@
   flex-direction: column;
   margin-right: 10%;
   margin-left: 10%;
+  flex-wrap: wrap;
 }
 

@@ -1,8 +1,11 @@
 /** @define CategoryItem; use strict */
 
 .CategoryItem {
+  background: red;
+  border: 1px solid #e3e3e3;
+  text-align: center;
   flex: 1;
-  background: grey;
+  flex-basis: 25%;
 }
 
 .CategoryItem-child {}
