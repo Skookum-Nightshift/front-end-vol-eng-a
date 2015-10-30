@@ -4,6 +4,7 @@ import CategoryItem from 'CategoryItem';
 import CategoryList from 'CategoryList';
 import CategoriesHeader from 'CategoriesHeader';
 import Jumbotron from 'Jumbotron';
+import BlueButton from 'BlueButton';
 
 class Categories extends React.Component {
   constructor(){
@@ -12,27 +13,59 @@ class Categories extends React.Component {
     this.state = {
       categories: [
         {
+          name: 'Children & Teens',
+          icon: "/public/images/help-icon.svg"
+        },
+        {
+          name: 'Homelessness',
+          icon: "/public/images/help-icon.svg"
+        },
+        {
+          name: 'Education',
+          icon: "/public/images/help-icon.svg"
+        },
+        {
           name: 'Seniors',
           icon: "/public/images/help-icon.svg"
         },
         {
-          name: 'Animals',
+          name: 'Arts & Crafts',
           icon: "/public/images/help-icon.svg"
         },
         {
-          name: 'Whatever',
+          name: 'Health & Wellness',
           icon: "/public/images/help-icon.svg"
         },
         {
-          name: 'Seniors',
+          name: 'Employment & Life Skills',
           icon: "/public/images/help-icon.svg"
         },
         {
-          name: 'Animals',
+          name: 'Sports & Recreation',
           icon: "/public/images/help-icon.svg"
         },
         {
-          name: 'Whatever',
+          name: 'Crisis Support',
+          icon: "/public/images/help-icon.svg"
+        },
+        {
+          name: 'Women',
+          icon: "/public/images/help-icon.svg"
+        },
+        {
+          name: 'Cleaning & Maintenance',
+          icon: "/public/images/help-icon.svg"
+        },
+        {
+          name: 'Food Preparation',
+          icon: "/public/images/help-icon.svg"
+        },
+        {
+          name: 'Elderly',
+          icon: "/public/images/help-icon.svg"
+        },
+        {
+          name: 'Donated Goods',
           icon: "/public/images/help-icon.svg"
         }
       ]
@@ -53,6 +86,9 @@ class Categories extends React.Component {
       <div className="Categories">
         <CategoriesHeader />
         <CategoryList categories={categories}/>
+        <p>Are you unsure where you might belong still?  Is the list a little long or are you curious what else you might be a great fit for?</p>
+        <BlueButton
+          label="Take Quiz" />
       </div>
     );
   }
