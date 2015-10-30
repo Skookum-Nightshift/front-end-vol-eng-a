@@ -1,7 +1,6 @@
 /** @define CategoryList; use strict */
 
 .CategoryList {
-  background: teal;
   display: flex;
   flex-wrap: wrap;
 }
