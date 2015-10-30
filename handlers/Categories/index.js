@@ -1,6 +1,5 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
-import CategoriesContainer from 'CategoriesContainer';
 import CategoryItem from 'CategoryItem';
 import CategoryList from 'CategoryList';
 import CategoriesHeader from 'CategoriesHeader';
@@ -11,8 +10,21 @@ class Categories extends React.Component {
     super();
 
     this.state = {
-      categories: ['1', '2', '3', '4', '5', '6', '7', '8']
-    }
+      categories: [
+        {
+          name: 'Seniors',
+          icon: "/public/images/apollo.png"
+        },
+        {
+          name: 'Animals',
+          icon: "/public/images/apollo.png"
+        },
+        {
+          name: 'Whatever',
+          icon: "/public/images/apollo.png"
+        },
+      ]
+    };
 
   }
 
