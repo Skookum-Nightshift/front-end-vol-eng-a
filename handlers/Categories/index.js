@@ -1,12 +1,34 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import CategoriesContainer from 'CategoriesContainer';
+import CategoryItem from 'CategoryItem';
+import CategoryList from 'CategoryList';
+import CategoriesHeader from 'CategoriesHeader';
+import Jumbotron from 'Jumbotron';
 
 class Categories extends React.Component {
+  constructor(){
+    super();
+
+    this.state = {
+      categories: ['1', '2', '3', '4']
+    }
+
+  }
+
   render(): ?ReactElement {
+
+    if(this.state.categories){
+      var categories = this.state.categories.map(category =>
+        <CategoryItem data={category} />
+        );
+    }
+
+
     return (
       <div className="Categories">
-        <CategoriesContainer />
+        <CategoriesHeader />
+        <CategoryList categories={categories}/>
       </div>
     );
   }

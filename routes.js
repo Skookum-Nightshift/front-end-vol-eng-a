@@ -18,12 +18,10 @@ var routes = (
   <Route path="/" handler={App} >
     <DefaultRoute name="home" handler={Home} />
     <Route name="about" handler={NotFound} />
-    <Route name="categories" handler={NotFound} />
+    <Route name="categories" handler={Categories} />
     <Route name="organizations" handler={NotFound} />
     <Route name="profile" handler={NotFound} />
     <Route name="quiz" handler={TakeQuiz} />
-    <Route name="Categories" handler={Categories} />
-    <NotFoundRoute handler={NotFound} />
   </Route>
 );
 

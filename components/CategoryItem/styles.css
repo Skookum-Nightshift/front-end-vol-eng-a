@@ -2,6 +2,7 @@
 
 .CategoryItem {
   flex: 1;
+  background: grey;
 }
 
 .CategoryItem-child {}

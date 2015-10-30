@@ -7,17 +7,13 @@ var {PropTypes} = React;
 import CategoryItem from 'CategoryItem';
 
 class CategoryList extends React.Component {
+
   render(): ?ReactElement {
+    var {children, type, ...props} = this.props;
+
     return (
       <div className="CategoryList">
-        <CategoryItem />
-        <CategoryItem />
-        <CategoryItem />
-        <CategoryItem />
-        <CategoryItem />
-        <CategoryItem />
-        <CategoryItem />
-        <CategoryItem />
+        {this.props.categories}
       </div>
     );
   }
