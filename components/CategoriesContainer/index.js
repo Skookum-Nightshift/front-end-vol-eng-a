@@ -14,12 +14,18 @@ class CategoriesContainer extends React.Component {
     this.state = {};
   }
 
+  ComponentDidMount(){
+    this.setState({
+      categories: ['1', '2', '3', '4']
+    });
+  }
 
   render(): ?ReactElement {
     return (
       <div className="CategoriesContainer">
         <CategoriesHeader />
         <CategoryList />
+        {categories}
       </div>
     );
   }
