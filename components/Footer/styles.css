@@ -1,13 +1,14 @@
 /** @define Footer; use strict */
 
+.Footer, .PageWrap:after {
+	height: 100px;
+}
+
 .Footer {
 	background-color: #e7e7e7;
 	border-top: 1px solid #000;
-	bottom: 0;
 	margin-top: 50px;
-	min-height: 100px;
 	padding-top: 30px;
-	position: absolute;
 	text-align: center;
 	width: 100%;
 }
