@@ -16,7 +16,10 @@ class CategoryListing extends React.Component {
           "name": "A Child’s Place",
           "contact":
           {
-            "address": "601 E. Fifth Street Suite 230 Charlotte, NC 28202",
+            "address": "601 E. Fifth Street Suite 230",
+            "city": "Charlotte",
+            "state": "NC",
+            "zip": "28202",
             "email": "",
             "phone": "7043433790",
             "web": "http://www.achildsplace.org",
@@ -25,6 +28,7 @@ class CategoryListing extends React.Component {
             "twitter": "http://twitter.com/ACPCharlotte",
             "youtube": "http://www.youtube.com/user/AChildsPlaceNC"
           },
+          "icon": "http://www.achildsplace.org/wp-content/uploads/2013/08/ACP-words-only_color_206x109.jpg",
           "categories":
           [
             "children-and-teens",
