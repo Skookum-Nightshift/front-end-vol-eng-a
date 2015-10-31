@@ -25,6 +25,7 @@ GreenButton.defaultProps = {
   label: 'Submit',
   primary: {true},
   labelColor: '#FFFFFF',
+  style: {margin: '10px 12%', minWidth: '75%', textAlign: 'center'}
 };
 
 export default GreenButton;
