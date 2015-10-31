@@ -28,7 +28,7 @@ class CategoryListing extends React.Component {
             "twitter": "http://twitter.com/ACPCharlotte",
             "youtube": "http://www.youtube.com/user/AChildsPlaceNC"
           },
-          "icon": "http://www.achildsplace.org/wp-content/uploads/2013/08/ACP-words-only_color_206x109.jpg",
+          "icon": "/public/images/help-icon.svg",
           "categories":
           [
             "children-and-teens",
