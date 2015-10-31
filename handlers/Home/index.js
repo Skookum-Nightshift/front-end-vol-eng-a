@@ -17,10 +17,12 @@ class Home extends React.Component {
       	<GreenButton 
           linkButton={true}
           containerElement={ <Link to="/quiz" /> }
+          href="/quiz"
           label="Take the Quiz" />
         <BlueButton 
           linkButton={true}
           containerElement={ <Link to="/categories" /> }
+          href="/categories"
           label="Click to see all our categories" />
       </div>
     );
