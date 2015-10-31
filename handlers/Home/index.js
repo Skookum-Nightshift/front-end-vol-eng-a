@@ -13,7 +13,7 @@ class Home extends React.Component {
 
     return (
       <div className="Home">
-        <HandlerHeader title={<span><strong>UWCC</strong>aspires</span>} introParagraph={paragraph} />
+        <HandlerHeader title={<span><strong>#UWCC</strong>aspires</span>} introParagraph={paragraph} />
       	<GreenButton 
           linkButton={true}
           containerElement={ <Link to="/quiz" /> }

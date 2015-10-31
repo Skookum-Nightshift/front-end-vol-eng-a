@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+.Home .HandlerHeader h1 {
+	font-weight: 400;
+}
+
 .HandlerHeader p {
   text-align: left;
 }
