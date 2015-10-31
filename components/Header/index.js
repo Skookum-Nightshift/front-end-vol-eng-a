@@ -14,7 +14,7 @@ class Header extends React.Component {
   render(): ?ReactElement {
 
   	var NavTitle = (
-  			<EnhancedButton className="NavTitle" linkButton={true} href="/" style={{fontSize: 34, paddingTop: 8 }}>
+  			<EnhancedButton className="NavTitle" linkButton={true} href="/" style={{fontSize: 34, paddingTop: 8, color: '#FFFFFF' }}>
         	<strong>UWCC</strong>aspires
       </EnhancedButton>
   	);
