@@ -2,13 +2,13 @@
 @import 'normalize.css';
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,900);
 
-html, body {
+html, body, #app, .AppBase {
 	height: 100%;
 }
 
 .PageWrap {
 	min-height: 100%;
-	margin-bottom: -100px;
+	margin-bottom: -165px; /* Footer + Navbar heights */
 }
 
 .PageWrap:after {
