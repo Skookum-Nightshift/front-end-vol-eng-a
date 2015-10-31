@@ -1,0 +1,18 @@
+/** @define HandlerHeader; use strict */
+
+.HandlerHeader {
+  flex: 1;
+}
+
+.HandlerHeader h1 {
+  text-align: center;
+}
+
+.HandlerHeader p {
+  text-align: left;
+}
+
+.HandlerHeader-child {}
+
+.HandlerHeader-child.is-state {}
+

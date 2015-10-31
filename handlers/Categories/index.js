@@ -2,7 +2,7 @@ import React from 'react';
 import {Resolver} from 'react-resolver';
 import CategoryItem from 'CategoryItem';
 import CategoryList from 'CategoryList';
-import CategoriesHeader from 'CategoriesHeader';
+import HandlerHeader from 'HandlerHeader';
 import Jumbotron from 'Jumbotron';
 import BlueButton from 'BlueButton';
 
@@ -84,7 +84,7 @@ class Categories extends React.Component {
 
     return (
       <div className="Categories">
-        <CategoriesHeader />
+        <HandlerHeader title="Categories" introParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut mi a odio viverra venenatis vel eget urna. Aliquam non elit vulputate, rutrum arcu vitae, consectetur turpis. Praesent pellentesque iaculis condimentum. Nunc quis fringilla ex, eu sodales ipsum. Nam molestie, dui quis maximus sagittis, turpis nisl molestie ex, quis maximus urna est non nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus." />
         <CategoryList categories={categories}/>
         <p>Are you unsure where you might belong still?  Is the list a little long or are you curious what else you might be a great fit for?</p>
         <BlueButton

@@ -3,20 +3,20 @@
 
 jest.dontMock('../index.js');
 
-describe('CategoriesHeader', function() {
+describe('HandlerHeader', function() {
   it('validates on propTypes', function() {
     spyOn(console, 'warn');
 
     const React = require('react');
     const Renderer = require('react/lib/ReactTestUtils').createRenderer();
-    const CategoriesHeader = require('../index.js');
+    const HandlerHeader = require('../index.js');
 
     Renderer.render(
-      <CategoriesHeader />
+      <HandlerHeader />
     );
 
     Renderer.render(
-      <CategoriesHeader id="1234" />
+      <HandlerHeader id="1234" />
     );
 
     const REQUIRED_PROP_TYPES = [
@@ -27,17 +27,17 @@ describe('CategoriesHeader', function() {
     expect(console.warn.calls[0].args[0]).toBe(
       'Warning: Failed propType: Required prop `' +
       REQUIRED_PROP_TYPES[0] +
-      '` was not specified in `CategoriesHeader`.'
+      '` was not specified in `HandlerHeader`.'
     );
   });
 
   it('renders', function() {
     const React = require('react');
     const Renderer = require('react/lib/ReactTestUtils').createRenderer();
-    const CategoriesHeader = require('../index.js');
+    const HandlerHeader = require('../index.js');
 
     Renderer.render(
-      <CategoriesHeader />
+      <HandlerHeader />
     );
 
     const result = Renderer.getRenderOutput();
