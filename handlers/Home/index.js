@@ -1,9 +1,9 @@
 import React from 'react';
+import { Router, Route, Link } from 'react-router';
 import {Resolver} from 'react-resolver';
-import Jumbotron from 'Jumbotron';
-import Carousel from 'Carousel';
 import BlueButton from 'BlueButton';
 import GreenButton from 'GreenButton';
+import HandlerHeader from 'HandlerHeader';
 
 class Home extends React.Component {
 
@@ -13,9 +13,14 @@ class Home extends React.Component {
 
     return (
       <div className="Home">
-      	<Jumbotron header="Who we are" paragraph={paragraph} />
-      	<Carousel type="icons" />
+        <HandlerHeader title={<span><strong>UWCC</strong>aspires</span>} introParagraph={paragraph} />
+      	<GreenButton 
+          linkButton={true}
+          containerElement={ <Link to="/quiz" /> }
+          label="Take the Quiz" />
         <BlueButton 
+          linkButton={true}
+          containerElement={ <Link to="/categories" /> }
           label="Click to see all our categories" />
       </div>
     );
