@@ -1,6 +1,7 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import HandlerHeader from 'HandlerHeader';
+import OrganizationList from 'OrganizationList';
 
 class CategoryListing extends React.Component {
   constructor(){
@@ -40,7 +41,7 @@ class CategoryListing extends React.Component {
     return (
       <div className="CategoryListing">
         <HandlerHeader title="Category Listing" introParagraph="blah blah blah"/>
-        CategoryListing
+        <OrganizationList organizations={organizations} />
       </div>
     );
   }
