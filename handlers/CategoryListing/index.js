@@ -2,6 +2,7 @@ import React from 'react';
 import {Resolver} from 'react-resolver';
 import HandlerHeader from 'HandlerHeader';
 import OrganizationList from 'OrganizationList';
+import OrganizationItem from 'OrganizationItem';
 
 class CategoryListing extends React.Component {
   constructor(){

@@ -1,0 +1,8 @@
+/** @define OrganizationItem; use strict */
+
+.OrganizationItem {}
+
+.OrganizationItem-child {}
+
+.OrganizationItem-child.is-state {}
+

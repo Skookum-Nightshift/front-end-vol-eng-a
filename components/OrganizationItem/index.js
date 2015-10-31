@@ -4,23 +4,22 @@ require('./styles.css');
 
 import React from 'react';
 var {PropTypes} = React;
-import OrganizationItem from 'OrganizationItem';
 
-class OrganizationList extends React.Component {
-
+class OrganizationItem extends React.Component {
   render(): ?ReactElement {
+
     var {children, type, ...props} = this.props;
 
     return (
-      <div className="OrganizationList">
-        {this.props.organizations}
+      <div className="OrganizationItem">
+        <h3>{this.props.data.name}</h3>
       </div>
     );
   }
 }
 
-OrganizationList.propTypes = {
+OrganizationItem.propTypes = {
   id: PropTypes.any.isRequired,
 };
 
-export default OrganizationList;
+export default OrganizationItem;
