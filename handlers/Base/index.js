@@ -24,8 +24,10 @@ class AppBase extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="AppBase">
-      	<Header id="header" />
-        <RouteHandler />
+      	<div className="PageWrap">
+      		<Header id="header" />
+        	<RouteHandler />
+        </div>
         <Footer id="footer" />
       </div>
     );

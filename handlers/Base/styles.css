@@ -2,9 +2,22 @@
 @import 'normalize.css';
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,900);
 
+html, body {
+	height: 100%;
+}
+
+.PageWrap {
+	min-height: 100%;
+	margin-bottom: -100px;
+}
+
+.PageWrap:after {
+	content: "";
+	display: block;
+}
+
 .Header + div {
   padding-top: 64px;
-	position: relative;
 	z-index: 100;
 }
 
