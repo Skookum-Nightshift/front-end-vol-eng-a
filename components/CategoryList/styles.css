@@ -1,0 +1,11 @@
+/** @define CategoryList; use strict */
+
+.CategoryList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.CategoryList-child {}
+
+.CategoryList-child.is-state {}
+

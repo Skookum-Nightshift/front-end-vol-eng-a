@@ -127,7 +127,7 @@ class TakeQuiz extends React.Component {
       <div className="container">
 
          <Jumbotron className = "QuizQuestion" paragraph={question.text} />
-         <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} answerB={question.answerB} /> 
+         <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} answerB={question.answerB} />
          <div className="Navigate">
           <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
           <Button onClick={this.backButton} {...buttonBackOptions} label="Go Back" />

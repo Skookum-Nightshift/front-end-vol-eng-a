@@ -1,0 +1,17 @@
+/** @define CategoryItem; use strict */
+
+.CategoryItem {
+  text-align: center;
+  flex: 1;
+  flex-basis: 15%;
+  padding: 0 5px 0 5px;
+}
+
+.CategoryItem img {
+  border-radius: 50%;
+}
+
+.CategoryItem-child {}
+
+.CategoryItem-child.is-state {}
+
