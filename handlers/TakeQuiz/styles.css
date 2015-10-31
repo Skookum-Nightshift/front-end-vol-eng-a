@@ -1,9 +1,8 @@
 .Navigate .Button {
-		padding-left: 20px;
-	padding-right: 20px;
 }
 
 .Navigate .QuizNumber {
-	padding-left: 20px;
-	padding-right: 20px;
+}
+
+.Navigate .buttonShowResults {
 }

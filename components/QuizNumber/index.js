@@ -12,7 +12,7 @@ class QuizNumber extends React.Component {
     return (
       <div className="QuizNumber">
       <p>
-      	{this.props.id} of {this.props.remaining}
+      	Question {this.props.id} of {this.props.remaining}
       	</p>
       </div>
     );

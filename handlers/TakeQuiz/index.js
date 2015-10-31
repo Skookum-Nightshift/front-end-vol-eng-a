@@ -1,7 +1,7 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import Jumbotron from 'Jumbotron';
-import QuizAnswer from 'QuizAnswer'
+import QuizAnswer from 'QuizAnswer';
 import QuizAnswers from 'QuizAnswers';
 import QuizNumber from 'QuizNumber';
 import Button from 'Button';
@@ -18,68 +18,97 @@ class TakeQuiz extends React.Component {
         {
           text: "I would rather...",
           answerA: "Work directly with the people I am serving",
-          answerB: "Help out indirectly (office work, etc)"
+          tagsA: ["direct"],
+          answerB: "Help out indirectly (office work, etc)",
+          tagsB: ["indirect"]
         },
         {
           text: "I would rather...",
           answerA: "Work with adults or seniors",
-          answerB: "Teens or kids"
+          tagsA: ["adults", "seniors"],
+          answerB: "Teens or kids",
+          tagsB: ["teens-or-children"]
+
         },
-        {
+       {
           text: "I would rather...",
           answerA: "Be very active (including moving, building, or lifting things)",
-          answerB: "do something less physically involved (reading to kids)"
+          tagsA: ["sports-recreation",  "cleaning-and-maintenance", "heavy-lifting"],
+          answerB: "do something less physically involved (reading to kids)",
+         tagsB: ["office"]
+
         },
-         {
+        {
           text: "I would rather...",
           answerA: "Work one on one with someone in need",
-          answerB: "Contribute with a group"
+          tagsA: ["individual"],
+          answerB: "Contribute with a group",
+          tagsB: ["group"]
         },
         {
           text: "I would rather...",
           answerA: "Do arts and crafts or play games with a child",
-          answerB: "Teach or tutor a child"
-        },
-        {
-          text: "I would rather...",
-          answerA: "Do arts and crafts or play games with a child",
-          answerB: "Teach or tutor a child"
+          tagsA: ["arts-and-crafts", "sports-recreation"],
+          answerB: "Teach or tutor a child",
+          tagsB: ["education"]
+
         },
         {
           text: "I would rather...",
           answerA: "Work outside",
-          answerB: "Work inside"
+          tagsA: ["sports-recreation",  "cleaning-and-maintenance", "heavy-lifting"],
+          answerB: "Work inside",
+          tagsB: ["office"]
+
         },
          {
           text: "I would rather...",
           answerA: "Be a big brother or sister to a child",
-          answerB: "Help adults transition back into the workforce or manage their finances"
+          tagsA: ["arts-and-crafts", "sports-recreation"],
+          answerB: "Help adults transition back into the workforce or manage their finances",
+          tagsB: ["employment-and-life-skills", "homelessness"]
+
         },
         {
           text: "I would rather...",
           answerA: "Volunteer at a one time event",
-          answerB: "Partner with an organization long-term"
+         tagsA: ["one-time", "onetime", "seasonal"],
+          answerB: "Partner with an organization long-term",
+          tagsB: ["ongoing"]
+
         },
         {
           text: "Are you interested in opportunities that involve speaking Spanish?",
           answerA: "Yes",
-          answerB: "No"
+          tagsA: ["Spanish"],
+          answerB: "No",
+          tagsB: []
+
         },
         {
           text: "Would you like to prepare and/or serving food to others?",
           answerA: "Yes",
-          answerB: "No"
+          tagsA: ["food-preparation"],
+          answerB: "No",
+          tagsB: []
+
         },
         {
           text: "Are you okay with participating in additional screening or training for a cause you care about?",
           answerA: "Yes",
-          answerB: "No"
+          tagsA: ["orientation", "interview", "application", "drug-screening"],
+          answerB: "No",
+          tagsB: []
+
         },
         {
           text: "Are you okay with completing a background check?",
           answerA: "Yes",
-          answerB: "No"
-        },
+          tagsA: ["background-check"],
+          answerB: "No",
+          tagsB: []
+
+        }, 
       ],
       selectedAnswers: [],
       currentQuestion: 0
@@ -107,6 +136,10 @@ class TakeQuiz extends React.Component {
     this.setState({ selectedAnswers, currentQuestion: nextQuestion });
     console.log(selectedAnswers);
     console.log(questions.length, selectedAnswers.length);
+    if(questions.length === currentQuestion+1) {
+      var asString = selectedAnswers.join();
+      console.log(asString);
+    }
   }
 
   render(): ?ReactElement {
@@ -119,19 +152,20 @@ class TakeQuiz extends React.Component {
     }
 
     var buttonShowResults = {};
-    if (this.state.selectedAnswers != this.state.questions.length) {
+    if (this.state.selectedAnswers.length != this.state.questions.length) {
       buttonShowResults.disabled = true;
+
     }
 
     return (
       <div className="container">
 
-         <Jumbotron className = "QuizQuestion" paragraph={question.text} />
-         <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} answerB={question.answerB} />
+         <Jumbotron className = "QuizQuestion" header={question.text} />
+                   <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
+         <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
          <div className="Navigate">
-          <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
           <Button onClick={this.backButton} {...buttonBackOptions} label="Go Back" />
-            <Button onClick={this.showResultsButton} {...buttonShowResults} label="Show Results" />
+            <Button {...buttonShowResults}  linkButton={true} href="/QuizResults"label="Show Results" />
 
          </div>
       </div>
