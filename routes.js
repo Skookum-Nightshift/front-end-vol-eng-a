@@ -12,7 +12,7 @@ import NotFound from './handlers/NotFound';
 import App from './handlers/Base';
 import Home from'./handlers/Home';
 import TakeQuiz from'./handlers/TakeQuiz';
-import quizresults from'./handlers/quizresults';
+import QuizResults from'./handlers/QuizResults';
 
 var routes = (
   <Route path="/" handler={App} >
@@ -22,7 +22,7 @@ var routes = (
     <Route name="organizations" handler={NotFound} />
     <Route name="profile" handler={NotFound} />
     <Route name="quiz" handler={TakeQuiz} />
-    <Route name="quizresults" handler={quizresults} />
+    <Route name="results" handler={QuizResults} />
     <NotFoundRoute handler={NotFound} />
   </Route>
 );
