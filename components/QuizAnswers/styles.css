@@ -1,6 +1,7 @@
 /** @define QuizAnswers; use strict */
 
 .QuizAnswers {
+	justify-content: space-between;
 }
 
 .QuizAnswers-child {

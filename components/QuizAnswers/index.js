@@ -20,8 +20,10 @@ class QuizAnswers extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="QuizAnswers">
-         <QuizAnswer onSelected={this.handleSelected} text={this.props.answerA} value={this.props.tagsA}/>
-        <QuizAnswer onSelected={this.handleSelected} text={this.props.answerB} value={this.props.tagsB}/>
+        <br/>
+         <QuizAnswer optionNum="1" onSelected={this.handleSelected} text={this.props.answerA} value={this.props.tagsA}/>
+         <br/>
+        <QuizAnswer optionNum="2" onSelected={this.handleSelected} text={this.props.answerB} value={this.props.tagsB}/>
       </div>
     );
   }
@@ -31,6 +33,7 @@ QuizAnswers.propTypes = {
   answerA: PropTypes.string.isRequired,
   answerB: PropTypes.string.isRequired,
    tagsA: PropTypes.array.isRequired,
+
   tagsB: PropTypes.array.isRequired,
   onSelected: PropTypes.func.isRequired,
 };

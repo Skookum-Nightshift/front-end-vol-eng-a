@@ -5,6 +5,8 @@ import QuizAnswer from 'QuizAnswer';
 import QuizAnswers from 'QuizAnswers';
 import QuizNumber from 'QuizNumber';
 import Button from 'Button';
+import HandlerHeader from 'HandlerHeader';
+
 
 
 
@@ -151,23 +153,21 @@ class TakeQuiz extends React.Component {
       buttonBackOptions.disabled = true;
     }
 
-    var buttonShowResults = {};
-    if (this.state.selectedAnswers.length != this.state.questions.length) {
-      buttonShowResults.disabled = true;
-
+    var buttonShowResults;
+    if (this.state.selectedAnswers.length === this.state.questions.length) {
+             buttonShowResults =  <Button  className="ShowReesultsButton" {...buttonShowResults}  linkButton={true} href="/results"label="Show Results" />
     }
 
     return (
       <div className="container">
 
-         <Jumbotron className = "QuizQuestion" header={question.text} />
+         <HandlerHeader className = "QuizQuestion" subtitle={question.text} />
                    <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
          <div className="Navigate">
-          <Button onClick={this.backButton} {...buttonBackOptions} label="Go Back" />
-            <Button {...buttonShowResults}  linkButton={true} href="/results"label="Show Results" />
-
+          <Button  className="BackButton" onClick={this.backButton} {...buttonBackOptions} label="Back" />
          </div>
+         {buttonShowResults}
       </div>
     );
   }

@@ -20,12 +20,18 @@ handleSelected() {
 
 
   render(): ?ReactElement {
-    return <Button onClick={this.handleSelected} label={this.props.text} value={this.props.value}/>;
+    return (
+    <div className="SingleQuizAnswer">
+	   <div optionNum={this.props.number} />
+     <Button onClick={this.handleSelected} label={this.props.text} value={this.props.value} />
+    </div>
+    );
   }
 }
 
 QuizAnswer.propTypes = {
   id: PropTypes.any.isRequired,
+  optionNum: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   value: PropTypes.array.isRequired,
   onSelected: PropTypes.func.isRequired,
