@@ -165,7 +165,7 @@ class TakeQuiz extends React.Component {
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
          <div className="Navigate">
           <Button onClick={this.backButton} {...buttonBackOptions} label="Go Back" />
-            <Button {...buttonShowResults}  linkButton={true} href="/QuizResults"label="Show Results" />
+            <Button {...buttonShowResults}  linkButton={true} href="/results"label="Show Results" />
 
          </div>
       </div>
