@@ -162,7 +162,7 @@ class TakeQuiz extends React.Component {
       <div className="container">
 
          <HandlerHeader className = "QuizQuestion" subtitle={question.text} />
-                   <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
+         <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
          <div className="Navigate">
           <Button  className="BackButton" onClick={this.backButton} {...buttonBackOptions} label="Back" />
