@@ -6,6 +6,10 @@ import HandlerHeader from 'HandlerHeader';
 import OrganizationList from 'OrganizationList';
 import OrganizationItem from 'OrganizationItem';
 
+// make request to v1/categories/:id/organizations to get array of matching organizations
+
+// pass that categoryID from an onClick event from the categoryItem
+
 class CategoryListing extends React.Component {
   constructor(){
     super();
