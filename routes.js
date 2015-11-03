@@ -21,7 +21,7 @@ var routes = (
     <DefaultRoute name="home" handler={Home} />
     <Route name="about" handler={NotFound} />
     <Route name="categories" handler={Categories} />
-    <Route name="category-listings" handler={CategoryListing} />
+    <Route name="category/:id" handler={CategoryListing} />
     <Route name="organizations" handler={NotFound} />
     <Route name="profile" handler={NotFound} />
     <Route name="quiz" handler={TakeQuiz} />
