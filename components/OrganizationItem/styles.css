@@ -11,7 +11,7 @@
   .OrganizationItem .comment-image {
     padding-right: 1.4em; }
     .OrganizationItem .comment-image > img {
-      background: #82a7db;
+      background: pink;
       border-radius: 3px;
       display: block;
       height: auto;
