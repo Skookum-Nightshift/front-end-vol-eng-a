@@ -1,6 +1,7 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import BlueButton from 'BlueButton';
+import ConnectFlag from 'material-ui/lib/paper';
 
 class Opportunity extends React.Component {
 
@@ -11,14 +12,14 @@ class Opportunity extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ connected: false });
+    this.setState({ connected: false, showConnectFlag: false });
   }
 
   onButtonClick() {
-    if (this.state.connected == false) {
-      this.setState({ connected: true });
+    if (this.state.showConnectFlag == false) {
+      this.setState({ showConnectFlag: true });
     } else {
-      this.setState({ connected: false });
+      this.setState({ showConnectFlag: false });
     }
   }
 
@@ -33,10 +34,15 @@ class Opportunity extends React.Component {
           label={this.state.connected ? "Connected" : "Connect" } 
           primary={this.state.connected ? true : false }
           secondary={this.state.connected ? false : true }
-          style={{ margin: '10px 0', width: '100%', textAlign: 'center', height: '50px' }} 
+          style={{ margin: '10px 0 0 0', width: '100%', textAlign: 'center', height: '50px' }} 
           labelStyle={{fontWeight: '900', fontSize: '20px'}} 
           onClick={this.onButtonClick} />
 
+          if (this.state.showConnectFlag == true) {
+          <ConnectFlag zDepth={2} style={{margin:'0 auto', padding:'20px', width: '75%' }}>
+            <p>Some Dialog</p>
+          </ConnectFlag>
+        }
       </div>
     );
   }

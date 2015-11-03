@@ -22,7 +22,7 @@ var routes = (
     <Route name="about" handler={NotFound} />
     <Route name="categories" handler={Categories}/>
     <Route name="organizations" handler={NotFound}/>
-    <Route name="Opportunity" handler={Opportunity}/>
+    <Route name="opportunity" handler={Opportunity}/>
     <Route name="profile" handler={NotFound} />
     <Route name="quiz" handler={TakeQuiz} />
     <Route name="results" handler={QuizResults} />
