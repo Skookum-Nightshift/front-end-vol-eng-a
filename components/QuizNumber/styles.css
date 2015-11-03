@@ -3,6 +3,7 @@
 .QuizNumber {
 	text-align: center;
 	position: center;
+	background-color: '#BDBDBD';
 }
 .QuizNumber-child {}
 

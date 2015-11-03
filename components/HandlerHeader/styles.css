@@ -4,11 +4,15 @@
   flex: 1;
 }
 
-.HandlerHeader h1 {
+.HandlerHeader h1, h3 {
   text-align: center;
 }
 
 .Home .HandlerHeader h1 {
+	font-weight: 400;
+}
+
+.Container .HandlerHeader h3 {
 	font-weight: 400;
 }
 
