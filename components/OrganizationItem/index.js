@@ -17,9 +17,9 @@ class OrganizationItem extends React.Component {
         </div>
         <div className="comment-content">
           <h1>{this.props.data.name}</h1>
-          <p>{this.props.data.contact.address}</p>
-          <p>{this.props.data.contact.city}, {this.props.data.contact.state} {this.props.data.contact.zip}</p>
-          <p>{this.props.data.contact.web}</p>
+          <p>{this.props.data.address}</p>
+          <p>{this.props.data.city}, {this.props.data.state} {this.props.data.zip}</p>
+          <p>{this.props.data.web}</p>
         </div>
       </div>
     );
