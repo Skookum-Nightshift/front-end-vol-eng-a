@@ -38,11 +38,8 @@ class Opportunity extends React.Component {
           labelStyle={{fontWeight: '900', fontSize: '20px'}} 
           onClick={this.onButtonClick} />
 
-          if (this.state.showConnectFlag == true) {
-          <ConnectFlag zDepth={2} style={{margin:'0 auto', padding:'20px', width: '75%' }}>
-            <p>Some Dialog</p>
-          </ConnectFlag>
-        }
+          { this.state.showConnectFlag  ? <ConnectFlag flagMaxHeight={this.state.flagMaxHeight} /> : null } 
+        </div>
       </div>
     );
   }
