@@ -8,9 +8,10 @@ import OrganizationItem from 'OrganizationItem';
 import {apiGet} from 'requestLib';
 
 class CategoryListing extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {}
+
   }
 
   componentDidMount(){
