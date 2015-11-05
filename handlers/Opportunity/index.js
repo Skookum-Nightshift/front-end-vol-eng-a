@@ -35,7 +35,7 @@ class Opportunity extends React.Component {
         <div className="PageContent">
           <p>{paragraph}</p>
         </div>
-        <div className="PageOverlay">
+        <div className={this.state.showConnectFlag ? "PageOverlay" : "" }>
         </div>
         <div className="PageTopContent">
           <BlueButton 

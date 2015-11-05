@@ -14,7 +14,11 @@ class ConnectFlag extends React.Component {
          <Paper 
          		className="Flag" 
          		zDepth={2} 
-         		style={{margin:'0 auto', padding:'20px', width: '75%', maxHeight: this.props.flagMaxHeight, transition: 'max-height 2s ease-in' }} 
+         		style={{
+         				margin:'0 auto', 
+         				padding:'20px', 
+         				width: '75%', 
+         				maxHeight: this.props.flagMaxHeight }} 
          		key={0}>
             <p>Some Dialog</p>
           </Paper>
