@@ -8,10 +8,6 @@ import { Router, Route, Link } from 'react-router'
 
 class CategoryItem extends React.Component {
 
-handleClick(event) {
-  console.log("hey");
-}
-
   render(): ?ReactElement {
 
     var {children, type, ...props} = this.props;
