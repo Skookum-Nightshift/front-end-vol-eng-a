@@ -28,11 +28,8 @@ html, body, #app, .AppBase {
 	z-index: 100;
 }
 
-.Categories {
-  display: flex;
-  flex-direction: column;
+.Categories, .HandlerHeader p, .Opportunity p {
   margin-right: 5%;
   margin-left: 5%;
-  flex-wrap: wrap;
 }
 
