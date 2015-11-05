@@ -1,10 +1,9 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import BlueButton from 'BlueButton';
-import ConnectFlag from 'material-ui/lib/paper';
+import ConnectFlag from 'ConnectFlag';
 
 class Opportunity extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {};
@@ -12,14 +11,18 @@ class Opportunity extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ connected: false, showConnectFlag: false });
+    this.setState({ 
+      connected: false, 
+      showConnectFlag: false,
+      flagMaxHeight: 0,
+      });
   }
 
   onButtonClick() {
-    if (this.state.showConnectFlag == false) {
-      this.setState({ showConnectFlag: true });
+    if (this.state.showConnectFlag === false) {
+      this.setState({ showConnectFlag: true, flagMaxHeight: 500 });
     } else {
-      this.setState({ showConnectFlag: false });
+      this.setState({ showConnectFlag: false, flagMaxHeight: 0  });
     }
   }
 
@@ -29,14 +32,19 @@ class Opportunity extends React.Component {
 
     return (
       <div className="Opportunity">
-        <p>{paragraph}</p>
-        <BlueButton 
-          label={this.state.connected ? "Connected" : "Connect" } 
-          primary={this.state.connected ? true : false }
-          secondary={this.state.connected ? false : true }
-          style={{ margin: '10px 0 0 0', width: '100%', textAlign: 'center', height: '50px' }} 
-          labelStyle={{fontWeight: '900', fontSize: '20px'}} 
-          onClick={this.onButtonClick} />
+        <div className="PageContent">
+          <p>{paragraph}</p>
+        </div>
+        <div className="PageOverlay">
+        </div>
+        <div className="PageTopContent">
+          <BlueButton 
+            label={this.state.connected ? "Connected" : "Connect" } 
+            primary={this.state.connected ? true : false }
+            secondary={this.state.connected ? false : true }
+            style={{ margin: '10px 0 0 0', width: '100%', textAlign: 'center', height: '50px' }} 
+            labelStyle={{fontWeight: '900', fontSize: '20px'}} 
+            onClick={this.onButtonClick} />
 
           { this.state.showConnectFlag  ? <ConnectFlag flagMaxHeight={this.state.flagMaxHeight} /> : null } 
         </div>
