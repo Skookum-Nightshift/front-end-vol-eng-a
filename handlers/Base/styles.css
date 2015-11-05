@@ -7,6 +7,12 @@ html, body, #app, .AppBase {
 	font-family: "Roboto", sans-serif;
 }
 
+.AppBase {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
 .PageWrap {
 	min-height: 100%;
 	margin-bottom: -165px; /* Footer + Navbar heights */
