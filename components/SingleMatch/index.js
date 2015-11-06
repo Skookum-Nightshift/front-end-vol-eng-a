@@ -16,9 +16,9 @@ class SingleMatch extends React.Component {
           <List className="SingleMatchList">
             <ListItem
             leftAvatar={<Avatar src={this.props.data.logo} />}
-              primaryText={this.props.data.organization.name}
+              primaryText={this.props.data.name}
               secondaryText= {<p><strong>
-              {this.props.data.name}: </strong>
+              {this.props.data.organization.name}: </strong>
               {this.props.data.description} 
               </p>}
          secondaryTextLines={2} />

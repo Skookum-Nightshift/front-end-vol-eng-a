@@ -5,6 +5,8 @@ import SingleMatch from 'SingleMatch';
 import QuizResultMatch from 'QuizResultMatch';
 import Index from 'material-ui/lib/lists/index';
 import ResultsStore from '../../stores/ResultsStore';
+import GreenButton from 'GreenButton';
+import { Router, Route, Link } from 'react-router';
 
 
 class QuizResults extends React.Component {
@@ -32,8 +34,13 @@ class QuizResults extends React.Component {
     return (
       <div className="QuizResults">
         <HandlerHeader title="Your Results" introParagraph={paragraph}/>
-        <h4>Top 3 Matches</h4>
         <QuizResultMatch results={results} />
+        <br />
+        <GreenButton 
+          linkButton={true}
+          containerElement={ <Link to="/quiz" /> }
+          href="/quiz"
+          label="Take the Quiz" />
       </div>
     );
   }

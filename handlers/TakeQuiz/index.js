@@ -84,7 +84,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Are you interested in opportunities that involve speaking Spanish?",
           answerA: "Yes",
-          tagsA: ["Spanish"],
+          tagsA: ["Spanish","Spanish","Spanish","Spanish"],
           answerB: "No",
           tagsB: []
 
@@ -92,7 +92,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Would you like to prepare and/or serving food to others?",
           answerA: "Yes",
-          tagsA: ["food-preparation"],
+          tagsA: ["food-preparation","food-preparation","food-preparation","food-preparation"],
           answerB: "No",
           tagsB: []
 
@@ -100,7 +100,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Are you okay with participating in additional screening or training for a cause you care about?",
           answerA: "Yes",
-          tagsA: ["orientation", "interview", "application", "drug-screening"],
+          tagsA: ["orientation","orientation","orientation","orientation", "interview", "application", "drug-screening"],
           answerB: "No",
           tagsB: []
 
@@ -108,7 +108,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Are you okay with completing a background check?",
           answerA: "Yes",
-          tagsA: ["background-check"],
+          tagsA: ["background-check","background-check","background-check","background-check"],
           answerB: "No",
           tagsB: []
 
