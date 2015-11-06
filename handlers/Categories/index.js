@@ -5,72 +5,28 @@ import CategoryList from 'CategoryList';
 import HandlerHeader from 'HandlerHeader';
 import Jumbotron from 'Jumbotron';
 import BlueButton from 'BlueButton';
+import {apiGet} from 'requestLib';
 
 class Categories extends React.Component {
   constructor(){
     super();
 
-    this.state = {
-      categories: [
-        {
-          name: 'Children & Teens',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Homelessness',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Education',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Seniors',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Arts & Crafts',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Health & Wellness',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Employment & Life Skills',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Sports & Recreation',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Crisis Support',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Women',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Cleaning & Maintenance',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Food Preparation',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Elderly',
-          icon: "/public/images/help-icon.svg"
-        },
-        {
-          name: 'Donated Goods',
-          icon: "/public/images/help-icon.svg"
-        }
-      ]
-    };
+    this.state = {};
 
+  }
+
+  componentDidMount(){
+    apiGet('v1/categories', {},
+      (data) => {
+        console.log(data);
+        this.setState({
+          categories: data.categories
+        });
+      },
+      () => {
+        console.log('error');
+      }
+    );
   }
 
   render(): ?ReactElement {
