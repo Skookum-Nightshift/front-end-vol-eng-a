@@ -6,6 +6,8 @@ import QuizAnswers from 'QuizAnswers';
 import QuizNumber from 'QuizNumber';
 import Button from 'Button';
 import HandlerHeader from 'HandlerHeader';
+import {apiPost} from 'requestLib';
+import ResultsActions from '../../actions/ResultsActions';
 
 
 
@@ -118,31 +120,35 @@ class TakeQuiz extends React.Component {
 
 
     this.backButton =  this.backButton.bind(this);
-    this.showResultsButton = this.showResultsButton.bind(this);
+    this.showResults = this.showResults.bind(this);
     this.handleSelected = this.handleSelected.bind(this);
   }
 
   backButton() {
     this.setState({ currentQuestion: this.state.currentQuestion-1 });
   }
-   showResultsButton() {
-    this.setState({ currentQuestion: questions[0]});
+
+  showResults() {
+    var {selectedAnswers} = this.state;
+    var tags = selectedAnswers.reduce((a, b)=>a.concat(b));
+    apiPost('v1/matches', { tags }, 
+      (results) => {
+        console.log(results);
+        ResultsActions.updateResults(results);
+        this.context.router.transitionTo('results');
+      }
+    );
   }
-
-
 
   handleSelected(option) {
     var {selectedAnswers, currentQuestion, questions} = this.state;
     selectedAnswers[currentQuestion] = option;
     var nextQuestion = currentQuestion+1 === questions.length ? currentQuestion : currentQuestion+1;
+
     this.setState({ selectedAnswers, currentQuestion: nextQuestion });
-    console.log(selectedAnswers);
-    console.log(questions.length, selectedAnswers.length);
-    if(questions.length === currentQuestion+1) {
-      var asString = selectedAnswers.join();
-      console.log(asString);
-    }
   }
+
+
 
   render(): ?ReactElement {
 
@@ -155,7 +161,7 @@ class TakeQuiz extends React.Component {
 
     var buttonShowResults;
     if (this.state.selectedAnswers.length === this.state.questions.length) {
-             buttonShowResults =  <Button  className="ShowReesultsButton" {...buttonShowResults}  linkButton={true} href="/results"label="Show Results" />
+             buttonShowResults =  <Button  className="ShowReesultsButton" {...buttonShowResults}  linkButton={true} onClick={this.showResults} label="Show Results" />
     }
 
     return (
@@ -177,6 +183,10 @@ class TakeQuiz extends React.Component {
 
 TakeQuiz.propTypes = {
   // promise: React.PropTypes.string.isRequired,
+};
+
+TakeQuiz.contextTypes = {
+  router: React.PropTypes.any.isRequired
 };
 
 TakeQuiz.displayName = 'TakeQuiz';
