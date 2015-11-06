@@ -1,7 +1,6 @@
 /** @define QuizResultMatch; use strict */
 
 .QuizResultMatch {
- display: flex;
   flex-wrap: wrap;
 	
 }

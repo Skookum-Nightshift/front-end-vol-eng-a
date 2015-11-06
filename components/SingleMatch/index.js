@@ -16,10 +16,10 @@ class SingleMatch extends React.Component {
           <List className="SingleMatchList">
             <ListItem
             leftAvatar={<Avatar src={this.props.data.logo} />}
-              primaryText={this.props.data.name}
-              secondaryText= {<p>
-              {this.props.data.opportunityName} <br/>
-              {this.props.data.opportunityDescription} 
+              primaryText={this.props.data.organization.name}
+              secondaryText= {<p><strong>
+              {this.props.data.name}: </strong>
+              {this.props.data.description} 
               </p>}
          secondaryTextLines={2} />
           <ListDivider inset={true} />
