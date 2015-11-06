@@ -5,6 +5,10 @@ import QuizAnswer from 'QuizAnswer';
 import QuizAnswers from 'QuizAnswers';
 import QuizNumber from 'QuizNumber';
 import Button from 'Button';
+import HandlerHeader from 'HandlerHeader';
+import {apiPost} from 'requestLib';
+import ResultsActions from '../../actions/ResultsActions';
+
 
 
 
@@ -80,7 +84,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Are you interested in opportunities that involve speaking Spanish?",
           answerA: "Yes",
-          tagsA: ["Spanish"],
+          tagsA: ["Spanish","Spanish","Spanish","Spanish"],
           answerB: "No",
           tagsB: []
 
@@ -88,7 +92,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Would you like to prepare and/or serving food to others?",
           answerA: "Yes",
-          tagsA: ["food-preparation"],
+          tagsA: ["food-preparation","food-preparation","food-preparation","food-preparation"],
           answerB: "No",
           tagsB: []
 
@@ -96,7 +100,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Are you okay with participating in additional screening or training for a cause you care about?",
           answerA: "Yes",
-          tagsA: ["orientation", "interview", "application", "drug-screening"],
+          tagsA: ["orientation","orientation","orientation","orientation", "interview", "application", "drug-screening"],
           answerB: "No",
           tagsB: []
 
@@ -104,7 +108,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Are you okay with completing a background check?",
           answerA: "Yes",
-          tagsA: ["background-check"],
+          tagsA: ["background-check","background-check","background-check","background-check"],
           answerB: "No",
           tagsB: []
 
@@ -116,31 +120,35 @@ class TakeQuiz extends React.Component {
 
 
     this.backButton =  this.backButton.bind(this);
-    this.showResultsButton = this.showResultsButton.bind(this);
+    this.showResults = this.showResults.bind(this);
     this.handleSelected = this.handleSelected.bind(this);
   }
 
   backButton() {
     this.setState({ currentQuestion: this.state.currentQuestion-1 });
   }
-   showResultsButton() {
-    this.setState({ currentQuestion: questions[0]});
+
+  showResults() {
+    var {selectedAnswers} = this.state;
+    var tags = selectedAnswers.reduce((a, b)=>a.concat(b));
+    apiPost('v1/matches', { tags }, 
+      (results) => {
+        console.log(results);
+        ResultsActions.updateResults(results);
+        this.context.router.transitionTo('results');
+      }
+    );
   }
-
-
 
   handleSelected(option) {
     var {selectedAnswers, currentQuestion, questions} = this.state;
     selectedAnswers[currentQuestion] = option;
     var nextQuestion = currentQuestion+1 === questions.length ? currentQuestion : currentQuestion+1;
+
     this.setState({ selectedAnswers, currentQuestion: nextQuestion });
-    console.log(selectedAnswers);
-    console.log(questions.length, selectedAnswers.length);
-    if(questions.length === currentQuestion+1) {
-      var asString = selectedAnswers.join();
-      console.log(asString);
-    }
   }
+
+
 
   render(): ?ReactElement {
 
@@ -151,23 +159,21 @@ class TakeQuiz extends React.Component {
       buttonBackOptions.disabled = true;
     }
 
-    var buttonShowResults = {};
-    if (this.state.selectedAnswers.length != this.state.questions.length) {
-      buttonShowResults.disabled = true;
-
+    var buttonShowResults;
+    if (this.state.selectedAnswers.length === this.state.questions.length) {
+             buttonShowResults =  <Button  className="ShowReesultsButton" {...buttonShowResults}  linkButton={true} onClick={this.showResults} label="Show Results" />
     }
 
     return (
       <div className="container">
 
-         <Jumbotron className = "QuizQuestion" header={question.text} />
-                   <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
+         <HandlerHeader className = "QuizQuestion" subtitle={question.text} />
+         <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
          <div className="Navigate">
-          <Button onClick={this.backButton} {...buttonBackOptions} label="Go Back" />
-            <Button {...buttonShowResults}  linkButton={true} href="/QuizResults"label="Show Results" />
-
+          <Button  className="BackButton" onClick={this.backButton} {...buttonBackOptions} label="Back" />
          </div>
+         {buttonShowResults}
       </div>
     );
   }
@@ -177,6 +183,10 @@ class TakeQuiz extends React.Component {
 
 TakeQuiz.propTypes = {
   // promise: React.PropTypes.string.isRequired,
+};
+
+TakeQuiz.contextTypes = {
+  router: React.PropTypes.any.isRequired
 };
 
 TakeQuiz.displayName = 'TakeQuiz';

@@ -20,7 +20,12 @@ handleSelected() {
 
 
   render(): ?ReactElement {
-    return <Button onClick={this.handleSelected} label={this.props.text} value={this.props.value}/>;
+    return (
+    <div className="SingleQuizAnswer">
+	   <div> {this.props.number}</div>
+     <Button onClick={this.handleSelected} label={this.props.text} value={this.props.value} />
+    </div>
+    );
   }
 }
 

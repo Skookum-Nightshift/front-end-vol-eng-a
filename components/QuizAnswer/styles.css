@@ -1,10 +1,15 @@
 /** @define QuizAnswer; use strict */
-.QuizAnswer  {
-	padding-left: 20px;
-	padding-right: 20px;
+.SingleQuizAnswer  {
+	text-align: center;
+  flex: 1;
+  flex-basis: 15%;
+  padding: 0 5px 0 5px;
 }
 
+.QuizAnswer .SingleQuizAnswer {
+	display: inline-block;
 
+}
 .QuizAnswer-child {
 }
 

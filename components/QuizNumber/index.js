@@ -11,9 +11,7 @@ class QuizNumber extends React.Component {
 
     return (
       <div className="QuizNumber">
-      <p>
       	Question {this.props.id} of {this.props.remaining}
-      	</p>
       </div>
     );
   }

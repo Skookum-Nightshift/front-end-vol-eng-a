@@ -1,6 +1,10 @@
 /** @define QuizResultMatch; use strict */
 
-.QuizResultMatch {}
+.QuizResultMatch {
+  flex-wrap: wrap;
+
+	
+}
 
 .QuizResultMatch-child {}
 
