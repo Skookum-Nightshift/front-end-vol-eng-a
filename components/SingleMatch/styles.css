@@ -9,6 +9,8 @@
 .SingleMatch .SingleMatchList {
 	width: 750px;
 	display: block;
+	  	margin:auto;
+
 }
 .SingleMatch img { 
   border-radius: 50%;
