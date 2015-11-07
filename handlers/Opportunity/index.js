@@ -51,7 +51,7 @@ class Opportunity extends React.Component {
             label={this.state.connected ? "Connected" : "Connect" } 
             primary={this.state.connected ? true : false }
             secondary={this.state.connected ? false : true }
-            style={{ margin: '10px 0 0 0', width: '100%', textAlign: 'center', height: '50px' }} 
+            style={{ margin: '10px 0 0 0', width: '100%', textAlign: 'center', height: '50px', boxShadow: '1px 7px 5px 0px rgba(94,92,94,0.52)' }} 
             labelStyle={{fontWeight: '900', fontSize: '20px'}} 
             onClick={this.onButtonClick} />
 
