@@ -84,7 +84,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Are you interested in opportunities that involve speaking Spanish?",
           answerA: "Yes",
-          tagsA: ["Spanish","Spanish","Spanish","Spanish"],
+          tagsA: ["Spanish","Spanish",,"Spanish"],
           answerB: "No",
           tagsB: []
 
@@ -92,7 +92,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Would you like to prepare and/or serving food to others?",
           answerA: "Yes",
-          tagsA: ["food-preparation","food-preparation","food-preparation","food-preparation"],
+          tagsA: ["food-preparation","food-preparation",,"food-preparation"],
           answerB: "No",
           tagsB: []
 
@@ -100,7 +100,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Are you okay with participating in additional screening or training for a cause you care about?",
           answerA: "Yes",
-          tagsA: ["orientation","orientation","orientation","orientation", "interview", "application", "drug-screening"],
+          tagsA: ["orientation","orientation","orientation", "interview", "application", "drug-screening"],
           answerB: "No",
           tagsB: []
 
@@ -108,7 +108,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Are you okay with completing a background check?",
           answerA: "Yes",
-          tagsA: ["background-check","background-check","background-check","background-check"],
+          tagsA: ["background-check","background-check","background-check"],
           answerB: "No",
           tagsB: []
 
@@ -117,12 +117,13 @@ class TakeQuiz extends React.Component {
       selectedAnswers: [],
       currentQuestion: 0
     };
-
-
     this.backButton =  this.backButton.bind(this);
     this.showResults = this.showResults.bind(this);
     this.handleSelected = this.handleSelected.bind(this);
+
   }
+
+
 
   backButton() {
     this.setState({ currentQuestion: this.state.currentQuestion-1 });
@@ -131,6 +132,40 @@ class TakeQuiz extends React.Component {
   showResults() {
     var {selectedAnswers} = this.state;
     var tags = selectedAnswers.reduce((a, b)=>a.concat(b));
+
+    var topChoice =  function (tags) {
+          if(tags.length == 0)
+            return null;
+          var modeMap = {};
+          var maxEl = tags[0], maxCount = 1;
+          for(var i = 0; i < tags.length; i++)
+          {
+            var el = tags[i];
+            if(modeMap[el] == null)
+              modeMap[el] = 1;
+            else
+              modeMap[el]++;  
+            if(modeMap[el] > maxCount)
+            {
+              maxEl = el;
+              maxCount = modeMap[el];
+            }
+          }
+          return maxEl;
+        }
+
+    var duplicate = tags.sort();
+    var foundTop = topChoice(duplicate);
+    duplicate.splice(duplicate.indexOf(foundTop),duplicate.lastIndexOf(foundTop)+1);
+
+    var second = topChoice(duplicate);
+
+    duplicate.splice(duplicate.indexOf(second),duplicate.lastIndexOf(second)+1);
+
+    var third = topChoice(duplicate);
+    var tags = [foundTop,second, third];
+
+
     apiPost('v1/matches', { tags }, 
       (results) => {
         console.log(results);
