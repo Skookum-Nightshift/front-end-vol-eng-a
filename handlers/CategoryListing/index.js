@@ -8,14 +8,15 @@ import OrganizationItem from 'OrganizationItem';
 import {apiGet} from 'requestLib';
 
 class CategoryListing extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {}
+
   }
 
   componentDidMount(){
-    var categoryId = 3;
-    apiGet(`v1/categories/${categoryId}/organizations`, {},
+    var id = this.context.router.getCurrentParams().id;
+    apiGet(`v1/categories/${id}/organizations`, {},
       (data) => {
         console.log(data);
         this.setState({
@@ -47,6 +48,10 @@ class CategoryListing extends React.Component {
 
 CategoryListing.propTypes = {
   // promise: React.PropTypes.string.isRequired,
+};
+
+CategoryListing.contextTypes = {
+  router: React.PropTypes.any.isRequired,
 };
 
 CategoryListing.displayName = 'CategoryListing';
