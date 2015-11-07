@@ -53,20 +53,20 @@ html, body, #app, .AppBase {
 	width: 100%;
 }
 
-.slideIn-appear {
+.Opportunity .slideIn-appear {
   opacity: 0.01;
 }
 
-.slideIn-appear.slideIn-appear-active {
+.Opportunity .slideIn-appear.slideIn-appear-active {
   opacity: 1;
-  transition: opacity 300ms ease-in;
+  transition: opacity 2s ease-in;
 }
 
-.slideIn-leave {
+.Opportunity .slideIn-leave {
   opacity: 1;
 }
 
-.slideIn-leave.slideIn-leave-active {
+.Opportunity .slideIn-leave.slideIn-leave-active {
   opacity: 0.01;
-  transition: height 300ms ease-in;
+  transition: height 2s ease-in;
 }
