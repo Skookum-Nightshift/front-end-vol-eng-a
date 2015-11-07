@@ -23,7 +23,7 @@ var routes = (
     <Route name="about" handler={NotFound} />
     <Route name="opportunity" handler={Opportunity}/>
     <Route name="categories" handler={Categories} />
-    <Route name="category/:id" handler={CategoryListing} />
+    <Route name="category" path="category/:id" handler={CategoryListing} />
     <Route name="organizations" handler={NotFound} />
     <Route name="profile" handler={NotFound} />
     <Route name="quiz" handler={TakeQuiz} />
