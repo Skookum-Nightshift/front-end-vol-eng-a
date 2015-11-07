@@ -9,6 +9,12 @@ var {PropTypes} = React;
 
 class ConnectFlag extends React.Component {
   render(): ?ReactElement {
+    if (this.props.flagMaxHeight > 0 ) { 
+      var padding =  '20px';
+    } else { 
+      var padding = '0px'; 
+     }
+
     return (
       <div className="ConnectFlag">
          <Paper 
@@ -16,11 +22,11 @@ class ConnectFlag extends React.Component {
          		zDepth={2} 
          		style={{
          				margin:'0 auto', 
-         				padding:'20px', 
+         				padding: padding, 
          				width: '75%', 
          				maxHeight: this.props.flagMaxHeight }} 
          		key={0}>
-            <p>Some Dialog</p>
+            { this.props.flagMaxHeight > 0 ? "Connect Form" : null }
           </Paper>
       </div>
     );
