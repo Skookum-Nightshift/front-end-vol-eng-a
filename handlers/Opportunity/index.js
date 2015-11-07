@@ -55,7 +55,7 @@ class Opportunity extends React.Component {
             labelStyle={{fontWeight: '900', fontSize: '20px'}} 
             onClick={this.onButtonClick} />
 
-            <ReactTransitionGroup transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={300} >
+            <ReactTransitionGroup transitionName="slideIn" transitionEnterTimeout={500} transitionLeaveTimeout={300} >
                 <ConnectFlag flagMaxHeight={this.state.flagMaxHeight} />
             </ReactTransitionGroup>
         </div>
