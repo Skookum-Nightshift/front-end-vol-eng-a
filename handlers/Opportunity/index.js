@@ -3,6 +3,7 @@ import {Resolver} from 'react-resolver';
 import ReactTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import BlueButton from 'BlueButton';
 import ConnectFlag from 'ConnectFlag';
+import PageContent from 'OpportunityPageContent';
 
 class Opportunity extends React.Component {
   constructor(props) {
@@ -30,6 +31,10 @@ class Opportunity extends React.Component {
   render(): ?ReactElement {
     var content = {
       logo: "/public/logos/bbbs.jpg",
+      headerImg: "/public/uwcc/2-0001.jpg",
+      orgName: "Big Brothers Big Sisters",
+      oppName: "Big Brother/Sister",
+      address: "Locations Vary",
       paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lectus et mauris efficitur feugiat aliquam in odio. Sed ut congue neque. Donec a erat mauris. Nulla pharetra lobortis mollis. Praesent eu semper tellus, vitae ullamcorper turpis. Proin ut justo lectus. Donec bibendum turpis lectus, non dictum erat laoreet a. Etiam eu lacinia elit. Ut dignissim urna metus, lobortis dignissim nibh bibendum non. Morbi vestibulum iaculis arcu eu rhoncus. Cras iaculis justo consequat, volutpat purus eget, tempus nisl. Proin eu nisi et leo cursus pellentesque."
     }
   
@@ -37,10 +42,7 @@ class Opportunity extends React.Component {
     return (
       <div className="Opportunity">
         <div className="PageContent">
-          <p>
-            <img className="Logo" src={logo} align="left" width="200" /> 
-            {paragraph}
-          </p>
+          <PageContent content={content} /> 
         </div>
         <div className={this.state.showConnectFlag ? "PageOverlay" : "" }>
         </div>

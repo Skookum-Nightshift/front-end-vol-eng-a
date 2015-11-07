@@ -1,0 +1,10 @@
+/** @define OpportunityPageContent; use strict */
+
+.OpportunityPageContent .HeaderImage {
+	width: 100%;
+}
+
+.OpportunityPageContent-child {}
+
+.OpportunityPageContent-child.is-state {}
+
