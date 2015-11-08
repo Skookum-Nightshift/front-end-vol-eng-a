@@ -6,7 +6,18 @@
 	width: 100%;
 }
 
-.OpportunityPageContent-child {}
+.OpportunityPageContent .HeaderInfo {
+	padding: 20px;
+}
 
-.OpportunityPageContent-child.is-state {}
+.OpportunityPageContent .Logo {
+	float: left;
+	padding-left: 15px;
+}
+
+.OpportunityPageContent h1, .OpportunityPageContent h2 {
+	margin: 0;
+	text-transform: uppercase;
+}
+
 
