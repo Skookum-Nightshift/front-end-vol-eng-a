@@ -15,14 +15,16 @@ import Home from'./handlers/Home';
 import Opportunity from'./handlers/Opportunity';
 import TakeQuiz from'./handlers/TakeQuiz';
 import QuizResults from'./handlers/QuizResults';
+import CategoryListing from './handlers/CategoryListing';
 
 var routes = (
   <Route path="/" handler={App} >
     <DefaultRoute name="home" handler={Home} />
     <Route name="about" handler={NotFound} />
-    <Route name="categories" handler={Categories}/>
-    <Route name="organizations" handler={NotFound}/>
     <Route name="opportunity" handler={Opportunity}/>
+    <Route name="categories" handler={Categories} />
+    <Route name="category" path="category/:id" handler={CategoryListing} />
+    <Route name="organizations" handler={NotFound} />
     <Route name="profile" handler={NotFound} />
     <Route name="quiz" handler={TakeQuiz} />
     <Route name="results" handler={QuizResults} />
