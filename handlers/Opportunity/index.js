@@ -41,11 +41,7 @@ class Opportunity extends React.Component {
 
     return (
       <div className="Opportunity">
-        <div className="PageContent">
-          <PageContent content={content} /> 
-        </div>
-        <div className={this.state.showConnectFlag ? "PageOverlay" : "" }>
-        </div>
+      
         <div className="PageTopContent">
           <BlueButton 
             label={this.state.connected ? "Connected" : "Connect" } 
@@ -58,6 +54,12 @@ class Opportunity extends React.Component {
             <ReactTransitionGroup transitionName="slideIn" transitionEnterTimeout={500} transitionLeaveTimeout={300} >
                 <ConnectFlag flagMaxHeight={this.state.flagMaxHeight} />
             </ReactTransitionGroup>
+        </div>
+
+        <div className="PageContent">
+          <PageContent content={content} /> 
+        </div>
+        <div className={this.state.showConnectFlag ? "PageOverlay" : "" }>
         </div>
       </div>
     );
