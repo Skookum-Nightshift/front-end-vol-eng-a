@@ -1,6 +1,8 @@
 /** @define OpportunityPageContent; use strict */
 
+
 .OpportunityPageContent .HeaderImage {
+	flex: 1;
 	width: 100%;
 }
 
