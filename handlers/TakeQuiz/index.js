@@ -98,14 +98,6 @@ class TakeQuiz extends React.Component {
 
         },
         {
-          text: "Are you okay with participating in additional screening or training for a cause you care about?",
-          answerA: "Yes",
-          tagsA: ["orientation","orientation","orientation", "interview", "application", "drug-screening"],
-          answerB: "No",
-          tagsB: []
-
-        },
-        {
           text: "Are you okay with completing a background check?",
           answerA: "Yes",
           tagsA: ["background-check","background-check","background-check"],
@@ -133,6 +125,20 @@ class TakeQuiz extends React.Component {
     var {selectedAnswers} = this.state;
     var tags = selectedAnswers.reduce((a, b)=>a.concat(b));
 
+/*    var noBackgroundCheckTags = function(arrayOfTags) {
+      if(selectedAnswers[11] != "background-check") {
+      var first= arrayOfTags.indexOf(keyword);
+      var last = arrayOfTags.lastIndexOf(keyword);
+    
+    if(last > 0) {
+        arrayOfTags.splice(first,last+1);
+      } else if(first > 0) {
+         arrayOfTags.splice(first,1)
+      }
+    }
+    return arrayOfTags;
+    } */
+
     var topChoice =  function (tags) {
           if(tags.length == 0)
             return null;
@@ -154,6 +160,9 @@ class TakeQuiz extends React.Component {
           return maxEl;
         }
 
+/*        tags = noBackgroundCheckTags("teens-or-children", tags);
+        tags = noBackgroundCheckTags("education", tags); */
+
     var duplicate = tags.sort();
     var foundTop = topChoice(duplicate);
     duplicate.splice(duplicate.indexOf(foundTop),duplicate.lastIndexOf(foundTop)+1);
@@ -163,8 +172,15 @@ class TakeQuiz extends React.Component {
     duplicate.splice(duplicate.indexOf(second),duplicate.lastIndexOf(second)+1);
 
     var third = topChoice(duplicate);
+
+        var yesToBackgroundCheck = tags.indexOf("background-check");
+
     var tags = [foundTop,second, third];
 
+
+ if(yesToBackgroundCheck < 0) {
+  tags.unshift("no-background-check");
+ }
 
     apiPost('v1/matches', { tags }, 
       (results) => {
