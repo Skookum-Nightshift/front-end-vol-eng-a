@@ -1,5 +1,6 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
+import {apiGet} from 'requestLib';
 import ReactTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import BlueButton from 'BlueButton';
 import ConnectFlag from 'ConnectFlag';
@@ -12,14 +13,23 @@ class Opportunity extends React.Component {
     this.onButtonClick = this.onButtonClick.bind(this);
   }
 
-  componentDidMount() {
-    this.setState({ 
-      connected: false, 
-      showConnectFlag: false,
-      flagMaxHeight: 0,
-      });
+  componentDidMount(){
+    apiGet('v1/opportunities/1', {},
+      (data) => {
+        console.log(data.opportunity);
+        this.setState({
+          content: data.opportunity,
+          connected: false, 
+          showConnectFlag: false,
+          flagMaxHeight: 0,
+        });
+      },
+      () => {
+        console.log('error');
+      }
+    );
   }
-
+ 
   onButtonClick() {
     if (this.state.showConnectFlag === false) {
       this.setState({ showConnectFlag: true, flagMaxHeight: 500 });
@@ -29,21 +39,17 @@ class Opportunity extends React.Component {
   }
 
   render(): ?ReactElement {
-    var content = {
-      logo: "/public/logos/bbbs.jpg",
-      headerImg: "/public/uwcc/2-0001.jpg",
-      orgName: "Big Brothers Big Sisters",
-      oppName: "Big Brother/Sister",
-      address: "Locations Vary",
-      paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lectus et mauris efficitur feugiat aliquam in odio. Sed ut congue neque. Donec a erat mauris. Nulla pharetra lobortis mollis. Praesent eu semper tellus, vitae ullamcorper turpis. Proin ut justo lectus. Donec bibendum turpis lectus, non dictum erat laoreet a. Etiam eu lacinia elit. Ut dignissim urna metus, lobortis dignissim nibh bibendum non. Morbi vestibulum iaculis arcu eu rhoncus. Cras iaculis justo consequat, volutpat purus eget, tempus nisl. Proin eu nisi et leo cursus pellentesque."
+
+    if(this.state.content){
+      var opportunity = <PageContent opportunity={this.state.content} />
     }
-  
+
 
     return (
       <div className="Opportunity">
       
         <div className="PageTopContent">
-          <BlueButton 
+           <BlueButton 
             label={this.state.connected ? "Connected" : "Connect" } 
             primary={this.state.connected ? true : false }
             secondary={this.state.connected ? false : true }
@@ -57,10 +63,13 @@ class Opportunity extends React.Component {
         </div>
 
         <div className="PageContent">
-          <PageContent content={content} /> 
+          {opportunity}
         </div>
-        <div className={this.state.showConnectFlag ? "PageOverlay" : "" }>
-        </div>
+
+        <div className={this.state.showConnectFlag ? "PageOverlay" : "" }></div>
+
+        
+
       </div>
     );
   }

@@ -5,22 +5,32 @@ require('./styles.css');
 import React from 'react';
 var {PropTypes} = React;
 
+
 class OpportunityPageContent extends React.Component {
+
+
   render(): ?ReactElement {
+
+  	var opportunity = this.props.opportunity; 
+
     return (
       <div className="OpportunityPageContent">
-        	<img className="HeaderImage" src= {this.props.content.headerImg} />
+      		<img className="HeaderImage" src="/public/uwcc/2-0001.jpg" />
 
         	<div className="HeaderInfo">
-        		<img className="Logo" src={this.props.content.logo} align="left" width="200" /> 
+        		<img className="Logo" src="/public/logos/bbbs.jpg" width="200" /> 
 
-          	<h1>{this.props.content.oppName}</h1>
-          	<h2>{this.props.content.orgName}</h2>
-          	<p>{this.props.content.address}</p>
+          	<h1>{opportunity.name}</h1>
+          	<h2>{opportunity.organization.name}</h2>
+          	<p>{opportunity.address}</p>
+
           </div>
+
           <p>
-            {this.props.content.paragraph}
+            	{opportunity.description}
           </p>
+
+        	
       </div>
     );
   }
