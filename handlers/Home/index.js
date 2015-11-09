@@ -3,6 +3,7 @@ import { Router, Route, Link } from 'react-router';
 import {Resolver} from 'react-resolver';
 import BlueButton from 'BlueButton';
 import GreenButton from 'GreenButton';
+import Jumbotron from 'Jumbotron';
 import HandlerHeader from 'HandlerHeader';
 
 class Home extends React.Component {
@@ -13,6 +14,9 @@ class Home extends React.Component {
 
     return (
       <div className="Home">
+
+        <Jumbotron image="/public/uwcc/2-0001.jpg" />
+
         <HandlerHeader title={<span><strong>#UWCC</strong>aspires</span>} introParagraph={paragraph} />
       	<GreenButton 
           linkButton={true}
