@@ -11,8 +11,10 @@
 }
 
 .OpportunityPageContent .Logo {
+	border: 2px solid #e7e7e7;
 	float: left;
 	padding-left: 15px;
+	margin: 0 15px 15px 0;
 }
 
 .OpportunityPageContent h1, .OpportunityPageContent h2 {
@@ -20,4 +22,7 @@
 	text-transform: uppercase;
 }
 
+#ContentBelowConnect {
+	margin-top: 70px;
+}
 

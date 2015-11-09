@@ -44,14 +44,20 @@ class Opportunity extends React.Component {
   render(): ?ReactElement {
 
     if(this.state.content){
-      var opportunity = <PageContent opportunity={this.state.content} />
+      var opportunityTop = <PageContent opportunity={this.state.content} location="top" />
+      var opportunityBottom =  <PageContent opportunity={this.state.content} location="bottom" />
     }
 
 
     return (
       <div className="Opportunity">
-      
+
+        <div className="PageContent">
+          {opportunityTop}
+        </div>
+
         <div className="PageTopContent">
+
            <BlueButton 
             label={this.state.connected ? "Connected" : "Connect" } 
             primary={this.state.connected ? true : false }
@@ -66,7 +72,7 @@ class Opportunity extends React.Component {
         </div>
 
         <div className="PageContent">
-          {opportunity}
+          {opportunityBottom}
         </div>
 
         <div className={this.state.showConnectFlag ? "PageOverlay" : "" }></div>

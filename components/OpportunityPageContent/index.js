@@ -8,27 +8,34 @@ var {PropTypes} = React;
 
 class OpportunityPageContent extends React.Component {
 
-
   render(): ?ReactElement {
 
   	var opportunity = this.props.opportunity; 
 
     return (
       <div className="OpportunityPageContent">
-      		<img className="HeaderImage" src="/public/uwcc/2-0001.jpg" />
 
-        	<div className="HeaderInfo">
-        		<img className="Logo" src="/public/logos/bbbs.jpg" width="200" /> 
+      {this.props.location === 'top' ? 
 
-          	<h1>{opportunity.name}</h1>
-          	<h2>{opportunity.organization.name}</h2>
-          	<p>{opportunity.address}</p>
+      	<div id="ContentAboveConnect" className="clearfix">
+      			<img id="HeaderImage" className="HeaderImage" src="/public/uwcc/2-0001.jpg" />
 
-          </div>
+	        	<div id="HeaderInfo" className="HeaderInfo">
+	        		<div className="LogoWrapper">
+	        			<img className="Logo" src="/public/logos/bbbs.jpg" width="200" /> 
+	        		</div>
 
-          <p>
-            	{opportunity.description}
-          </p>
+	          	<h1>{opportunity.name}</h1>
+	          	<h2>{opportunity.organization.name}</h2>
+	          	<p>{opportunity.address ? opportunity.address : "Locations Vary"}</p>
+          	</div>
+        </div>
+      : 
+
+      <div id="ContentBelowConnect">
+      	<p>{opportunity.description}</p>
+      </div>
+    }
 
         	
       </div>
