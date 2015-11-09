@@ -32,3 +32,7 @@ html, body, #app, .AppBase {
   margin-right: 5%;
   margin-left: 5%;
 }
+
+.clearfix {
+  overflow: auto;
+}
