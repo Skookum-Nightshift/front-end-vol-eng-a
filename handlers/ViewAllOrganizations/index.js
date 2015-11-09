@@ -15,7 +15,7 @@ class ViewAllOrganizations extends React.Component {
   }
 
   componentDidMount(){
-    apiGet('v1/organizations',
+    apiGet('v1/organizations', {},
       (data) => {
         console.log(data);
         this.setState({
