@@ -5,6 +5,8 @@ require('./styles.css');
 import React from 'react';
 import Input from 'Input';
 import Paper from 'material-ui/lib/paper';
+import SubmitButton from 'BlueButton';
+import FlatButton from 'material-ui/lib/flat-button';
 
 var {PropTypes} = React;
 
@@ -37,6 +39,18 @@ class ConnectFlag extends React.Component {
                 <Input type="password" placeholder="Password" style={{ width: '90%' }} />
                 <Input type="password" placeholder="Confirm Password" style={{ width: '90%' }} />
                 <Input placeholder="Zip Code" style={{ width: '40%' }} />
+
+                <SubmitButton 
+                  label="Create" 
+                  style={{margin: '10px', float: 'right', textAlign: 'center'}} /> 
+
+                <FlatButton 
+                  onClick={this.props.onClick} 
+                  label="Cancel"
+                  style={{margin: '10px', float: 'right', textAlign: 'center'}}  />
+
+                
+
               </form>
 
              : null }

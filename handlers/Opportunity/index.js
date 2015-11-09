@@ -58,7 +58,7 @@ class Opportunity extends React.Component {
 
         <div className="PageTopContent">
 
-           <BlueButton 
+          <BlueButton 
             label={this.state.connected ? "Connected" : "Connect" } 
             primary={this.state.connected ? true : false }
             secondary={this.state.connected ? false : true }
@@ -67,7 +67,7 @@ class Opportunity extends React.Component {
             onClick={this.onButtonClick} />
 
             <ReactTransitionGroup transitionName="slideIn" transitionEnterTimeout={500} transitionLeaveTimeout={300} >
-                <ConnectFlag flagMaxHeight={this.state.flagMaxHeight} />
+                <ConnectFlag flagMaxHeight={this.state.flagMaxHeight} onClick={this.onButtonClick} />
             </ReactTransitionGroup>
         </div>
 
