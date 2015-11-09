@@ -1,6 +1,11 @@
 /** @define ConnectFlag; use strict */
 
-.ConnectFlag {}
+.ConnectFlag {
+	position: absolute;
+	width: 75%;
+	z-index: 0;
+	margin: 50px 15%;
+}
 
 .ConnectFlag-child {}
 
