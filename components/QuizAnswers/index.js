@@ -23,8 +23,7 @@ class QuizAnswers extends React.Component {
         <br/>
          <QuizAnswer number="1" onSelected={this.handleSelected} text={this.props.answerA} value={this.props.tagsA}/>
          <br/>
-        <QuizAnswer number="2" onSelected={this.handleSelected} text={this.props.answerB} value={this.props.tagsB}/>
-      </div>
+        <QuizAnswer number="2" onSelected={this.handleSelected} text={this.props.answerB} value={this.props.tagsB}/></div>
     );
   }
 }

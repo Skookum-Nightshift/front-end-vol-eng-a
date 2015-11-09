@@ -6,10 +6,15 @@
   padding: 0 5px 0 5px;
 }
 
+.SingleQuizAnswer .answer {
+		display: inline-block;
+		padding: 10px;
+}
 .QuizAnswer .SingleQuizAnswer {
 	display: inline-block;
 
 }
+
 .QuizAnswer-child {
 }
 

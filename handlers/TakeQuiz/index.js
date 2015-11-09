@@ -84,7 +84,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Are you interested in opportunities that involve speaking Spanish?",
           answerA: "Yes",
-          tagsA: ["Spanish","Spanish",,"Spanish"],
+          tagsA: ["Spanish","Spanish","Spanish"],
           answerB: "No",
           tagsB: []
 
@@ -92,7 +92,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Would you like to prepare and/or serving food to others?",
           answerA: "Yes",
-          tagsA: ["food-preparation","food-preparation",,"food-preparation"],
+          tagsA: ["food-preparation","food-preparation","food-preparation"],
           answerB: "No",
           tagsB: []
 
@@ -100,7 +100,7 @@ class TakeQuiz extends React.Component {
         {
           text: "Are you okay with completing a background check?",
           answerA: "Yes",
-          tagsA: ["background-check","background-check","background-check"],
+          tagsA: ["background-check"],
           answerB: "No",
           tagsB: []
 
@@ -162,6 +162,7 @@ class TakeQuiz extends React.Component {
 
 /*        tags = noBackgroundCheckTags("teens-or-children", tags);
         tags = noBackgroundCheckTags("education", tags); */
+        var yesToBackgroundCheck = tags.indexOf("background-check");
 
     var duplicate = tags.sort();
     var foundTop = topChoice(duplicate);
@@ -173,14 +174,12 @@ class TakeQuiz extends React.Component {
 
     var third = topChoice(duplicate);
 
-        var yesToBackgroundCheck = tags.indexOf("background-check");
 
     var tags = [foundTop,second, third];
-
-
  if(yesToBackgroundCheck < 0) {
   tags.unshift("no-background-check");
  }
+
 
     apiPost('v1/matches', { tags }, 
       (results) => {
@@ -215,16 +214,15 @@ class TakeQuiz extends React.Component {
              buttonShowResults =  <Button  className="ShowReesultsButton" {...buttonShowResults}  linkButton={true} onClick={this.showResults} label="Show Results" />
     }
 
+
     return (
       <div className="container">
 
          <HandlerHeader className = "QuizQuestion" subtitle={question.text} />
          <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
-         <div className="Navigate">
-          <Button  className="BackButton" onClick={this.backButton} {...buttonBackOptions} label="Back" />
-         </div>
-         {buttonShowResults}
+         <div className="Navigate"> <Button  className="BackButton" onClick={this.backButton} {...buttonBackOptions} label="Back" />
+         {buttonShowResults} </div>
       </div>
     );
   }

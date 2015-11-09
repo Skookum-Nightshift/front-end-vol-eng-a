@@ -1,5 +1,5 @@
-.Navigate .Button {
-
+.container .Navigate {
+display: inline-flex;
 }
 
 .ShowResultsButton {
