@@ -16,7 +16,8 @@ class Opportunity extends React.Component {
   }
 
   componentDidMount(){
-    apiGet('v1/opportunities/1', {},
+    var id = this.context.router.getCurrentParams().id;
+    apiGet(`/v1/opportunities/${id}`, {},
       (data) => {
         console.log(data.opportunity);
         this.setState({
@@ -80,6 +81,11 @@ class Opportunity extends React.Component {
 Opportunity.propTypes = {
   // promise: React.PropTypes.string.isRequired,
 };
+
+Opportunity.contextTypes = {
+  router: React.PropTypes.any.isRequired,
+};
+
 
 Opportunity.displayName = 'Opportunity';
 
