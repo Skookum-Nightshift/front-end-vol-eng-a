@@ -1,3 +1,5 @@
+require('./styles.css');
+
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import {apiGet} from 'requestLib';
