@@ -13,6 +13,11 @@ class OpportunityPageContent extends React.Component {
 
   	var opportunity = this.props.opportunity; 
 
+    var tags = opportunity.tags.map(tag =>
+        {tag.name}
+      );
+    
+
     return (
       <div className="OpportunityPageContent">
 
@@ -23,10 +28,10 @@ class OpportunityPageContent extends React.Component {
             <Jumbotron image="/public/uwcc/2-0001.jpg" />
            
 	        	<div id="HeaderInfo" className="HeaderInfo">
+            
 	        		<div className="LogoWrapper">
-	        			<img className="Logo" src="/public/logos/bbbs.jpg" width="200" /> 
+	        			<img className="Logo" src="/public/logos/bbbs.jpg" width="150" /> 
 	        		</div>
-
 	          	<h1>{opportunity.name}</h1>
 	          	<h2>{opportunity.organization.name}</h2>
 	          	<p>{opportunity.address ? opportunity.address : "Locations Vary"}</p>
@@ -35,6 +40,7 @@ class OpportunityPageContent extends React.Component {
       : 
 
       <div id="ContentBelowConnect">
+
       	<p>{opportunity.description}</p>
       </div>
     }
