@@ -4,6 +4,7 @@ require('./styles.css');
 
 import React from 'react';
 var {PropTypes} = React;
+import Jumbotron from 'Jumbotron';
 
 
 class OpportunityPageContent extends React.Component {
@@ -18,8 +19,9 @@ class OpportunityPageContent extends React.Component {
       {this.props.location === 'top' ? 
 
       	<div id="ContentAboveConnect" className="clearfix">
-      			<img id="HeaderImage" className="HeaderImage" src="/public/uwcc/2-0001.jpg" />
 
+            <Jumbotron image="/public/uwcc/2-0001.jpg" />
+           
 	        	<div id="HeaderInfo" className="HeaderInfo">
 	        		<div className="LogoWrapper">
 	        			<img className="Logo" src="/public/logos/bbbs.jpg" width="200" /> 
