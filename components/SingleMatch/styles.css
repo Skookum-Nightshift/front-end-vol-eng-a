@@ -10,6 +10,7 @@
 	width: 750px;
 	display: block;
 	  	margin:auto;
+	  	flex:1;
 
 }
 .SingleMatch img { 

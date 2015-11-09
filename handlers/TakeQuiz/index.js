@@ -47,7 +47,7 @@ class TakeQuiz extends React.Component {
           answerA: "Work one on one with someone in need",
           tagsA: ["individual"],
           answerB: "Contribute with a group",
-          tagsB: ["group"]
+          tagsB: ["group","group","group"]
         },
         {
           text: "I would rather...",

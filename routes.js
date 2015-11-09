@@ -16,6 +16,7 @@ import Opportunity from'./handlers/Opportunity';
 import TakeQuiz from'./handlers/TakeQuiz';
 import QuizResults from'./handlers/QuizResults';
 import CategoryListing from './handlers/CategoryListing';
+import ViewAllOrganizations from './handlers/ViewAllOrganizations';
 
 var routes = (
   <Route path="/" handler={App} >
@@ -28,6 +29,8 @@ var routes = (
     <Route name="profile" handler={NotFound} />
     <Route name="quiz" handler={TakeQuiz} />
     <Route name="results" handler={QuizResults} />
+    <Route name="allorganizations" handler={ViewAllOrganizations} />
+
     <NotFoundRoute handler={NotFound} />
   </Route>
 );

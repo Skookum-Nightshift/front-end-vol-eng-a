@@ -23,7 +23,12 @@ handleSelected() {
   render(): ?ReactElement {
     return (
     <div className="SingleQuizAnswer">
-	   <div className="answer"> <Paper zDepth={2} circle={true}> <p>{this.props.number}</p> </Paper></div>
+	   <div className="answer"> <Paper zDepth={2} circle={true}
+     style={{
+                margin:'0 auto', 
+                padding:'20px', 
+                width: '50px', 
+                maxHeight: '50px' }}> <p>{this.props.number}</p> </Paper></div>
      <div className="answer"><Button onClick={this.handleSelected} label={this.props.text} value={this.props.value} /> </div>
     </div>
     );
