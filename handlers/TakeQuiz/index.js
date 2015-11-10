@@ -211,7 +211,7 @@ class TakeQuiz extends React.Component {
 
     var buttonShowResults;
     if (this.state.selectedAnswers.length === this.state.questions.length) {
-             buttonShowResults =  <Button  className="ShowReesultsButton" {...buttonShowResults}  linkButton={true} onClick={this.showResults} label="Show Results" />
+             buttonShowResults =  <Button style={{ float: "right", margin: "20px" }}   className="ShowReesultsButton" {...buttonShowResults}  linkButton={true} onClick={this.showResults} label="Show Results" />
     }
 
 
@@ -221,7 +221,7 @@ class TakeQuiz extends React.Component {
          <HandlerHeader className = "QuizQuestion" subtitle={question.text} />
          <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
-         <div className="Navigate"> <Button  className="BackButton" onClick={this.backButton} {...buttonBackOptions} label="Back" />
+         <div className="Navigate"> <Button style={{ float: "right", margin: "20px" }}  className="BackButton" onClick={this.backButton} {...buttonBackOptions} label="Back" />
          {buttonShowResults} </div>
       </div>
     );

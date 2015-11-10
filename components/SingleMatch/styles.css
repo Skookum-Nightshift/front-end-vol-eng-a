@@ -1,7 +1,6 @@
 /** @define SingleMatch; use strict */
 
 .SingleMatch {
-	text-align: center;
   	flex: 1;
   	flex-basis: 15%;
 }
