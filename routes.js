@@ -26,7 +26,7 @@ var routes = (
     <Route name="opportunity" path="opportunity/:id" handler={Opportunity}/>
     <Route name="categories" handler={Categories} />
     <Route name="category" path="category/:id" handler={CategoryListing} />
-    <Route name="organizations" handler={Organization} />
+    <Route name="organization" path="organization/:id" handler={Organization} />
     <Route name="profile" handler={NotFound} />
     <Route name="quiz" handler={TakeQuiz} />
     <Route name="results" handler={QuizResults} />
