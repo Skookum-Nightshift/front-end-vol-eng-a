@@ -3,7 +3,8 @@
   display: table;
   margin-bottom: 1.5em;
   padding-bottom: 1em;
-  width: 100%; }
+  width: 100%;
+  }
   .OrganizationItem .comment-image,
   .OrganizationItem .comment-content {
     display: table-cell;
