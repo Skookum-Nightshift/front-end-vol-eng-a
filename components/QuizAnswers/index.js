@@ -21,9 +21,9 @@ class QuizAnswers extends React.Component {
     return (
       <div className="QuizAnswers">
         <br/>
-         <QuizAnswer onSelected={this.handleSelected} text={this.props.answerA} value={this.props.tagsA}/>
+         <QuizAnswer onSelected={this.handleSelected} text={this.props.answerA} value={this.props.tagsA} />
          <br/>
-        <QuizAnswer onSelected={this.handleSelected} text={this.props.answerB} value={this.props.tagsB}/></div>
+        <QuizAnswer onSelected={this.handleSelected} text={this.props.answerB} value={this.props.tagsB} /></div>
     );
   }
 }
