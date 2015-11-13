@@ -4,15 +4,10 @@ require('./styles.css');
 
 import React from 'react';
 var {PropTypes} = React;
-<<<<<<< HEAD
 import {Paper} from 'material-ui';
 import {Card} from 'material-ui/lib/card';
 import {CardActions} from 'material-ui/lib/card';
 import { Router, Route, Link } from 'react-router';
-=======
-import { Router, Route, Link } from 'react-router'
-
->>>>>>> 7899e563e27b121c8dd0792fff9f2e93fc45b7bb
 
 class OrganizationItem extends React.Component {
   render(): ?ReactElement {
