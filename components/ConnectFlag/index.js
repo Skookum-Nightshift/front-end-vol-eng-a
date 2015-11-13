@@ -7,6 +7,7 @@ import Input from 'Input';
 import Paper from 'material-ui/lib/paper';
 import SubmitButton from 'BlueButton';
 import FlatButton from 'material-ui/lib/flat-button';
+import {apiPost} from 'requestLib';
 
 var {PropTypes} = React;
 
@@ -24,8 +25,14 @@ class ConnectFlag extends React.Component {
       "organization_id": this.props.data.organization.organization_id,
      };
 
-
-     console.log(userData);
+    //  apiPost(`/v1/connection`, userData,
+    //   (data) => {
+        
+    //   },
+    //   () => {
+    //     console.log('error');
+    //   }
+    // );
 
   }
 
