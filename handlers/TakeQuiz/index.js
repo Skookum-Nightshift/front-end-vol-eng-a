@@ -24,14 +24,17 @@ class TakeQuiz extends React.Component {
           answerA: "Work directly with the people I am serving",
           tagsA: ["direct"],
           answerB: "Help out indirectly (office work, etc)",
-          tagsB: ["indirect"]
+          tagsB: ["indirect"],
+          pic: "public/images/1308_BelkUniformsCabarrus_0002.jpg"
         },
         {
           text: "I would rather...",
           answerA: "Work with adults or seniors",
           tagsA: ["adults", "seniors"],
           answerB: "Teens or kids",
-          tagsB: ["teens-or-children"]
+          tagsB: ["teens-or-children"],
+          pic: "public/images/WingateUniversityTeamandMrThomasHuey.jpg"
+
 
         },
        {
@@ -39,22 +42,24 @@ class TakeQuiz extends React.Component {
           answerA: "Be very active (including moving, building, or lifting things)",
           tagsA: ["sports-recreation",  "cleaning-and-maintenance", "heavy-lifting"],
           answerB: "do something less physically involved (reading to kids)",
-         tagsB: ["office"]
-
+          tagsB: ["office"],
+          pic: "public/images/United_Way_Day_Of_Caring_002.jpg"
         },
         {
           text: "I would rather...",
           answerA: "Work one on one with someone in need",
           tagsA: ["individual"],
           answerB: "Contribute with a group",
-          tagsB: ["group","group","group"]
+          tagsB: ["group","group","group"],
+          pic: "public/images/1409_EYVolunteers_0003.jpg"
         },
         {
           text: "I would rather...",
           answerA: "Do arts and crafts or play games with a child",
           tagsA: ["arts-and-crafts", "sports-recreation"],
           answerB: "Teach or tutor a child",
-          tagsB: ["education"]
+          tagsB: ["education"],
+          pic: "public/images/DSC_1419_Extended.jpg"
 
         },
         {
@@ -62,7 +67,8 @@ class TakeQuiz extends React.Component {
           answerA: "Work outside",
           tagsA: ["sports-recreation",  "cleaning-and-maintenance", "heavy-lifting"],
           answerB: "Work inside",
-          tagsB: ["office"]
+          tagsB: ["office"],
+          pic: "public/images/20140606_103224_resized.jpg"
 
         },
          {
@@ -70,7 +76,8 @@ class TakeQuiz extends React.Component {
           answerA: "Be a big brother or sister to a child",
           tagsA: ["arts-and-crafts", "sports-recreation"],
           answerB: "Help adults transition back into the workforce or manage their finances",
-          tagsB: ["employment-and-life-skills", "homelessness"]
+          tagsB: ["employment-and-life-skills", "homelessness"],
+          pic: "public/images/DSC_0394.jpg"
 
         },
         {
@@ -78,7 +85,8 @@ class TakeQuiz extends React.Component {
           answerA: "Volunteer at a one time event",
          tagsA: ["one-time", "onetime", "seasonal"],
           answerB: "Partner with an organization long-term",
-          tagsB: ["ongoing"]
+          tagsB: ["ongoing"],
+          pic: "public/images/1411_BAC Urban Garden Volunteer_0011.jpg"
 
         },
         {
@@ -86,7 +94,8 @@ class TakeQuiz extends React.Component {
           answerA: "Yes",
           tagsA: ["Spanish","Spanish","Spanish"],
           answerB: "No",
-          tagsB: []
+          tagsB: [],
+          pic: "public/images/DSC_1419_Extended.jpg"
 
         },
         {
@@ -94,7 +103,8 @@ class TakeQuiz extends React.Component {
           answerA: "Yes",
           tagsA: ["food-preparation","food-preparation","food-preparation"],
           answerB: "No",
-          tagsB: []
+          tagsB: [],
+          pic: "public/images/1407_CHS Volunteers__Safe Alliance_0026.jpg"
 
         },
         {
@@ -102,7 +112,8 @@ class TakeQuiz extends React.Component {
           answerA: "Yes",
           tagsA: ["background-check"],
           answerB: "No",
-          tagsB: []
+          tagsB: [],
+          pic: "public/images/1412_BACTrikeBuild_0010.jpg"
 
         }, 
       ],
@@ -211,14 +222,14 @@ class TakeQuiz extends React.Component {
 
     var buttonShowResults;
     if (this.state.selectedAnswers.length === this.state.questions.length) {
-             buttonShowResults =  <Button style={{ float: "right", margin: "20px" }}   className="ShowReesultsButton" {...buttonShowResults}  linkButton={true} onClick={this.showResults} label="Show Results" />
+             buttonShowResults =  <Button style={{ float: "right", margin: "20px" }}  labelPosition="after" className="ShowReesultsButton" {...buttonShowResults}  linkButton={true} onClick={this.showResults} label="Show Results" />
     }
 
 
     return (
       <div className="container">
-
-         <HandlerHeader className = "QuizQuestion" subtitle={question.text} />
+              <Jumbotron image={question.pic} header={question.text}/>
+         <HandlerHeader className = "QuizQuestion" />
          <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
          <div className="Navigate"> <Button style={{ float: "right", margin: "20px" }}  className="BackButton" onClick={this.backButton} {...buttonBackOptions} label="Back" />

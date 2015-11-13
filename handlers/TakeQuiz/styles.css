@@ -1,16 +1,19 @@
+.container .Jumbotron {
+	background-size: 100%;
+}
+
 .container .Navigate {
 width: 100%;
+display: block;
 }
 
 .ShowResultsButton {
  text-align: center;
-  flex: 1;
-  flex-basis: 15%;
+ display: block;
   padding: 0 5px 0 5px;
 }
 
 .Button.BackButton {
-	float: right;
 }
 
 .Navigate .buttonShowResults {
