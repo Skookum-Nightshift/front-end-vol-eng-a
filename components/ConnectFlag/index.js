@@ -13,7 +13,6 @@ var {PropTypes} = React;
 
 class ConnectFlag extends React.Component {
 
-
   sendUserData() {
 
      var userData = {
@@ -27,7 +26,10 @@ class ConnectFlag extends React.Component {
 
     //  apiPost(`/v1/connection`, userData,
     //   (data) => {
-        
+
+          this.props.onChange(); 
+
+
     //   },
     //   () => {
     //     console.log('error');
@@ -58,26 +60,45 @@ class ConnectFlag extends React.Component {
             { this.props.flagMaxHeight > 0 ? 
 
               <form id="ConnectFlagForm">
-                <h2>Send Your Information</h2>
-                <Input id="firstname" placeholder="First Name" value="" style={{ width: '40%', marginRight: '5px' }} />
-                <Input id="lastname" placeholder="Last Name" style={{ width: '40%' }} />
-                <Input id="email" placeholder="Email" style={{ width: '90%' }} />
-                <Input id="zipcode" placeholder="Zip Code" style={{ width: '90%' }} />
 
-                <div className="clearfix">
+                { this.props.connected ? 
+                  
+                  <div className="ConnectConfirmation clearfix">
+                    <h2>Thank you!</h2> <p>We have sent your information and someone from {this.props.data.organization.name} will contact you soon!</p>
+                  
+                     <FlatButton 
+                        onClick={this.props.onClick} 
+                        label="Close"
+                        style={{margin: '10px', float: 'right', textAlign: 'center'}}  />
+
+                  </div>
+
+                  :
+
+                  <div className="ConnectForm">
+                    <h2>Send Your Information</h2>
+                      <Input id="firstname" placeholder="First Name" value="" style={{ width: '40%', marginRight: '5px' }} />
+                      <Input id="lastname" placeholder="Last Name" style={{ width: '40%' }} />
+                      <Input id="email" placeholder="Email" style={{ width: '90%' }} />
+                      <Input id="zipcode" placeholder="Zip Code" style={{ width: '90%' }} />
+
+                      <div className="clearfix">
+                      
+                        <SubmitButton 
+                          label="Send" 
+                          style={{margin: '10px', float: 'right', textAlign: 'center'}}
+                          onClick={this.sendUserData.bind(this)} /> 
+
+                        <FlatButton 
+                          onClick={this.props.onClick} 
+                          label="Cancel"
+                          style={{margin: '10px', float: 'right', textAlign: 'center'}}  />
+
+                      </div>
+                  </div>
+
+                 }
                 
-                  <SubmitButton 
-                    label="Send" 
-                    style={{margin: '10px', float: 'right', textAlign: 'center'}}
-                    onClick={this.sendUserData.bind(this)} /> 
-
-                  <FlatButton 
-                    onClick={this.props.onClick} 
-                    label="Cancel"
-                    style={{margin: '10px', float: 'right', textAlign: 'center'}}  />
-
-                </div>
-
               </form>
 
              : null }

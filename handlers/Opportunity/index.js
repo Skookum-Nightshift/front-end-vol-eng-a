@@ -14,6 +14,7 @@ class Opportunity extends React.Component {
     super(props);
     this.state = {};
     this.onButtonClick = this.onButtonClick.bind(this);
+    this.connectionChange = this.connectionChange.bind(this);
   }
 
   componentDidMount(){
@@ -41,6 +42,14 @@ class Opportunity extends React.Component {
     }
   }
 
+  connectionChange() {
+    if (this.state.connected === false) {
+      this.setState({ connected: true });
+    } else {
+      this.setState({ connected: false });
+    }
+  }
+ 
   render(): ?ReactElement {
 
     if(this.state.content){
@@ -70,7 +79,9 @@ class Opportunity extends React.Component {
                 <ConnectFlag 
                   flagMaxHeight={this.state.flagMaxHeight} 
                   data={this.state.content} 
-                  onClick={this.onButtonClick} />
+                  connected={this.state.connected}
+                  onClick={this.onButtonClick} 
+                  onChange={this.connectionChange} />
             </ReactTransitionGroup>
         </div>
 
