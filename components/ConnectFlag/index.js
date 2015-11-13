@@ -56,7 +56,8 @@ class ConnectFlag extends React.Component {
          				padding: padding, 
          				width: '85%', 
          				maxHeight: this.props.flagMaxHeight }} 
-         		key={0}>
+         		 key={0}>
+             
             { this.props.flagMaxHeight > 0 ? 
 
               <form id="ConnectFlagForm">
