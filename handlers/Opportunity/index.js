@@ -34,7 +34,7 @@ class Opportunity extends React.Component {
  
   onButtonClick() {
     if (this.state.showConnectFlag === false) {
-      this.setState({ showConnectFlag: true, flagMaxHeight: 500 });
+      this.setState({ showConnectFlag: true, flagMaxHeight: 600 });
     } else {
       this.setState({ showConnectFlag: false, flagMaxHeight: 0  });
     }

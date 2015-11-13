@@ -11,6 +11,12 @@ import FlatButton from 'material-ui/lib/flat-button';
 var {PropTypes} = React;
 
 class ConnectFlag extends React.Component {
+
+  handleSumbit() {
+    console.log();
+
+  }
+
   render(): ?ReactElement {
     if (this.props.flagMaxHeight > 0 ) { 
       var padding =  '20px';
@@ -20,6 +26,7 @@ class ConnectFlag extends React.Component {
 
     return (
       <div className="ConnectFlag">
+
          <Paper 
          		className="Flag" 
          		zDepth={2} 
@@ -31,23 +38,26 @@ class ConnectFlag extends React.Component {
          		key={0}>
             { this.props.flagMaxHeight > 0 ? 
 
-              <form>
+              <form id="ConnectFlagForm">
                 <h2>Send Your Information</h2>
-                <Input placeholder="First Name" style={{ width: '40%', marginRight: '5px' }} />
-                <Input placeholder="Last Name" style={{ width: '40%' }} />
-                <Input placeholder="Email" style={{ width: '90%' }} />
-                <Input placeholder="Zip Code" style={{ width: '40%' }} />
+                <Input id="firstname" placeholder="First Name" style={{ width: '40%', marginRight: '5px' }} />
+                <Input id="lastname" placeholder="Last Name" style={{ width: '40%' }} />
+                <Input id="email" placeholder="Email" style={{ width: '90%' }} />
+                <Input id="zipcode" placeholder="Zip Code" style={{ width: '90%' }} />
 
-                <SubmitButton 
-                  label="Create" 
-                  style={{margin: '10px', float: 'right', textAlign: 'center'}} /> 
-
-                <FlatButton 
-                  onClick={this.props.onClick} 
-                  label="Cancel"
-                  style={{margin: '10px', float: 'right', textAlign: 'center'}}  />
-
+                <div className="clearfix">
                 
+                  <SubmitButton 
+                    label="Send" 
+                    style={{margin: '10px', float: 'right', textAlign: 'center'}}
+                    onClick={this.handleSumbit} /> 
+
+                  <FlatButton 
+                    onClick={this.props.onClick} 
+                    label="Cancel"
+                    style={{margin: '10px', float: 'right', textAlign: 'center'}}  />
+
+                </div>
 
               </form>
 
