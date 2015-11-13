@@ -15,6 +15,10 @@ Organization.propTypes = {
   // promise: React.PropTypes.string.isRequired,
 };
 
+Organization.contextTypes = {
+  router: React.PropTypes.any.isRequired,
+};
+
 Organization.displayName = 'Organization';
 
 export default Resolver.createContainer(Organization, {
