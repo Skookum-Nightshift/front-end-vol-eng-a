@@ -8,16 +8,14 @@ var {PropTypes} = React;
 class OrganizationPage extends React.Component {
   render(): ?ReactElement {
 
-    var organization = this.props.organization;
+    var organization = this.props.data;
 
-    var opportunitites = organization.opportunitites.map(opp =>
-        {opp.name}
-      );
+  
 
     return (
       <div className="OrganizationPage">
-        <h2>{this.props.data.name}</h2>
-        <h4>{opportunitites}</h4>
+        <h2>{organization.name}</h2>
+        
       </div>
     );
   }
