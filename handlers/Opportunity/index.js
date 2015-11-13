@@ -20,7 +20,6 @@ class Opportunity extends React.Component {
     apiGet(`/v1/opportunities/${id}`, {},
       (data) => {
         console.log(data.opportunity);
-        debugger
         this.setState({
           content: data.opportunity,
           connected: false,

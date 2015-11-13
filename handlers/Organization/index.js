@@ -18,7 +18,7 @@ class Organization extends React.Component {
       (data) => {
         console.log(data.organization);
         this.setState({
-          organization: data.organization
+          content: data.organization,
         });
       },
       () => {
@@ -29,8 +29,8 @@ class Organization extends React.Component {
 
   render(): ?ReactElement {
 
-    if(this.state.organization){
-      var info = <OrganizationPage data={this.state.organization} />
+    if(this.state.content){
+      var info = <OrganizationPage data={this.state.content} />
     };
 
     return (
