@@ -19,7 +19,6 @@ class Opportunity extends React.Component {
     var id = this.context.router.getCurrentParams().id;
     apiGet(`/v1/opportunities/${id}`, {},
       (data) => {
-        console.log(data.opportunity);
         this.setState({
           content: data.opportunity,
           connected: false, 
