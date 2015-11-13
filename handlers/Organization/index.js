@@ -1,6 +1,7 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import {apiGet} from 'requestLib';
+import OrganizationPage from 'OrganizationPage';
 
 class Organization extends React.Component {
   constructor(props){
@@ -25,9 +26,14 @@ class Organization extends React.Component {
   }
 
   render(): ?ReactElement {
+
+    if(this.state.organization){
+      var info = <OrganizationPage data={this.state.organization} />
+    };
+
     return (
       <div className="Organization">
-        Organization
+        {info}
       </div>
     );
   }
