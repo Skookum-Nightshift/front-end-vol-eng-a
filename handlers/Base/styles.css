@@ -9,13 +9,14 @@ html, body, #app, .AppBase {
 
 .AppBase {
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .PageWrap {
 	min-height: 100%;
 	margin-bottom: -165px; /* Footer + Navbar heights */
+	flex: 1;
 }
 
 .PageWrap:after {

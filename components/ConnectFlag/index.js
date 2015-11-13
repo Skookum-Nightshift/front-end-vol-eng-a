@@ -32,12 +32,10 @@ class ConnectFlag extends React.Component {
             { this.props.flagMaxHeight > 0 ? 
 
               <form>
-                <h2>Create a Profile</h2>
+                <h2>Send Your Information</h2>
                 <Input placeholder="First Name" style={{ width: '40%', marginRight: '5px' }} />
                 <Input placeholder="Last Name" style={{ width: '40%' }} />
                 <Input placeholder="Email" style={{ width: '90%' }} />
-                <Input type="password" placeholder="Password" style={{ width: '90%' }} />
-                <Input type="password" placeholder="Confirm Password" style={{ width: '90%' }} />
                 <Input placeholder="Zip Code" style={{ width: '40%' }} />
 
                 <SubmitButton 

@@ -10,8 +10,11 @@ class Footer extends React.Component {
     return (
       <div className="Footer">
         <div className="credits">
-      		<img src="/public/images/apollo.png" width="150" /><br/>
-        	UWCCaspires is a <a href="http://nightshiftc.lt" target="_blank">Nightshift</a> Project by Team Apollo.
+      		<img src="/public/images/uncc_logo2.png" />
+          <p>
+        	  301 S Brevard Street, Charlotte, NC 28202 <br/> 
+            704.372.7170 | info@uwcentralcarolinas.org
+          </p>
         </div>
       </div>
     );

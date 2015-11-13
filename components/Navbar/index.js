@@ -25,8 +25,6 @@ class Navbar extends React.Component {
         <MenuItem className="MenuItem" primaryText="Take the Quiz" linkButton={true} href="/quiz" />
         <MenuItem className="MenuItem" primaryText="All Categories" linkButton={true} href="/categories" />
         <MenuItem className="MenuItem" primaryText="View Organizations" linkButton={true} href="/allorganizations" />
-        <MenuItem className="MenuItem" primaryText="About UWCCaspires" linkButton={true} href="/about" />
-        <MenuItem className="MenuItem" primaryText="My Profile" linkButton={true} href="/profile" />
 
       </IconMenu>
     </div>

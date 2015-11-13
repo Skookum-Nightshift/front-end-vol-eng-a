@@ -6,8 +6,6 @@
 }
 
 .Footer {
-	background-color: #e7e7e7;
-	border-top: 1px solid #000;
 	margin-top: 50px;
 	padding-top: 30px;
 	text-align: center;
@@ -15,8 +13,10 @@
 }
 
 .Footer .credits {
-	font-size: 10px;
+	font-size: 12px;
+	line-height: 16px;
 	text-transform: uppercase;
+	padding-bottom: 15px;
 }
 .Footer-child {}
 
