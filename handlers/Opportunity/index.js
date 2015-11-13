@@ -9,6 +9,7 @@ import ConnectFlag from 'ConnectFlag';
 import PageContent from 'OpportunityPageContent';
 
 class Opportunity extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {};
@@ -66,7 +67,10 @@ class Opportunity extends React.Component {
             onClick={this.onButtonClick} />
 
             <ReactTransitionGroup transitionName="slideIn" transitionEnterTimeout={500} transitionLeaveTimeout={300} >
-                <ConnectFlag flagMaxHeight={this.state.flagMaxHeight} onClick={this.onButtonClick} />
+                <ConnectFlag 
+                  flagMaxHeight={this.state.flagMaxHeight} 
+                  data={this.state.content} 
+                  onClick={this.onButtonClick} />
             </ReactTransitionGroup>
         </div>
 

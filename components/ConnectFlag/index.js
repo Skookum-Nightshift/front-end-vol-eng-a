@@ -12,8 +12,20 @@ var {PropTypes} = React;
 
 class ConnectFlag extends React.Component {
 
-  handleSumbit() {
-    console.log();
+
+  sendUserData() {
+
+     var userData = {
+      "firstname": document.getElementById('firstname').value,
+      "lastname": document.getElementById('lastname').value,
+      "email": document.getElementById('email').value,
+      "zipcode": document.getElementById('zipcode').value,
+      "opportunity_id": this.props.data.opportunity_id,
+      "organization_id": this.props.data.organization.organization_id,
+     };
+
+
+     console.log(userData);
 
   }
 
@@ -40,7 +52,7 @@ class ConnectFlag extends React.Component {
 
               <form id="ConnectFlagForm">
                 <h2>Send Your Information</h2>
-                <Input id="firstname" placeholder="First Name" style={{ width: '40%', marginRight: '5px' }} />
+                <Input id="firstname" placeholder="First Name" value="" style={{ width: '40%', marginRight: '5px' }} />
                 <Input id="lastname" placeholder="Last Name" style={{ width: '40%' }} />
                 <Input id="email" placeholder="Email" style={{ width: '90%' }} />
                 <Input id="zipcode" placeholder="Zip Code" style={{ width: '90%' }} />
@@ -50,7 +62,7 @@ class ConnectFlag extends React.Component {
                   <SubmitButton 
                     label="Send" 
                     style={{margin: '10px', float: 'right', textAlign: 'center'}}
-                    onClick={this.handleSumbit} /> 
+                    onClick={this.sendUserData.bind(this)} /> 
 
                   <FlatButton 
                     onClick={this.props.onClick} 
