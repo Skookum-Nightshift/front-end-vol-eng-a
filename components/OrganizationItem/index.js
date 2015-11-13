@@ -21,7 +21,7 @@ class OrganizationItem extends React.Component {
             <img src={this.props.data.icon} width="75"/>
           </div>
           <div className="comment-content">
-            <h1><Link to={`/organization/${this.props.data.id}`}>{this.props.data.name}</Link></h1>
+            <h1><Link to={`/organization/${this.props.data.organization_id}`}>{this.props.data.name}</Link></h1>
             <p>{this.props.data.address}</p>
             <p>{this.props.data.city}, {this.props.data.state} {this.props.data.zip}</p>
             <p>{this.props.data.web}</p>
