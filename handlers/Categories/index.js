@@ -46,7 +46,7 @@ class Categories extends React.Component {
         <HandlerHeader title="Categories" />
         <CategoryList categories={categories}/>
         <p>Are you unsure where you might belong still?  Is the list a little long or are you curious what else you might be a great fit for?</p>
-        <GreenButton 
+        <GreenButton
           linkButton={true}
           containerElement={ <Link to="/quiz" /> }
           href="/quiz"
