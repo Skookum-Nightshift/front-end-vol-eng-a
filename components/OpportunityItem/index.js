@@ -18,7 +18,7 @@ class OpportunityItem extends React.Component {
           <div className="comment-image">
           </div>
           <div className="comment-content">
-            <h1>{this.props.data.name}</h1>
+            <h1><Link to={`/opportunity/${this.props.data.id}`}>{this.props.data.name}</Link></h1>
             <p>{this.props.data.description}</p>
           </div>
         </Card>
