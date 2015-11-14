@@ -27,7 +27,7 @@ class OpportunityPageContent extends React.Component {
 
       	<div id="ContentAboveConnect" className="clearfix">
 
-            <Jumbotron image="/public/photos/DSC_1419_Extended.jpg" />
+            <Jumbotron image="/public/images/DSC_1419_Extended.jpg" />
            
 	        	<div id="HeaderInfo" className="HeaderInfo">
             
