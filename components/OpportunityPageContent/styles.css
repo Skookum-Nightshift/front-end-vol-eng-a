@@ -31,3 +31,15 @@
 	margin-top: 70px;
 }
 
+#ContentBelowConnect .OpportunityTags {
+	margin: 0 auto;
+	text-align: center;
+	width: 90%;
+}
+
+#ContentBelowConnect .OpportunityTags .CategoryItem {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: auto;
+}

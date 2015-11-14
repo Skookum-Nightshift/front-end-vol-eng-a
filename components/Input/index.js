@@ -59,6 +59,7 @@ class Input extends React.Component {
       return (
         <input style={this.props.style} type="text" ref="inputField"
           className={'Input ' + requiredClass}
+          id={this.props.id}
           placeholder={this.props.placeholder}
           onChange={this.onInputChange}
           onKeyUp={this.onInputKeyDown}
@@ -69,6 +70,7 @@ class Input extends React.Component {
     return (
       <input defaultValue={this.props.defaultValue} style={this.props.style}
         type={this.props.type} ref="inputField"
+        id={this.props.id}
         className={'Input ' + requiredClass}
         placeholder={this.props.placeholder}
         onChange={this.onInputChange}
