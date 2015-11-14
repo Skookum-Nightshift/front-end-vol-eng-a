@@ -4,6 +4,8 @@
 	min-height: 400px; 
 	overflow: hidden;
 	text-align: center;
+		    flex-direction: column;
+
 
 }
 

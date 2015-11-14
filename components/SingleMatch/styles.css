@@ -3,6 +3,7 @@
   display: table;
   margin-bottom: 1.5em;
   padding-bottom: 1em;
+  padding-top: 1em;
   width: 100%;
   }
   .SingleMatch .comment-image,
@@ -10,15 +11,15 @@
     display: table-cell;
     vertical-align: top; }
   .SingleMatch .comment-image {
-    padding-right: 1.4em; }
+    /*padding-right: 1.4em; */ }
     .SingleMatch .comment-image > img {
-      background: pink;
+     /* background: pink; */
       border-radius: 3px;
       display: block;
       height: auto;
       max-width: none;
       padding: 0.7em;
-      width: 4em; }
+      width: .5em; }
     .comment-reverse-order .SingleMatch .comment-image {
       padding-right: 0;
       padding-left: 10px; }
@@ -26,7 +27,7 @@
     width: 100%; }
     .SingleMatch .comment-content h1 {
       font-size: 1em;
-      margin: 0 0 0.5em 0; }
+      margin: 0.5em 0 0.5em 0; }
     .SingleMatch .comment-content p {
       line-height: 1.5em;
       margin-bottom: 0.5em; }
