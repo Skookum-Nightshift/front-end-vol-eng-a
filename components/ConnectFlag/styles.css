@@ -7,6 +7,12 @@
 	margin: 50px 15%;
 }
 
+#ConnectFlagForm p {
+	width: 90%;
+	padding: 0;
+	margin: 0;
+}
+
 .ConnectFlag-child {}
 
 .ConnectFlag-child.is-state {}

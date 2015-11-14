@@ -5,6 +5,7 @@ require('./styles.css');
 import React from 'react';
 var {PropTypes} = React;
 import Jumbotron from 'Jumbotron';
+import CategoryItem from 'CategoryItem';
 
 
 class OpportunityPageContent extends React.Component {
@@ -12,9 +13,10 @@ class OpportunityPageContent extends React.Component {
   render(): ?ReactElement {
 
   	var opportunity = this.props.opportunity; 
+    var opportunityTags = opportunity.tags;
 
-    var tags = opportunity.tags.map(tag =>
-        {tag.name}
+    var tags = opportunityTags.sort().map(tag =>
+        <CategoryItem data={tag} />
       );
     
 
@@ -25,7 +27,7 @@ class OpportunityPageContent extends React.Component {
 
       	<div id="ContentAboveConnect" className="clearfix">
 
-            <Jumbotron image="/public/uwcc/2-0001.jpg" />
+            <Jumbotron image="/public/photos/DSC_1419_Extended.jpg" />
            
 	        	<div id="HeaderInfo" className="HeaderInfo">
             
@@ -40,8 +42,11 @@ class OpportunityPageContent extends React.Component {
       : 
 
       <div id="ContentBelowConnect">
-
       	<p>{opportunity.description}</p>
+
+        <div className="OpportunityTags">
+          {tags}
+        </div>
       </div>
     }
 

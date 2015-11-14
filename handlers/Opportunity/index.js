@@ -9,17 +9,18 @@ import ConnectFlag from 'ConnectFlag';
 import PageContent from 'OpportunityPageContent';
 
 class Opportunity extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {};
     this.onButtonClick = this.onButtonClick.bind(this);
+    this.connectionChange = this.connectionChange.bind(this);
   }
 
   componentDidMount(){
     var id = this.context.router.getCurrentParams().id;
     apiGet(`/v1/opportunities/${id}`, {},
       (data) => {
-        console.log(data.opportunity);
         this.setState({
           content: data.opportunity,
           connected: false,
@@ -35,12 +36,20 @@ class Opportunity extends React.Component {
 
   onButtonClick() {
     if (this.state.showConnectFlag === false) {
-      this.setState({ showConnectFlag: true, flagMaxHeight: 500 });
+      this.setState({ showConnectFlag: true, flagMaxHeight: 600 });
     } else {
       this.setState({ showConnectFlag: false, flagMaxHeight: 0  });
     }
   }
 
+  connectionChange() {
+    if (this.state.connected === false) {
+      this.setState({ connected: true });
+    } else {
+      this.setState({ connected: false });
+    }
+  }
+ 
   render(): ?ReactElement {
 
     if(this.state.content){
@@ -67,7 +76,12 @@ class Opportunity extends React.Component {
             onClick={this.onButtonClick} />
 
             <ReactTransitionGroup transitionName="slideIn" transitionEnterTimeout={500} transitionLeaveTimeout={300} >
-                <ConnectFlag flagMaxHeight={this.state.flagMaxHeight} onClick={this.onButtonClick} />
+                <ConnectFlag 
+                  flagMaxHeight={this.state.flagMaxHeight} 
+                  data={this.state.content} 
+                  connected={this.state.connected}
+                  onClick={this.onButtonClick} 
+                  onChange={this.connectionChange} />
             </ReactTransitionGroup>
         </div>
 
