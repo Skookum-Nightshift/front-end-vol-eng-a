@@ -1,21 +1,38 @@
-/** @define SingleMatch; use strict */
-
 .SingleMatch {
-  	flex-basis: 15%;
-}
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+  display: table;
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  width: 100%;
+  }
+  .SingleMatch .comment-image,
+  .SingleMatch .comment-content {
+    display: table-cell;
+    vertical-align: top; }
+  .SingleMatch .comment-image {
+    padding-right: 1.4em; }
+    .SingleMatch .comment-image > img {
+      background: pink;
+      border-radius: 3px;
+      display: block;
+      height: auto;
+      max-width: none;
+      padding: 0.7em;
+      width: 4em; }
+    .comment-reverse-order .SingleMatch .comment-image {
+      padding-right: 0;
+      padding-left: 10px; }
+  .SingleMatch .comment-content {
+    width: 100%; }
+    .SingleMatch .comment-content h1 {
+      font-size: 1em;
+      margin: 0 0 0.5em 0; }
+    .SingleMatch .comment-content p {
+      line-height: 1.5em;
+      margin-bottom: 0.5em; }
+    .SingleMatch .comment-content p.comment-detail {
+      color: rgba(51, 51, 51, 0.5);
+      font-size: 0.9em;
+      font-style: italic; }
 
-.SingleMatch .SingleMatchList {
-	width: 750px;
-	display: block;
-	  	margin:auto;
-
-}
-.SingleMatch img { 
-  border-radius: 50%;
-
-}
-
-.SingleMatch-child {}
-
-.SingleMatch-child.is-state {}
-
+/*# sourceMappingURL=styles.css.map */

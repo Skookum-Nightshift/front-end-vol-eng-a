@@ -1,0 +1,8 @@
+/** @define OrganizationPage; use strict */
+
+.OrganizationPage {}
+
+.OrganizationPage-child {}
+
+.OrganizationPage-child.is-state {}
+

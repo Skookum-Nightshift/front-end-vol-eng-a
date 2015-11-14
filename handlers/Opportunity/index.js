@@ -23,7 +23,7 @@ class Opportunity extends React.Component {
       (data) => {
         this.setState({
           content: data.opportunity,
-          connected: false, 
+          connected: false,
           showConnectFlag: false,
           flagMaxHeight: 0,
         });
@@ -33,7 +33,7 @@ class Opportunity extends React.Component {
       }
     );
   }
- 
+
   onButtonClick() {
     if (this.state.showConnectFlag === false) {
       this.setState({ showConnectFlag: true, flagMaxHeight: 600 });
@@ -67,12 +67,12 @@ class Opportunity extends React.Component {
 
         <div className="PageTopContent">
 
-          <BlueButton 
-            label={this.state.connected ? "Connected" : "Connect" } 
+          <BlueButton
+            label={this.state.connected ? "Connected" : "Connect" }
             primary={this.state.connected ? true : false }
             secondary={this.state.connected ? false : true }
-            style={{ margin: '0', width: '100%', textAlign: 'center', height: '50px', boxShadow: '1px 7px 5px 0px rgba(94,92,94,0.52)', position: 'absolute', zIndex: 2 }} 
-            labelStyle={{fontWeight: '900', fontSize: '20px'}} 
+            style={{ margin: '0', width: '100%', textAlign: 'center', height: '50px', boxShadow: '1px 7px 5px 0px rgba(94,92,94,0.52)', position: 'absolute', zIndex: 2 }}
+            labelStyle={{fontWeight: '900', fontSize: '20px'}}
             onClick={this.onButtonClick} />
 
             <ReactTransitionGroup transitionName="slideIn" transitionEnterTimeout={500} transitionLeaveTimeout={300} >
@@ -91,7 +91,7 @@ class Opportunity extends React.Component {
 
         <div className={this.state.showConnectFlag ? "PageOverlay" : "" }></div>
 
-        
+
 
       </div>
     );
