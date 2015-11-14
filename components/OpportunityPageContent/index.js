@@ -3,6 +3,7 @@
 require('./styles.css');
 
 import React from 'react';
+import { Router, Route, Link } from 'react-router'
 var {PropTypes} = React;
 import Jumbotron from 'Jumbotron';
 import CategoryItem from 'CategoryItem';
@@ -35,7 +36,7 @@ class OpportunityPageContent extends React.Component {
 	        			<img className="Logo" src="/public/logos/bbbs.jpg" width="150" /> 
 	        		</div>
 	          	<h1>{opportunity.name}</h1>
-	          	<h2>{opportunity.organization.name}</h2>
+	          	<h2><Link to={`/organization/${opportunity.organization.organization_id}`}>{opportunity.organization.name}</Link></h2>
 	          	<p>{opportunity.address ? opportunity.address : "Locations Vary"}</p>
           	</div>
         </div>
