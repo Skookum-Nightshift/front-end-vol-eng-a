@@ -23,7 +23,7 @@ BlueButton.propTypes = {
 
 BlueButton.defaultProps = {
   label: 'Submit',
-  secondary: {true},
+  secondary: true,
   labelColor: '#FFFFFF',
   style: {margin: '10px 12%', minWidth: '75%', textAlign: 'center'}
 };

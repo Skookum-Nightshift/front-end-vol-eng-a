@@ -1,7 +1,12 @@
+require('./styles.css');
+
 import React from 'react';
 import {Resolver} from 'react-resolver';
+import {apiGet} from 'requestLib';
+import ReactTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import BlueButton from 'BlueButton';
 import ConnectFlag from 'ConnectFlag';
+import PageContent from 'OpportunityPageContent';
 
 class Opportunity extends React.Component {
   constructor(props) {
@@ -10,14 +15,24 @@ class Opportunity extends React.Component {
     this.onButtonClick = this.onButtonClick.bind(this);
   }
 
-  componentDidMount() {
-    this.setState({ 
-      connected: false, 
-      showConnectFlag: false,
-      flagMaxHeight: 0,
-      });
+  componentDidMount(){
+    var id = this.context.router.getCurrentParams().id;
+    apiGet(`/v1/opportunities/${id}`, {},
+      (data) => {
+        console.log(data.opportunity);
+        this.setState({
+          content: data.opportunity,
+          connected: false, 
+          showConnectFlag: false,
+          flagMaxHeight: 0,
+        });
+      },
+      () => {
+        console.log('error');
+      }
+    );
   }
-
+ 
   onButtonClick() {
     if (this.state.showConnectFlag === false) {
       this.setState({ showConnectFlag: true, flagMaxHeight: 500 });
@@ -28,26 +43,42 @@ class Opportunity extends React.Component {
 
   render(): ?ReactElement {
 
-    var paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lectus et mauris efficitur feugiat aliquam in odio. Sed ut congue neque. Donec a erat mauris. Nulla pharetra lobortis mollis. Praesent eu semper tellus, vitae ullamcorper turpis. Proin ut justo lectus. Donec bibendum turpis lectus, non dictum erat laoreet a. Etiam eu lacinia elit. Ut dignissim urna metus, lobortis dignissim nibh bibendum non. Morbi vestibulum iaculis arcu eu rhoncus. Cras iaculis justo consequat, volutpat purus eget, tempus nisl. Proin eu nisi et leo cursus pellentesque."; 
+    if(this.state.content){
+      var opportunityTop = <PageContent opportunity={this.state.content} location="top" />
+      var opportunityBottom =  <PageContent opportunity={this.state.content} location="bottom" />
+    }
+
 
     return (
       <div className="Opportunity">
+
         <div className="PageContent">
-          <p>{paragraph}</p>
+          {opportunityTop}
         </div>
-        <div className={this.state.showConnectFlag ? "PageOverlay" : "" }>
-        </div>
+
         <div className="PageTopContent">
+
           <BlueButton 
             label={this.state.connected ? "Connected" : "Connect" } 
             primary={this.state.connected ? true : false }
             secondary={this.state.connected ? false : true }
-            style={{ margin: '10px 0 0 0', width: '100%', textAlign: 'center', height: '50px' }} 
+            style={{ margin: '0', width: '100%', textAlign: 'center', height: '50px', boxShadow: '1px 7px 5px 0px rgba(94,92,94,0.52)', position: 'absolute', zIndex: 2 }} 
             labelStyle={{fontWeight: '900', fontSize: '20px'}} 
             onClick={this.onButtonClick} />
 
-          { this.state.showConnectFlag  ? <ConnectFlag flagMaxHeight={this.state.flagMaxHeight} /> : null } 
+            <ReactTransitionGroup transitionName="slideIn" transitionEnterTimeout={500} transitionLeaveTimeout={300} >
+                <ConnectFlag flagMaxHeight={this.state.flagMaxHeight} onClick={this.onButtonClick} />
+            </ReactTransitionGroup>
         </div>
+
+        <div className="PageContent">
+          {opportunityBottom}
+        </div>
+
+        <div className={this.state.showConnectFlag ? "PageOverlay" : "" }></div>
+
+        
+
       </div>
     );
   }
@@ -56,6 +87,11 @@ class Opportunity extends React.Component {
 Opportunity.propTypes = {
   // promise: React.PropTypes.string.isRequired,
 };
+
+Opportunity.contextTypes = {
+  router: React.PropTypes.any.isRequired,
+};
+
 
 Opportunity.displayName = 'Opportunity';
 

@@ -33,24 +33,6 @@ html, body, #app, .AppBase {
   margin-left: 5%;
 }
 
-.Opportunity .PageContent {
-	z-index: 0;
-}
-
-.Opportunity .PageOverlay {
-	background: #000000;
-	opacity: 0.6;
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-}
-
-.Opportunity .PageTopContent {
-	z-index: 2;
-	position: absolute;
-	width: 100%;
-	height: 100%
+.clearfix {
+  overflow: auto;
 }

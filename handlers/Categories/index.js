@@ -6,6 +6,9 @@ import HandlerHeader from 'HandlerHeader';
 import Jumbotron from 'Jumbotron';
 import BlueButton from 'BlueButton';
 import {apiGet} from 'requestLib';
+import GreenButton from 'GreenButton';
+import { Router, Route, Link } from 'react-router';
+
 
 class Categories extends React.Component {
   constructor(){
@@ -40,11 +43,14 @@ class Categories extends React.Component {
 
     return (
       <div className="Categories">
-        <HandlerHeader title="Categories" introParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut mi a odio viverra venenatis vel eget urna. Aliquam non elit vulputate, rutrum arcu vitae, consectetur turpis. Praesent pellentesque iaculis condimentum. Nunc quis fringilla ex, eu sodales ipsum. Nam molestie, dui quis maximus sagittis, turpis nisl molestie ex, quis maximus urna est non nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus." />
+        <HandlerHeader title="Categories" />
         <CategoryList categories={categories}/>
         <p>Are you unsure where you might belong still?  Is the list a little long or are you curious what else you might be a great fit for?</p>
-        <BlueButton
-          label="Take Quiz" />
+        <GreenButton 
+          linkButton={true}
+          containerElement={ <Link to="/quiz" /> }
+          href="/quiz"
+          label="Take the Quiz" />
       </div>
     );
   }
