@@ -10,6 +10,7 @@ class Jumbotron extends React.Component {
     return (
       <div className="Jumbotron" style={{ background: 'url(' + this.props.image + ') no-repeat top center', backgroundSize: this.props.size }}>
         <h1>{this.props.header}</h1>
+        <h2>{this.props.subtitle}</h2>
         <p>{this.props.paragraph}</p>
       </div>
     );

@@ -25,7 +25,7 @@ class TakeQuiz extends React.Component {
           tagsA: ["direct"],
           answerB: "Help out indirectly (office work, etc)",
           tagsB: ["indirect"],
-          pic: "public/images/1308_BelkUniformsCabarrus_0002.jpg"
+          pic: "public/images/1411_BACUrbanGardenVolunteer_0020.jpg"
         },
         {
           text: "I would rather...",
@@ -34,8 +34,6 @@ class TakeQuiz extends React.Component {
           answerB: "Teens or kids",
           tagsB: ["teens-or-children"],
           pic: "public/images/WingateUniversityTeamandMrThomasHuey.jpg"
-
-
         },
        {
           text: "I would rather...",
@@ -59,8 +57,7 @@ class TakeQuiz extends React.Component {
           tagsA: ["arts-and-crafts", "sports-recreation"],
           answerB: "Teach or tutor a child",
           tagsB: ["education"],
-          pic: "public/images/DSC_1419_Extended.jpg"
-
+          pic: "public/images/DSC_0394.jpg"
         },
         {
           text: "I would rather...",
@@ -69,7 +66,6 @@ class TakeQuiz extends React.Component {
           answerB: "Work inside",
           tagsB: ["office"],
           pic: "public/images/20140606_103224_resized.jpg"
-
         },
          {
           text: "I would rather...",
@@ -77,8 +73,7 @@ class TakeQuiz extends React.Component {
           tagsA: ["arts-and-crafts", "sports-recreation"],
           answerB: "Help adults transition back into the workforce or manage their finances",
           tagsB: ["employment-and-life-skills", "homelessness"],
-          pic: "public/images/DSC_0394.jpg"
-
+          pic: "public/images/DSC_1419_Extended.jpg"
         },
         {
           text: "I would rather...",
@@ -86,8 +81,7 @@ class TakeQuiz extends React.Component {
          tagsA: ["one-time", "onetime", "seasonal"],
           answerB: "Partner with an organization long-term",
           tagsB: ["ongoing"],
-          pic: "public/images/1411_BAC Urban Garden Volunteer_0011.jpg"
-
+          pic: "public/images/1411_BACUrbanGardenVolunteer_0028.jpg"
         },
         {
           text: "Are you interested in opportunities that involve speaking Spanish?",
@@ -95,8 +89,7 @@ class TakeQuiz extends React.Component {
           tagsA: ["Spanish","Spanish","Spanish"],
           answerB: "No",
           tagsB: [],
-          pic: "public/images/DSC_1419_Extended.jpg"
-
+          pic: "public/images/DSC_0509.jpg"
         },
         {
           text: "Would you like to prepare and/or serving food to others?",
@@ -104,8 +97,7 @@ class TakeQuiz extends React.Component {
           tagsA: ["food-preparation","food-preparation","food-preparation"],
           answerB: "No",
           tagsB: [],
-          pic: "public/images/1407_CHS Volunteers__Safe Alliance_0026.jpg"
-
+          pic: "public/images/1409_DixonHughesVolunteers0007(2).jpg"
         },
         {
           text: "Are you okay with completing a background check?",
@@ -228,12 +220,12 @@ class TakeQuiz extends React.Component {
 
     return (
       <div className="container">
-              <Jumbotron image={question.pic} header={question.text} size="contain"/>
+              <Jumbotron image={question.pic} subtitle={question.text} size="contain"/>
          <HandlerHeader className = "QuizQuestion" />
          <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
-         <div className="Navigate"> <Button style={{ float: "right", margin: "20px" }}  className="BackButton" onClick={this.backButton} {...buttonBackOptions} label="Back" />
-         {buttonShowResults} </div>
+         <div className="Navigate"><Button style={{ float: "right", margin: "20px" }}  className="BackButton" onClick={this.backButton} {...buttonBackOptions} label="Back" />
+        {buttonShowResults} </div>
       </div>
     );
   }

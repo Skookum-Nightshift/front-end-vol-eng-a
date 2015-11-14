@@ -1,16 +1,11 @@
 .QuizResults {
-text-align: center;
-  flex: 1;
-  flex-basis: 15%;
-  padding: 0 5px 0 5px;
+	 display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+  margin-left: 5%;
+  flex-wrap: wrap;
 
 }
 
 .QuizResults h4 {
-		font-weight: 400;
-	 text-align: center;
-  flex: 1;
-  flex-basis: 15%;
-  padding: 0 5px 0 5px;
-  margin: auto;
 }

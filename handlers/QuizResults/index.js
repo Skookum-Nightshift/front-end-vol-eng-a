@@ -36,7 +36,6 @@ class QuizResults extends React.Component {
       <div className="QuizResults">
         <HandlerHeader title="Your Results" />
         <QuizResultMatch results={results} />
-        <br />
         <GreenButton 
           linkButton={true}
           containerElement={ <Link to="/quiz" /> }

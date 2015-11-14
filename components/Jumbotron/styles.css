@@ -15,6 +15,14 @@
     font-size: 2.5em;
 }
 
+.Jumbotron h2 {
+	text-transform: uppercase;
+	font-family: Roboto, sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 1.7em;
+}
+
 .Jumbotron p {
 	line-height: 1.5em;
 }
