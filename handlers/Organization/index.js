@@ -30,7 +30,8 @@ class Organization extends React.Component {
   render(): ?ReactElement {
 
     if(this.state.content){
-      var info = <OrganizationPage data={this.state.content} />
+      var info = <OrganizationPage data={this.state.content} />;
+     #add opps here
     };
 
     return (
