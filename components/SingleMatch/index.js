@@ -14,7 +14,7 @@ class SingleMatch extends React.Component {
 
   render(): ?ReactElement {
 
-    var viewOpp =  <Link to={`/opportunities/${this.props.data.opportunity_id}`}>{this.props.data.name}</Link>
+    var viewOpp =  <Link to={`/opportunity/${this.props.data.opportunity_id}`}>{this.props.data.name}</Link>
 
     return (
       <div className="SingleMatch">
@@ -24,7 +24,7 @@ class SingleMatch extends React.Component {
     showExpandableButton={true}
              title={viewOpp}
               subtitle= {<p><strong>
-              {this.props.data.organization.name}: </strong>
+              {this.props.data.organization.name}</strong>
               </p>} />
                            
               <CardText  expandable={true}>{this.props.data.description} </CardText>

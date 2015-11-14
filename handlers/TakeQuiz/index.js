@@ -228,7 +228,7 @@ class TakeQuiz extends React.Component {
 
     return (
       <div className="container">
-              <Jumbotron image={question.pic} header={question.text}/>
+              <Jumbotron image={question.pic} header={question.text} size="contain"/>
          <HandlerHeader className = "QuizQuestion" />
          <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
