@@ -4,6 +4,9 @@ import {apiGet} from 'requestLib';
 import OrganizationPage from 'OrganizationPage';
 import Jumbotron from 'Jumbotron';
 import SingleMatch from 'SingleMatch';
+import QuizResultMatch from 'QuizResultMatch';
+import OpportunityList from 'OpportunityList';
+import OpportunityItem from 'OpportunityItem';
 
 class Organization extends React.Component {
   constructor(props){
@@ -17,6 +20,7 @@ class Organization extends React.Component {
     apiGet(`v1/organizations/${id}`, {},
       (data) => {
         console.log(data.organization);
+        console.log(data.organization.opportunities);
         this.setState({
           content: data.organization,
         });
@@ -30,14 +34,16 @@ class Organization extends React.Component {
   render(): ?ReactElement {
 
     if(this.state.content){
-      var info = <OrganizationPage data={this.state.content} />;
-     #add opps here
+      var opps = this.state.content.opportunities.map(opp =>
+        <OpportunityItem data={opp} />
+        );
+      var info = <OrganizationPage data={this.state.content} />
     };
 
     return (
       <div className="Organization">
-        <Jumbotron image="/public/uwcc/2-0001.jpg" />
         {info}
+        <OpportunityList opportunities={opps}/>
       </div>
     );
   }
