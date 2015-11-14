@@ -8,6 +8,8 @@
 
 .Jumbotron h1 {
 	text-transform: uppercase;
+	top: 500px;
+	color: gray;
 }
 
 .Jumbotron p {
