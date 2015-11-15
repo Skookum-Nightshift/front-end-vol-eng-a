@@ -6,7 +6,6 @@ import React from 'react';
 import { Router, Route, Link } from 'react-router'
 var {PropTypes} = React;
 import Jumbotron from 'Jumbotron';
-import CategoryItem from 'CategoryItem';
 
 
 class OpportunityPageContent extends React.Component {
@@ -14,11 +13,6 @@ class OpportunityPageContent extends React.Component {
   render(): ?ReactElement {
 
   	var opportunity = this.props.opportunity; 
-    var opportunityTags = opportunity.tags;
-
-    var tags = opportunityTags.sort().map(tag =>
-        <CategoryItem data={tag} />
-      );
     
 
     return (
@@ -45,9 +39,7 @@ class OpportunityPageContent extends React.Component {
       <div id="ContentBelowConnect">
       	<p>{opportunity.description}</p>
 
-        <div className="OpportunityTags">
-          {tags}
-        </div>
+    
       </div>
     }
 
