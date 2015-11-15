@@ -40,7 +40,7 @@ class QuizResults extends React.Component {
           linkButton={true}
           containerElement={ <Link to="/quiz" /> }
           href="/quiz"
-          label="Take the Quiz" />
+          label="Take the Quiz Again" />
       </div>
     );
   }

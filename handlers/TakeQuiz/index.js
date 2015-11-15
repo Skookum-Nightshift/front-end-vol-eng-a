@@ -211,21 +211,21 @@ class TakeQuiz extends React.Component {
     if (this.state.currentQuestion === 0) {
       buttonBackOptions.disabled = true;
     }
-
-    var buttonShowResults;
-    if (this.state.selectedAnswers.length === this.state.questions.length) {
-             buttonShowResults =  <Button style={{ float: "right", margin: "20px" }}  labelPosition="after" className="ShowReesultsButton" {...buttonShowResults}  linkButton={true} onClick={this.showResults} label="Show Results" />
+ var buttonShowResults;
+    if (this.state.selectedAnswers.length === this.state.questions.length) { 
+      buttonShowResults =  <Button style={{ float: "right", margin: "20px"}} className="ShowReesultsButton" {...buttonShowResults} backgroundColor="#ff9600" secondary={true}  linkButton={true} onClick={this.showResults} label="Show Results" />
     }
 
 
     return (
-      <div className="container">
-              <Jumbotron image={question.pic} subtitle={question.text} size="contain"/>
-         <HandlerHeader className = "QuizQuestion" />
+      <div className="TakeQuiz">
+          <Jumbotron image={question.pic} subtitle={question.text} size="contain" />
          <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
-         <div className="Navigate"><Button style={{ float: "right", margin: "20px" }}  className="BackButton" onClick={this.backButton} {...buttonBackOptions} label="Back" />
-        {buttonShowResults} </div>
+          <div className="Navigate">
+                      {buttonShowResults} 
+            <Button style={{ float: "right", margin: "20px"}} backgroundColor="#7c81b8" secondary={true} className="BackButton" onClick={this.backButton} {...buttonBackOptions} label="Back" />
+        </div>
       </div>
     );
   }

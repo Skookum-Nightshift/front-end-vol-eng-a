@@ -8,7 +8,7 @@ var {PropTypes} = React;
 class Jumbotron extends React.Component {
   render(): ?ReactElement {
     return (
-      <div className="Jumbotron" style={{ background: 'url(' + this.props.image + ') no-repeat top center', backgroundSize: this.props.size }}>
+      <div className="Jumbotron" style={{ background: 'url(' + this.props.image + ') no-repeat top center', backgroundSize: this.props.size}}>
         <h1>{this.props.header}</h1>
         <h2>{this.props.subtitle}</h2>
         <p>{this.props.paragraph}</p>

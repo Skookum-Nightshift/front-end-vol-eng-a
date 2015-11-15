@@ -4,9 +4,7 @@
 	min-height: 400px; 
 	overflow: hidden;
 	text-align: center;
-		    flex-direction: column;
-
-
+	flex-direction: column;
 }
 
 .Jumbotron h1 {

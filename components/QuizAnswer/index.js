@@ -23,7 +23,7 @@ handleSelected() {
   render(): ?ReactElement {
     return (
     <div className="SingleQuizAnswer">
-     <div className="answer"><Button onClick={this.handleSelected} label={this.props.text} value={this.props.value} /> </div>
+     <div className="answer"><Button onClick={this.handleSelected} label={this.props.text} value={this.props.value} secondary={true} backgroundColor={this.props.buttonColor}/> </div>
     </div>
     );
   }

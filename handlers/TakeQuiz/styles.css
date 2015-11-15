@@ -1,14 +1,22 @@
-.container .Jumbotron {
-}
+.TakeQuiz {
+ padding-top: 64px;
+	z-index: 100;
+	display: flex;
+	flex: 1;
+  flex-direction: column;
+  margin-right: 5%;
+  margin-left: 5%;
+  flex-wrap: wrap;
 
+}
 .container .Navigate {
 width: 100%;
-display: block;
+/*display: block; */
 }
 
 .ShowResultsButton {
  text-align: center;
- display: block;
+ /*display: block; */
   padding: 0 5px 0 5px;
 }
 
