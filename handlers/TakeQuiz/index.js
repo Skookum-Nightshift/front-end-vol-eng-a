@@ -220,7 +220,6 @@ class TakeQuiz extends React.Component {
     return (
       <div className="TakeQuiz">
           <Jumbotron image={question.pic} subtitle={question.text} size="contain" />
-         <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
           <div className="Navigate">
                       {buttonShowResults} 
@@ -232,6 +231,7 @@ class TakeQuiz extends React.Component {
 }
 
 
+//         <QuizNumber id={this.state.currentQuestion+1} remaining={this.state.questions.length} />
 
 TakeQuiz.propTypes = {
   // promise: React.PropTypes.string.isRequired,

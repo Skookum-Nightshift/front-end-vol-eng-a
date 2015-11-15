@@ -27,8 +27,6 @@ class QuizResults extends React.Component {
 
     var results = [];
     if(this.state.results && this.state.results !== 'undefined'){
-     
-
       results = this.state.results.map(result => <SingleMatch data={result} />);
     }
 

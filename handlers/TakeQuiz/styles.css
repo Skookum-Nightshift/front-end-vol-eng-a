@@ -11,12 +11,12 @@
 }
 .container .Navigate {
 width: 100%;
-/*display: block; */
+display: block; 
 }
 
 .ShowResultsButton {
  text-align: center;
- /*display: block; */
+ display: block; 
   padding: 0 5px 0 5px;
 }
 
