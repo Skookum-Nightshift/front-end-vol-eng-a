@@ -15,7 +15,7 @@ class Home extends React.Component {
     return (
       <div className="Home">
 
-        <Jumbotron image="/public/photos/DSC_1419_Extended.jpg" />
+        <Jumbotron image="/public/images/DSC_1419_Extended.jpg" />
 
         <HandlerHeader title={<span><strong>#UWCC</strong>aspires</span>} introParagraph={paragraph} />
       	<GreenButton 

@@ -15,9 +15,9 @@ class UserStore {
 
   handleUpdateUser(user) {
     this.user = user;
-    cookie.save('user', user, {
+    cookie.save('user', JSON.stringify(user), {
       expires: new Date(user.auth_token_expiration)
-    });
+    });   
   }
 
   handleDeleteUser() {
