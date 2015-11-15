@@ -25,7 +25,7 @@ class TakeQuiz extends React.Component {
           tagsA: ["direct"],
           answerB: "Help out indirectly (office work, etc)",
           tagsB: ["indirect"],
-          pic: "public/images/1411_BACUrbanGardenVolunteer_0020.jpg"
+          pic: "public/images/PeopleWeHelp_IncreasingGraduation.jpg"
         },
         {
           text: "I would rather...",

@@ -1,4 +1,12 @@
-.SingleMatch {
+/** @define OpportunityItem; use strict */
+
+.OpportunityItem {}
+
+.OpportunityItem-child {}
+
+.OpportunityItem-child.is-state {}
+
+.OpportunityItem {
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   display: table;
   margin-bottom: 1.5em;
@@ -6,13 +14,13 @@
   padding-top: 1em;
   width: 100%;
   }
-  .SingleMatch .comment-image,
-  .SingleMatch .comment-content {
+  .OpportunityItem .comment-image,
+  .OpportunityItem .comment-content {
     display: table-cell;
     vertical-align: top; }
-  .SingleMatch .comment-image {
+  .OpportunityItem .comment-image {
     /*padding-right: 1.4em; */ }
-    .SingleMatch .comment-image > img {
+    .OpportunityItem .comment-image > img {
      /* background: pink; */
       border-radius: 3px;
       display: block;
@@ -20,18 +28,18 @@
       max-width: none;
       padding: 0.7em;
       width: .5em; }
-    .comment-reverse-order .SingleMatch .comment-image {
+    .comment-reverse-order .OpportunityItem .comment-image {
       padding-right: 0;
       padding-left: 10px; }
-  .SingleMatch .comment-content {
+  .OpportunityItem .comment-content {
     width: 100%; }
-    .SingleMatch .comment-content h1 {
+    .OpportunityItem .comment-content h1 {
       font-size: 1em;
       margin: 0.5em 0 0.5em 0; }
-    .SingleMatch .comment-content p {
+    .OpportunityItem .comment-content p {
       line-height: 1.5em;
       margin-bottom: 0.5em; }
-    .SingleMatch .comment-content p.comment-detail {
+    .OpportunityItem .comment-content p.comment-detail {
       color: rgba(51, 51, 51, 0.5);
       font-size: 0.9em;
       font-style: italic; }
