@@ -3,9 +3,9 @@
 require('./styles.css');
 
 import React from 'react';
+import { Router, Route, Link } from 'react-router'
 var {PropTypes} = React;
 import Jumbotron from 'Jumbotron';
-import CategoryItem from 'CategoryItem';
 
 
 class OpportunityPageContent extends React.Component {
@@ -13,11 +13,6 @@ class OpportunityPageContent extends React.Component {
   render(): ?ReactElement {
 
   	var opportunity = this.props.opportunity; 
-    var opportunityTags = opportunity.tags;
-
-    var tags = opportunityTags.sort().map(tag =>
-        <CategoryItem data={tag} />
-      );
     
 
     return (
@@ -27,7 +22,7 @@ class OpportunityPageContent extends React.Component {
 
       	<div id="ContentAboveConnect" className="clearfix">
 
-            <Jumbotron image="/public/photos/DSC_1419_Extended.jpg" />
+            <Jumbotron image="/public/images/DSC_1419_Extended.jpg" />
            
 	        	<div id="HeaderInfo" className="HeaderInfo">
             
@@ -35,7 +30,7 @@ class OpportunityPageContent extends React.Component {
 	        			<img className="Logo" src="/public/logos/bbbs.jpg" width="150" /> 
 	        		</div>
 	          	<h1>{opportunity.name}</h1>
-	          	<h2>{opportunity.organization.name}</h2>
+	          	<h2><Link to={`/organization/${opportunity.organization.organization_id}`}>{opportunity.organization.name}</Link></h2>
 	          	<p>{opportunity.address ? opportunity.address : "Locations Vary"}</p>
           	</div>
         </div>
@@ -44,9 +39,7 @@ class OpportunityPageContent extends React.Component {
       <div id="ContentBelowConnect">
       	<p>{opportunity.description}</p>
 
-        <div className="OpportunityTags">
-          {tags}
-        </div>
+    
       </div>
     }
 

@@ -7,23 +7,35 @@ import ReactTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import BlueButton from 'BlueButton';
 import ConnectFlag from 'ConnectFlag';
 import PageContent from 'OpportunityPageContent';
+import UserStore from '../../stores/UserStore';
+
 
 class Opportunity extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      userData: UserStore.getState().user
+    };
     this.onButtonClick = this.onButtonClick.bind(this);
     this.connectionChange = this.connectionChange.bind(this);
   }
 
   componentDidMount(){
     var id = this.context.router.getCurrentParams().id;
+
+    if (this.state.userData) {
+      var opportunities = this.state.userData.opportunities;
+      if (opportunities.indexOf(parseInt(id)) >= 0) {
+        var connection = true; 
+      } else { var connection = false }
+    }  else { var connection = false; }
+
     apiGet(`/v1/opportunities/${id}`, {},
       (data) => {
         this.setState({
           content: data.opportunity,
-          connected: false,
+          connected: connection,
           showConnectFlag: false,
           flagMaxHeight: 0,
         });
