@@ -45,8 +45,10 @@ class ConnectFlag extends React.Component {
       "lastname": document.getElementById('lastname').value,
       "email": document.getElementById('email').value,
       "zipcode": document.getElementById('zipcode').value,
-      "opportunity": this.props.data.opportunity_id,
-      "organization": this.props.data.organization.organization_id,
+      "opportunity_id": this.props.data.opportunity_id,
+      "opportunity_name": this.props.data.name,
+      "organization_id": this.props.data.organization.organization_id,
+      "organization_name": this.props.data.organization.name,
       "opportunities": opportunities,
       "organizations": organizations,
      };

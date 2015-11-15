@@ -16,9 +16,11 @@ class OrganizationPage extends React.Component {
 
     return (
       <div className="OrganizationPage">
-        <Jumbotron image="/public/photos/DSC_1419_Extended.jpg" />
-        <h2>{org.name}</h2>
-        <h2>{org.city}</h2>
+        <Jumbotron image="/public/images/DSC_1419_Extended.jpg" />
+        <div className="content">
+          <h1>{org.name}</h1>
+          <h2>{org.city}</h2>
+        </div>
       </div>
     );
   }
