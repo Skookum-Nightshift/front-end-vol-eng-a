@@ -1,9 +1,10 @@
 /** @define OrganizationList; use strict */
 
 .OrganizationList {
-  margin-right: 5%;
   margin-left: 5%;
+  margin-right: 5%;
 }
+
 
 .OrganizationList-child {}
 
