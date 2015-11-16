@@ -25,11 +25,10 @@ var routes = (
     <Route name="opportunity" path="opportunity/:id" handler={Opportunity}/>
     <Route name="categories" handler={Categories} />
     <Route name="category" path="category/:id" handler={CategoryListing} />
+    <Route name="organizations" handler={ViewAllOrganizations} />
     <Route name="organization" path="organization/:id" handler={Organization} />
     <Route name="quiz" handler={TakeQuiz} />
     <Route name="results" handler={QuizResults} />
-    <Route name="allorganizations" handler={ViewAllOrganizations} />
-
     <NotFoundRoute handler={NotFound} />
   </Route>
 );
