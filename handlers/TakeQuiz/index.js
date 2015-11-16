@@ -219,7 +219,7 @@ class TakeQuiz extends React.Component {
 
     return (
       <div className="TakeQuiz">
-          <Jumbotron image={question.pic} subtitle={question.text} size="contain" />
+         <Jumbotron image={question.pic} subtitle={question.text} />
          <QuizAnswers onSelected={this.handleSelected} answerA={question.answerA} tagsA={question.tagsA} answerB={question.answerB} tagsB={question.tagsB}  /> 
           <div className="Navigate">
                       {buttonShowResults} 
