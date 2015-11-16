@@ -14,8 +14,10 @@ class CategoryItem extends React.Component {
 
     return (
       <div className="CategoryItem">
+        <Link to={`/category/${this.props.data.id}`}>
           <img src={this.props.data.icon} width="75"/>
           <p><Link to={`/category/${this.props.data.id}`}>{this.props.data.name}</Link></p>
+        </Link>
       </div>
     );
   }
