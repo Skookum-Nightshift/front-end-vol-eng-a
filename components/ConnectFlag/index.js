@@ -125,8 +125,7 @@ class ConnectFlag extends React.Component {
 
                   <div className="ConnectForm">
                     <h2>Send Your Information</h2>
-                      <Input 
-                        id="firstname" defaultValue={this.state.userData ? this.state.userData.firstname : null} placeholder="First Name" value="" style={{ width: '40%', marginRight: '5px' }} />
+                      <Input id="firstname" defaultValue={this.state.userData ? this.state.userData.firstname : null} placeholder="First Name" value="" style={{ width: '40%', marginRight: '5px' }} />
                       <Input id="lastname" defaultValue={this.state.userData ? this.state.userData.lastname : null} placeholder="Last Name" style={{ width: '40%' }} />
                       <Input id="email" defaultValue={this.state.userData ? this.state.userData.email : null} placeholder="Email" style={{ width: '90%' }} />
                       <Input id="zipcode" defaultValue={this.state.userData ? this.state.userData.zipcode : null} placeholder="Zip Code" style={{ width: '90%' }} />
