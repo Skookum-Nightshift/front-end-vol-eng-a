@@ -1,13 +1,45 @@
-/** @define OrganizationPage; use strict */
+/** @define OpportunityPage; use strict */
 
-.OrganizationPage {}
 
-.OrganizationPage .content {
-  margin-left: 5%;
-  margin-right: 5%;
+.OrganizationPage .HeaderImage {
+	flex: 1;
+	width: 100%;
 }
 
-.OrganizationPage-child {}
+.OrganizationPage .HeaderInfo {
+	padding: 20px;
+}
 
-.OrganizationPage-child.is-state {}
+.OrganizationPage .LogoWrapper {
+	width: 150px;
+	height: 150px;
+	margin: 0 15px 15px 0;
+	border: 2px solid #e7e7e7;
+	float: left;
+	padding-left: 15px;
+	text-align: center; 
+	overflow: hidden;
+}
 
+
+.OrganizationPage h1, .OrganizationPage h2 {
+	margin: 0;
+	text-transform: uppercase;
+}
+
+#ContentBelowConnect {
+	margin: 70px 5% 0 5%;
+}
+
+#ContentBelowConnect .OrganizationTags {
+	margin: 0 auto;
+	text-align: center;
+	width: 90%;
+}
+
+#ContentBelowConnect .OrganizationTags .CategoryItem {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: auto;
+}

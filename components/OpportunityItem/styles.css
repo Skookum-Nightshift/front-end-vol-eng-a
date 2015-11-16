@@ -1,47 +1,16 @@
 /** @define OpportunityItem; use strict */
 
-.OpportunityItem {}
+.OpportunityItem {
+  margin: 20px 5%;
+}
+
+.OpportunityItem .Card {
+  padding: 10px;
+}
 
 .OpportunityItem-child {}
 
 .OpportunityItem-child.is-state {}
 
-.OpportunityItem {
-  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-  display: table;
-  margin-bottom: 1.5em;
-  padding-bottom: 1em;
-  padding-top: 1em;
-  width: 100%;
-  }
-  .OpportunityItem .comment-image,
-  .OpportunityItem .comment-content {
-    display: table-cell;
-    vertical-align: top; }
-  .OpportunityItem .comment-image {
-    /*padding-right: 1.4em; */ }
-    .OpportunityItem .comment-image > img {
-     /* background: pink; */
-      border-radius: 3px;
-      display: block;
-      height: auto;
-      max-width: none;
-      padding: 0.7em;
-      width: .5em; }
-    .comment-reverse-order .OpportunityItem .comment-image {
-      padding-right: 0;
-      padding-left: 10px; }
-  .OpportunityItem .comment-content {
-    width: 100%; }
-    .OpportunityItem .comment-content h1 {
-      font-size: 1em;
-      margin: 0.5em 0 0.5em 0; }
-    .OpportunityItem .comment-content p {
-      line-height: 1.5em;
-      margin-bottom: 0.5em; }
-    .OpportunityItem .comment-content p.comment-detail {
-      color: rgba(51, 51, 51, 0.5);
-      font-size: 0.9em;
-      font-style: italic; }
 
 /*# sourceMappingURL=styles.css.map */

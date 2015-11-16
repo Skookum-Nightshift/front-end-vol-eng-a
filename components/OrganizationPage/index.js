@@ -3,24 +3,49 @@
 require('./styles.css');
 
 import React from 'react';
-import Jumbotron from 'Jumbotron';
-import OpportunityList from 'OpportunityList';
+import { Router, Route, Link } from 'react-router'
 var {PropTypes} = React;
+import Jumbotron from 'Jumbotron';
+import OpportunityItem from 'OpportunityItem';
 
 class OrganizationPage extends React.Component {
 
-
   render(): ?ReactElement {
 
-    var org = this.props.data;
+    var organization = this.props.organization; 
+    var opps = organization.opportunities.map(opp =>
+        <OpportunityItem data={opp} key={opp.id} />
+    );
 
     return (
       <div className="OrganizationPage">
-        <Jumbotron image="/public/images/DSC_1419_Extended.jpg" />
-        <div className="content">
-          <h1>{org.name}</h1>
-          <h2>{org.city}</h2>
+
+      {this.props.location === 'top' ? 
+
+        <div id="ContentAboveConnect" className="clearfix">
+
+            <Jumbotron image="/public/images/DSC_1419_Extended.jpg" />
+           
+            <div id="HeaderInfo" className="HeaderInfo">
+            
+              <div className="LogoWrapper">
+                <img className="Logo" src="/public/logos/bbbs.jpg" width="150" /> 
+              </div>
+              <h1>{organization.name}</h1>
+              <p>{organization.address ? organization.address : "Locations Vary"}</p>
+              <p>{organization.description}</p>
+            </div>
         </div>
+      : 
+
+      <div id="ContentBelowConnect">
+       <h2>Volunteer Opportunities</h2>
+        {opps}
+    
+      </div>
+    }
+
+          
       </div>
     );
   }

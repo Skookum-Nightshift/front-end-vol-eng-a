@@ -3,10 +3,9 @@
 require('./styles.css');
 
 import React from 'react';
-
-import {Paper} from 'material-ui';
+import { Router, Route, Link } from 'react-router';
 import {Card} from 'material-ui/lib/card';
-import {CardActions} from 'material-ui/lib/card';import { Router, Route, Link } from 'react-router'
+import {CardActions} from 'material-ui/lib/card';
 
 var {PropTypes} = React;
 
@@ -14,11 +13,9 @@ class OpportunityItem extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="OpportunityItem">
-        <Card>
-          <div className="comment-image">
-          </div>
+        <Card className="Card">
           <div className="comment-content">
-            <h1><Link to={`/opportunity/${this.props.data.id}`}>{this.props.data.name}</Link></h1>
+            <h3><Link to={`/opportunity/${this.props.data.id}`}>{this.props.data.name}</Link></h3>
             <p>{this.props.data.description}</p>
           </div>
         </Card>
