@@ -92,6 +92,7 @@ class Opportunity extends React.Component {
                   flagMaxHeight={this.state.flagMaxHeight} 
                   data={this.state.content} 
                   connected={this.state.connected}
+                  type="opportunity"
                   onClick={this.onButtonClick} 
                   onChange={this.connectionChange} />
             </ReactTransitionGroup>

@@ -37,21 +37,39 @@ class ConnectFlag extends React.Component {
       var organizations = new Array();
     }
 
-    opportunities.push(this.props.data.opportunity_id)
+    if (this.props.type == 'opportunity') { opportunities.push(this.props.data.opportunity_id); } 
     organizations.push(this.props.data.organization_id);
 
-     var userData = {
-      "firstname": document.getElementById('firstname').value,
-      "lastname": document.getElementById('lastname').value,
-      "email": document.getElementById('email').value,
-      "zipcode": document.getElementById('zipcode').value,
-      "opportunity_id": this.props.data.opportunity_id,
-      "opportunity_name": this.props.data.name,
-      "organization_id": this.props.data.organization.organization_id,
-      "organization_name": this.props.data.organization.name,
-      "opportunities": opportunities,
-      "organizations": organizations,
-     };
+    if (this.props.type == 'opportunity') {
+
+       var userData = {
+        "firstname": document.getElementById('firstname').value,
+        "lastname": document.getElementById('lastname').value,
+        "email": document.getElementById('email').value,
+        "zipcode": document.getElementById('zipcode').value,
+        "opportunity_id": this.props.data.opportunity_id,
+        "opportunity_name": this.props.data.name,
+        "organization_id": this.props.data.organization.organization_id,
+        "organization_name": this.props.data.organization.name,
+        "opportunities": opportunities,
+        "organizations": organizations,
+       };
+
+   } else {
+      var userData = {
+
+        "firstname": document.getElementById('firstname').value,
+        "lastname": document.getElementById('lastname').value,
+        "email": document.getElementById('email').value,
+        "zipcode": document.getElementById('zipcode').value,
+        "opportunity_id": null,
+        "opportunity_name": "Any Opportunity",
+        "organization_id": this.props.data.organization_id,
+        "organization_name": this.props.data.name,
+        "opportunities": opportunities,
+        "organizations": organizations,
+       };
+   }
 
     //  apiPost(`/v1/connection`, userData,
     //   (data) => {
@@ -94,7 +112,7 @@ class ConnectFlag extends React.Component {
                 { this.props.connected ? 
                   
                   <div className="ConnectConfirmation clearfix">
-                    <h2>Thank you!</h2> <p>We have sent your information and someone from {this.props.data.organization.name} will contact you soon!</p>
+                    <h2>Thank you!</h2> <p>We have sent your information and someone from {this.props.type == 'opportunity' ? this.props.data.organization.name : this.props.data.name } will contact you soon!</p>
                   
                      <FlatButton 
                         onClick={this.props.onClick} 
