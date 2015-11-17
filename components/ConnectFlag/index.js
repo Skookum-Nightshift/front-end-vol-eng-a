@@ -71,17 +71,17 @@ class ConnectFlag extends React.Component {
        };
    }
 
-    //  apiPost(`/v1/connection`, userData,
-    //   (data) => {
+      apiPost(`/v1/connection`, userData,
+       (data) => {
 
           this.props.onChange(); 
           UserActions.updateUser(userData);
 
-    //   },
-    //   () => {
-    //     console.log('error');
-    //   }
-    // );
+       },
+       () => {
+         console.log('error');
+       }
+     );
 
   }
 
