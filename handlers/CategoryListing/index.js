@@ -26,7 +26,7 @@ class CategoryListing extends React.Component {
             var catName = data.organizations[0].categories[key].name;
           }
         }
-        if (data.organizations[0].categories.id === id) { var catName = data.organizations[0].categories.name; }
+
         this.setState({
           organizations: data.organizations,
           catName: catName
