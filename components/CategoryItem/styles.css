@@ -5,10 +5,12 @@
   flex: 1;
   flex-basis: 15%;
   padding: 0 5px 0 5px;
+  margin-right: 10px;
+
 }
 
-.CategoryItem img {
-  border-radius: 50%;
+.CategoryItem p {
+  font-size: 12px;
 }
 
 .CategoryItem-child {}
