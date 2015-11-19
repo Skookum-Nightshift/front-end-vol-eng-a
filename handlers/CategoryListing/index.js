@@ -16,11 +16,20 @@ class CategoryListing extends React.Component {
 
   componentDidMount(){
     var id = this.context.router.getCurrentParams().id;
+    var catName = 'Category Listing';
+
     apiGet(`v1/categories/${id}/organizations`, {},
       (data) => {
-        console.log(data);
+
+        for (var key in data.organizations[0].categories) {
+          if (id == data.organizations[0].categories[key].id ) {
+            var catName = data.organizations[0].categories[key].name;
+          }
+        }
+
         this.setState({
-          organizations: data.organizations
+          organizations: data.organizations,
+          catName: catName
         });
       },
       () => {
@@ -39,7 +48,7 @@ class CategoryListing extends React.Component {
 
     return (
       <div className="CategoryListing">
-        <HandlerHeader title="Category Listing" introParagraph=""/>
+        <HandlerHeader title={this.state.catName} introParagraph=""/>
         <OrganizationList organizations={organizations} />
       </div>
     );
