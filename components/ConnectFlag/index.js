@@ -30,14 +30,14 @@ class ConnectFlag extends React.Component {
   sendUserData() {
 
     if (this.state.userData) {
-      var opportunities = this.state.userData.opportunities; 
+      var opportunities = this.state.userData.opportunities;
       var organizations = this.state.userData.organizations;
     } else {
-      var opportunities = new Array(); 
+      var opportunities = new Array();
       var organizations = new Array();
     }
 
-    if (this.props.type == 'opportunity') { opportunities.push(this.props.data.opportunity_id); } 
+    if (this.props.type == 'opportunity') { opportunities.push(this.props.data.opportunity_id); }
     organizations.push(this.props.data.organization_id);
 
     if (this.props.type == 'opportunity') {
@@ -72,50 +72,50 @@ class ConnectFlag extends React.Component {
    }
 
       apiPost(`/v1/connection`, userData,
-       (data) => {
+      (data) => {
 
-          this.props.onChange(); 
+          this.props.onChange();
           UserActions.updateUser(userData);
 
-       },
-       () => {
-         console.log('error');
-       }
-     );
+      },
+      () => {
+        console.log('error');
+      }
+    );
 
   }
 
   render(): ?ReactElement {
-    if (this.props.flagMaxHeight > 0 ) { 
+    if (this.props.flagMaxHeight > 0 ) {
       var padding =  '20px';
-    } else { 
-      var padding = '0px'; 
+    } else {
+      var padding = '0px';
      }
 
     return (
       <div className="ConnectFlag">
 
-         <Paper 
-         		className="Flag" 
-         		zDepth={2} 
+         <Paper
+         		className="Flag"
+         		zDepth={2}
          		style={{
-         				margin:'0 auto', 
-         				padding: padding, 
-         				width: '85%', 
-         				maxHeight: this.props.flagMaxHeight }} 
+         				margin:'0 auto',
+         				padding: padding,
+         				width: '85%',
+         				maxHeight: this.props.flagMaxHeight }}
          		 key={0}>
-             
-            { this.props.flagMaxHeight > 0 ? 
+
+            { this.props.flagMaxHeight > 0 ?
 
               <form id="ConnectFlagForm">
 
-                { this.props.connected ? 
-                  
+                { this.props.connected ?
+
                   <div className="ConnectConfirmation clearfix">
                     <h2>Thank you!</h2> <p>We have sent your information and someone from {this.props.type == 'opportunity' ? this.props.data.organization.name : this.props.data.name } will contact you soon!</p>
-                  
-                     <FlatButton 
-                        onClick={this.props.onClick} 
+
+                     <FlatButton
+                        onClick={this.props.onClick}
                         label="Close"
                         style={{margin: '10px', float: 'right', textAlign: 'center'}}  />
 
@@ -131,14 +131,14 @@ class ConnectFlag extends React.Component {
                       <Input id="zipcode" defaultValue={this.state.userData ? this.state.userData.zipcode : null} placeholder="Zip Code" style={{ width: '90%' }} />
 
                       <div className="clearfix">
-                      
-                        <SubmitButton 
-                          label="Send" 
-                          style={{margin: '10px', float: 'right', textAlign: 'center'}}
-                          onClick={this.sendUserData.bind(this)} /> 
 
-                        <FlatButton 
-                          onClick={this.props.onClick} 
+                        <SubmitButton
+                          label="Send"
+                          style={{margin: '10px', float: 'right', textAlign: 'center'}}
+                          onClick={this.sendUserData.bind(this)} />
+
+                        <FlatButton
+                          onClick={this.props.onClick}
                           label="Cancel"
                           style={{margin: '10px', float: 'right', textAlign: 'center'}}  />
 
@@ -146,7 +146,7 @@ class ConnectFlag extends React.Component {
                   </div>
 
                  }
-                
+
               </form>
 
              : null }

@@ -21,9 +21,9 @@ class QuizAnswers extends React.Component {
     return (
       <div className="QuizAnswers">
         <br/>
-         <QuizAnswer onSelected={this.handleSelected} text={this.props.answerA} value={this.props.tagsA} buttonColor="#7DD63C"/>
+         <QuizAnswer onSelected={this.handleSelected} text={this.props.answerA} value={this.props.tagsA} buttonColor="#4d8fe5"/>
          <br/>
-        <QuizAnswer onSelected={this.handleSelected} text={this.props.answerB} value={this.props.tagsB} buttonColor="#1854A2"/></div>
+        <QuizAnswer onSelected={this.handleSelected} text={this.props.answerB} value={this.props.tagsB} buttonColor="#103a6f"/></div>
     );
   }
 }
