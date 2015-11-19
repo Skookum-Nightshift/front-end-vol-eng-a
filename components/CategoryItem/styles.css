@@ -9,7 +9,8 @@
 
 }
 
-.CategoryItem img {
+.CategoryItem p {
+  font-size: 12px;
 }
 
 .CategoryItem-child {}
