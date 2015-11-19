@@ -28,7 +28,9 @@ class OrganizationPage extends React.Component {
             <Jumbotron image="/public/images/DSC_1419_Extended.jpg" />
 
             <div id="HeaderInfo" className="HeaderInfo">
-
+             <div className="LogoWrapper">
+                <img className="Logo" src={organization.logo} width="150" /> 
+              </div>
               <h1>{organization.name}</h1>
               <p>{organization.address ? addy : "Locations Vary"}</p>
               <p>{organization.description}</p>
