@@ -29,15 +29,15 @@
 
 .Jumbotron-child.is-state {}
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 525px) {
 
-    .Jumbotron {
-	min-height: 200px; 
+  .Jumbotron {
+		max-height: 200px; 
 	}
 
 	.Jumbotron h1 {
     font-size: 2em;
-}
+	}
 
 }
 
