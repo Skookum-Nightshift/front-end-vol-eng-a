@@ -23,7 +23,7 @@ OrganizationLogo.propTypes = {
 
 OrganizationLogo.defaultProps = {
   width: 150,
-  logo: '/public/logos/bbbs.jpg',
+  logo: '/public/icons/noun_29964_cc.svg',
 };
 
 export default OrganizationLogo;
