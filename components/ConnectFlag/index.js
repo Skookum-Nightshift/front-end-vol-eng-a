@@ -53,7 +53,6 @@ class ConnectFlag extends React.Component {
         "organization_name": this.props.data.organization.name,
         "opportunities": opportunities,
         "organizations": organizations,
-        "organization_email": this.props.data.organization.email,
        };
 
    } else {
@@ -69,7 +68,6 @@ class ConnectFlag extends React.Component {
         "organization_name": this.props.data.name,
         "opportunities": opportunities,
         "organizations": organizations,
-        "organization_email": this.props.data.organization.email,
        };
    }
 

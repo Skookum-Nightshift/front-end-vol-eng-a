@@ -1,6 +1,6 @@
 /** @define Jumbotron; use strict */
 .Jumbotron {
-	min-height: 400px; 
+	min-height: 400px;
 	overflow: hidden;
 	text-align: center;
 	flex-direction: column;
@@ -32,7 +32,7 @@
 @media screen and (max-width: 525px) {
 
   .Jumbotron {
-		max-height: 200px; 
+		max-height: 200px;
 	}
 
 	.Jumbotron h1 {
