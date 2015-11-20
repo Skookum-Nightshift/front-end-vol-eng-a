@@ -7,6 +7,7 @@ import { Router, Route, Link } from 'react-router'
 var {PropTypes} = React;
 import Jumbotron from 'Jumbotron';
 import OpportunityItem from 'OpportunityItem';
+import Logo from 'OrganizationLogo';
 
 class OrganizationPage extends React.Component {
 
@@ -28,9 +29,9 @@ class OrganizationPage extends React.Component {
             <Jumbotron image="/public/images/DSC_1419_Extended.jpg" />
 
             <div id="HeaderInfo" className="HeaderInfo">
-             <div className="LogoWrapper">
-                <img className="Logo" src={organization.logo} width="150" /> 
-              </div>
+
+              <Logo logo={organization.logo} />
+            
               <h1>{organization.name}</h1>
               <p>{organization.address ? addy : "Locations Vary"}</p>
               <p>{organization.description}</p>
