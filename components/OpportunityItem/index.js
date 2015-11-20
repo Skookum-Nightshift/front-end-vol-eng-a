@@ -6,6 +6,7 @@ import React from 'react';
 import { Router, Route, Link } from 'react-router';
 import {Card} from 'material-ui/lib/card';
 import {CardActions} from 'material-ui/lib/card';
+import Logo from 'OrganizationLogo';
 
 var {PropTypes} = React;
 
@@ -15,6 +16,7 @@ class OpportunityItem extends React.Component {
       <div className="OpportunityItem">
         <Card className="Card">
           <div className="comment-content">
+            <Logo logo={this.props.data.organization.logo} width='75' />
             <h3><Link to={`/opportunity/${this.props.data.id}`}>{this.props.data.name}</Link></h3>
             <p>{this.props.data.description}</p>
           </div>
