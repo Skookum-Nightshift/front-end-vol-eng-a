@@ -6,6 +6,7 @@ import React from 'react';
 import { Router, Route, Link } from 'react-router';
 import {Card} from 'material-ui/lib/card';
 import {CardActions} from 'material-ui/lib/card';
+import Logo from 'OrganizationLogo';
 
 var {PropTypes} = React;
 

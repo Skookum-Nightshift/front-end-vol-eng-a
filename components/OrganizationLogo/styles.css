@@ -1,0 +1,22 @@
+/** @define OrganizationLogo; use strict */
+
+.LogoWrapper {
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	margin: 0 15px 15px 0;
+	border: 2px solid #e7e7e7;
+	float: left;
+	text-align: center; 
+	overflow: hidden;
+}
+
+.LogoWrapper .helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.LogoWrapper img {
+  vertical-align: middle;
+}

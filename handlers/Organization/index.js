@@ -33,6 +33,7 @@ class Organization extends React.Component {
 
     apiGet(`/v1/organizations/${id}`, {},
       (data) => {
+
         this.setState({
           content: data.organization,
           connected: connection,
@@ -65,7 +66,7 @@ class Organization extends React.Component {
   render(): ?ReactElement {
 
     if(this.state.content){
-      var organizationTop = <PageContent organization={this.state.content} location="top" />
+      var organizationTop = <PageContent organization={this.state.content} connection={this.state.connected} location="top" />
       var organizationBottom =  <PageContent organization={this.state.content} location="bottom" />
     }
 

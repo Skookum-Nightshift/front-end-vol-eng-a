@@ -12,18 +12,6 @@
 
 }
 
-.OpportunityPageContent .LogoWrapper {
-	width: 150px;
-	height: 150px;
-	margin: 0 15px 15px 0;
-	border: 2px solid #e7e7e7;
-	float: left;
-	padding-left: 15px;
-	text-align: center; 
-	overflow: hidden;
-}
-
-
 .OpportunityPageContent h1, .OpportunityPageContent h2 {
 	margin: 0;
 	text-transform: uppercase;

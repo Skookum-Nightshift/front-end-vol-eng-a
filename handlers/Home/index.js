@@ -10,7 +10,7 @@ class Home extends React.Component {
 
   render(): ?ReactElement {
 
-    var paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lectus et mauris efficitur feugiat aliquam in odio. Sed ut congue neque. Donec a erat mauris. Nulla pharetra lobortis mollis. Praesent eu semper tellus, vitae ullamcorper turpis. Proin ut justo lectus. Donec bibendum turpis lectus, non dictum erat laoreet a. Etiam eu lacinia elit. Ut dignissim urna metus, lobortis dignissim nibh bibendum non. Morbi vestibulum iaculis arcu eu rhoncus. Cras iaculis justo consequat, volutpat purus eget, tempus nisl. Proin eu nisi et leo cursus pellentesque."; 
+    var paragraph = "Welcome to UWCCaspires, United Way of Central Carolinas' volunteer portal! Our goal is to help you seamlessly discover the organizations and specific volunteering opportunities that align with your interests. Please take a moment to view our partner organizations by category or take the volunteer quiz to see which opportunities we suggest for you. Once you find the right opportunity and organization, you may easily connect via the blue connect button on the organization's profile page. Any user contact information shared with an organization is kept private and is never shared with an additional party outside of UWCC."; 
 
     return (
       <div className="Home">
