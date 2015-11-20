@@ -17,3 +17,16 @@
 
 .ConnectFlag-child.is-state {}
 
+@media screen and (max-width: 621px) {
+
+  .ConnectFlag {
+		width: 100%;
+		margin: 50px 2%;
+	}
+
+	.Jumbotron h1 {
+    font-size: 2em;
+	}
+
+}
+
