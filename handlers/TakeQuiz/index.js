@@ -97,7 +97,7 @@ class TakeQuiz extends React.Component {
           tagsA: ["food-preparation","food-preparation","food-preparation"],
           answerB: "No",
           tagsB: [],
-          pic: "public/images/1409_DixonHughesVolunteers0007(2).jpg"
+          pic: "public/images/1409_DixonHughesVolunteers0007.jpg"
         },
         {
           text: "Are you okay with completing a background check?",
