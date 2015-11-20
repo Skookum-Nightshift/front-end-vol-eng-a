@@ -16,7 +16,6 @@ class OpportunityItem extends React.Component {
       <div className="OpportunityItem">
         <Card className="Card">
           <div className="comment-content">
-            <Logo logo={this.props.data.organization.logo} width='75' />
             <h3><Link to={`/opportunity/${this.props.data.id}`}>{this.props.data.name}</Link></h3>
             <p>{this.props.data.description}</p>
           </div>
