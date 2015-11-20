@@ -32,7 +32,7 @@ class OrganizationPage extends React.Component {
             <div id="HeaderInfo" className="HeaderInfo">
 
               <Logo logo={organization.logo} />
-            
+
               <h1>{organization.name}</h1>
               <p>{organization.address ? addy : "Locations Vary"}</p>
               <p>{organization.description}</p>
